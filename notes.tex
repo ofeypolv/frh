@@ -1,0 +1,43 @@
+
+\documentclass{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath, amssymb, graphicx, hyperref}
+
+\title{Full Rank Hypothesis (FRH) Study}
+\author{Camilla Polvara}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+The Full Rank Hypothesis (FRH) is a concept used to analyze the structure of quantum many-body wavefunctions and their evolution. In this study, we examine the FRH in different models, including the one-dimensional transverse field Ising model (TFIM), the PXP model, and the TFIM on the icosahedral geometry. specifically, we're trying to relate the frh and the presence of scarred states.
+
+\section{1D Transverse Field Ising Model (TFIM)}
+The transverse field Ising model is one of the simplest paradigms for quantum phase transitions. The Hamiltonian is given by:
+\begin{equation}
+    H = -J \sum_{i} \sigma^z_i \sigma^z_{i+1} - h \sum_{i} \sigma^x_i,
+\end{equation}
+where $J$ is the interaction strength and $h$ is the transverse field. The FRH in this system is investigated by analyzing the eigenstates and their rank structure in different parameter regimes.\\
+outline of model (boundary conditions, symmetries) + how to solve it (Fourier transform to momentum space + Jordan-Wigner + Bogoliubov). There are infinte conserved charges, which are k-th occupation numbers of free fermions, they commute with the Hamiltonian but they are globally defined (frh always satisfied for this model, but this doesn't help explaining ``scars'' in the icosahedral tfim, contrary to what would have happened if these charges were locally defined). include rdm plot to show frh is satisfied. mention majorana fermions notation.
+
+\section{PXP Model}
+The PXP model describes constrained dynamics relevant to Rydberg atom arrays. The Hamiltonian takes the form:
+\begin{equation}
+    H = \sum_i P_{i-1} \sigma^x_i P_{i+1},
+\end{equation}
+where $P_i = \frac{1}{2} (1 - \sigma^z_i)$ ensures that adjacent excitations are forbidden. This model is known for exhibiting quantum many-body scars, and the FRH is analyzed in connection to these nonthermal eigenstates. shows numerical plots and explain numerical analysis. talk about rydberg blockade and allowed states subspace, fibonacci dim, null states space (apart from non-allowed states space, both annihilated by H), Neel state + tower of scars with SU(2) structure and say it's not exact in PXP (forward scattering approximation). attempt to explain scars is by looking at casimir operator Q of this local su(2) structure, Q commutes with H but unfortunately not with the rdm (maybe bc the SU(2) sturcture is not exact. the rank of rdm and null columns do actually corresp to non allowed states (projectors onto these forbidden states commute with rdm, but that follows from a stronger condition, which is that rdm annihilates these forbiudden states. so no local conserved charges explain the presence of scars, just the kinetic constraint following from the rydberg blockade that fragment the hilbert space. note that in the pxp model all states are ``weakly'' scarred, and the scars csan be lifted by removing this kinetic constraint (i.e. remove P projectors from H, obtaining the free paramagnets, which does not have scars).
+
+\section{TFIM on Icosahedron}
+The transverse field Ising model can also be studied on the icosahedral lattice, where the geometry introduces frustration and modifies the quantum critical behavior. The Hamiltonian remains the same as in 1D, but with interactions following the icosahedral connectivity. talk about icosahedron bonds  and structure + symmetry (esp discrete 5-fold rotation), tfim model on it from william paper, show 3 spins rdm frh plot, but then shows 4 and 5 spins rdm frh, 5 scarred degenerate states. show plots + naive entanglement entropy plot. degeneracy is 5 as a consequence of 5-fold rotation symmetry, and energy is -6 (why?). bc scars are  degenerate, we can find linear combination w complex coeffs that minimizes (and maximizes too) bipartite entanglement entropy. once we find that, go look for local charges commuting with 4/5 spins rdm, that could explain these scars (maybe 5-fold rotation). also print rank of these 4/5 spins rdm. The rank of the 4 spins rdm is full (16) for generic states and 16-5=11 for the 5 scarred states. For 5 spins rdm, full rank = 32 for generic states and 32-5=27 for the 5 scarred states.
+
+\section*{Bibliography}
+\begin{thebibliography}{9}
+    \bibitem{Sachdev} S. Sachdev, \textit{Quantum Phase Transitions}, Cambridge University Press (2011).
+    \bibitem{Turner} C. J. Turner, A. A. Michailidis, D. A. Abanin, M. Serbyn, and Z. Papic, ``Quantum many-body scars," Nature Physics 14, 745–749 (2018).
+    \bibitem{Lieb} E. H. Lieb, T. Schultz, and D. Mattis, ``Two soluble models of an antiferromagnetic chain," Annals of Physics 16, 407-466 (1961).
+    \bibitem{udem} G. Parez, W. Witczak-Krempa, ``The Fate of Entanglement," arXiv preprint arXiv:2402.06677 (2024).
+\end{thebibliography}
+
+\end{document}
