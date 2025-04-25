@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     20193,        446]
-NotebookOptionsPosition[     19411,        426]
-NotebookOutlinePosition[     19815,        442]
-CellTagsIndexPosition[     19772,        439]
+NotebookDataLength[     20428,        455]
+NotebookOptionsPosition[     19647,        435]
+NotebookOutlinePosition[     20050,        451]
+CellTagsIndexPosition[     20007,        448]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -311,68 +311,77 @@ Cell[BoxData[
      5, 9, 1}, {6, 5, 1}, {10, 6, 1}, {3, 10, 1}, {9, 3, 1}, {12, 10, 8}, {8, 
      3, 7}, {7, 9, 11}, {11, 5, 4}, {4, 6, 12}, {5, 11, 9}, {6, 4, 5}, {10, 
      12, 6}, {3, 8, 10}, {9, 7, 3}}]], {Text3DBox[
-     StyleBox["1",
-      StripOnInput->False,
-      FontSize->16,
-      FontWeight->Bold], 
+     FormBox[
+      StyleBox["1",
+       StripOnInput->False,
+       FontSize->16,
+       FontWeight->Bold], StandardForm], 
      NCache[{0, 0, (-5) (50 - 10 5^Rational[1, 2])^Rational[-1, 2]}, {
       0, 0, -0.9510565162951536}]], Text3DBox[
-     StyleBox["2",
-      StripOnInput->False,
-      FontSize->16,
-      FontWeight->Bold], 
+     FormBox[
+      StyleBox["2",
+       StripOnInput->False,
+       FontSize->16,
+       FontWeight->Bold], StandardForm], 
      NCache[{0, 0, 5 (50 - 10 5^Rational[1, 2])^Rational[-1, 2]}, {
       0, 0, 0.9510565162951536}]], Text3DBox[
-     StyleBox["3",
-      StripOnInput->False,
-      FontSize->16,
-      FontWeight->Bold], 
+     FormBox[
+      StyleBox["3",
+       StripOnInput->False,
+       FontSize->16,
+       FontWeight->Bold], StandardForm], 
      NCache[{-(2/(5 - 5^Rational[1, 2]))^Rational[1, 2], 
        0, -(10 - 2 5^Rational[1, 2])^Rational[-1, 2]}, {-0.85065080835204, 
        0, -0.42532540417601994`}]], Text3DBox[
-     StyleBox["4",
-      StripOnInput->False,
-      FontSize->16,
-      FontWeight->Bold], 
+     FormBox[
+      StyleBox["4",
+       StripOnInput->False,
+       FontSize->16,
+       FontWeight->Bold], StandardForm], 
      NCache[{(2/(5 - 5^Rational[1, 2]))^Rational[1, 2], 
        0, (10 - 2 5^Rational[1, 2])^Rational[-1, 2]}, {
       0.85065080835204, 0, 0.42532540417601994`}]], Text3DBox[
-     StyleBox["5",
-      StripOnInput->False,
-      FontSize->16,
-      FontWeight->Bold], 
+     FormBox[
+      StyleBox["5",
+       StripOnInput->False,
+       FontSize->16,
+       FontWeight->Bold], StandardForm], 
      NCache[{Rational[1, 2] (10 - 2 5^Rational[1, 2])^Rational[-1, 2] (1 + 
         5^Rational[1, 2]), 
        Rational[-1, 2], -(10 - 2 5^Rational[1, 2])^Rational[-1, 2]}, {
       0.6881909602355868, -0.5, -0.42532540417601994`}]], Text3DBox[
-     StyleBox["6",
-      StripOnInput->False,
-      FontSize->16,
-      FontWeight->Bold], 
+     FormBox[
+      StyleBox["6",
+       StripOnInput->False,
+       FontSize->16,
+       FontWeight->Bold], StandardForm], 
      NCache[{Rational[1, 2] (10 - 2 5^Rational[1, 2])^Rational[-1, 2] (1 + 
         5^Rational[1, 2]), Rational[
        1, 2], -(10 - 2 5^Rational[1, 2])^Rational[-1, 2]}, {
       0.6881909602355868, 0.5, -0.42532540417601994`}]], Text3DBox[
-     StyleBox["7",
-      StripOnInput->False,
-      FontSize->16,
-      FontWeight->Bold], 
+     FormBox[
+      StyleBox["7",
+       StripOnInput->False,
+       FontSize->16,
+       FontWeight->Bold], StandardForm], 
      NCache[{Rational[1, 2] (10 - 2 5^Rational[1, 2])^Rational[-1, 2] (-1 - 5^
         Rational[1, 2]), Rational[-1, 2], (10 - 2 5^Rational[1, 2])^
        Rational[-1, 2]}, {-0.6881909602355868, -0.5, 0.42532540417601994`}]], 
     Text3DBox[
-     StyleBox["8",
-      StripOnInput->False,
-      FontSize->16,
-      FontWeight->Bold], 
+     FormBox[
+      StyleBox["8",
+       StripOnInput->False,
+       FontSize->16,
+       FontWeight->Bold], StandardForm], 
      NCache[{Rational[1, 2] (10 - 2 5^Rational[1, 2])^Rational[-1, 2] (-1 - 5^
         Rational[1, 2]), Rational[1, 2], (10 - 2 5^Rational[1, 2])^
        Rational[-1, 2]}, {-0.6881909602355868, 0.5, 0.42532540417601994`}]], 
     Text3DBox[
-     StyleBox["9",
-      StripOnInput->False,
-      FontSize->16,
-      FontWeight->Bold], 
+     FormBox[
+      StyleBox["9",
+       StripOnInput->False,
+       FontSize->16,
+       FontWeight->Bold], StandardForm], 
      NCache[{Rational[1, 2] (10 - 2 5^Rational[1, 2])^Rational[-1, 2] (1 - 5^
         Rational[1, 2]), 
        Rational[-1, 2] ((5 - 5^Rational[1, 2])^(-1) (5 + 5^Rational[1, 2]))^
@@ -380,41 +389,41 @@ Cell[BoxData[
         Rational[-1, 
           2]}, {-0.2628655560595668, -0.8090169943749475, \
 -0.42532540417601994`}]], Text3DBox[
-     StyleBox["10",
-      StripOnInput->False,
-      FontSize->16,
-      FontWeight->Bold], 
+     FormBox[
+      StyleBox["10",
+       StripOnInput->False,
+       FontSize->16,
+       FontWeight->Bold], StandardForm], 
      NCache[{Rational[1, 2] (10 - 2 5^Rational[1, 2])^Rational[-1, 2] (1 - 5^
         Rational[1, 2]), 
        Rational[1, 2] ((5 - 5^Rational[1, 2])^(-1) (5 + 5^Rational[1, 2]))^
         Rational[1, 2], -(10 - 2 5^Rational[1, 2])^
         Rational[-1, 2]}, {-0.2628655560595668, 
       0.8090169943749475, -0.42532540417601994`}]], Text3DBox[
-     StyleBox["11",
-      StripOnInput->False,
-      FontSize->16,
-      FontWeight->Bold], 
+     FormBox[
+      StyleBox["11",
+       StripOnInput->False,
+       FontSize->16,
+       FontWeight->Bold], StandardForm], 
      NCache[{Rational[1, 2] (10 - 2 5^Rational[1, 2])^Rational[-1, 2] (-1 + 
         5^Rational[1, 2]), 
        Rational[-1, 2] ((5 - 5^Rational[1, 2])^(-1) (5 + 5^Rational[1, 2]))^
         Rational[1, 2], (10 - 2 5^Rational[1, 2])^Rational[-1, 2]}, {
       0.2628655560595668, -0.8090169943749475, 0.42532540417601994`}]], 
     Text3DBox[
-     StyleBox["12",
-      StripOnInput->False,
-      FontSize->16,
-      FontWeight->Bold], 
+     FormBox[
+      StyleBox["12",
+       StripOnInput->False,
+       FontSize->16,
+       FontWeight->Bold], StandardForm], 
      NCache[{Rational[1, 2] (10 - 2 5^Rational[1, 2])^Rational[-1, 2] (-1 + 
         5^Rational[1, 2]), 
        Rational[1, 2] ((5 - 5^Rational[1, 2])^(-1) (5 + 5^Rational[1, 2]))^
         Rational[1, 2], (10 - 2 5^Rational[1, 2])^Rational[-1, 2]}, {
       0.2628655560595668, 0.8090169943749475, 0.42532540417601994`}]]}},
   Boxed->False,
-  ImageSize->{351.5777000701704, 336.4450883472938},
-  ImageSizeRaw->Automatic,
-  ViewPoint->{-0.6998218871716614, 1.946328115050217, -2.678069490285971},
-  ViewVertical->{-0.7034330306341408, -0.22072599008392693`, \
--0.6756197219696434}]], "Output",
+  ImageSize->{356.6482703968111, 339.0022658173193},
+  ImageSizeRaw->Automatic]], "Output",
  CellChangeTimes->{3.9489725643521805`*^9, 3.9489726004137383`*^9, 
   3.94897263228648*^9, 3.948972669901129*^9, 3.9489747588135624`*^9, 
   3.9489747889353065`*^9, 3.9489752825755806`*^9, 3.9489847347729683`*^9, 
@@ -424,7 +433,7 @@ Cell[BoxData[
  CellLabel->"Out[5]=",ExpressionUUID->"300a4b87-8f8f-d740-a9ca-bdfd812d6820"]
 }, Open  ]]
 },
-WindowSize->{1070.25, 647.625},
+WindowSize->{1070.25, 642.75},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"14.1 for Microsoft Windows (64-bit) (July 16, 2024)",
 StyleDefinitions->"Default.nb",
@@ -446,7 +455,7 @@ Cell[576, 22, 2603, 57, 161, "Input",ExpressionUUID->"bf5c5f40-ba53-1341-9fc6-a2
 Cell[3182, 81, 3788, 67, 353, "Output",ExpressionUUID->"5462822f-ceda-c24d-8f6f-d26ff5d9d959"],
 Cell[6973, 150, 2288, 37, 194, "Output",ExpressionUUID->"1fa0a703-6237-5f4a-a689-be6808dd6e5a"],
 Cell[9264, 189, 2320, 69, 51, "Output",ExpressionUUID->"ec51bcf4-9f7c-5d49-a3a3-77375701f345"],
-Cell[11587, 260, 7808, 163, 353, "Output",ExpressionUUID->"300a4b87-8f8f-d740-a9ca-bdfd812d6820"]
+Cell[11587, 260, 8044, 172, 356, "Output",ExpressionUUID->"300a4b87-8f8f-d740-a9ca-bdfd812d6820"]
 }, Open  ]]
 }
 ]
