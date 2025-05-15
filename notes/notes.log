@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.8)  2 MAY 2025 11:56
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.8)  14 MAY 2025 16:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -504,24 +504,57 @@ File: icosahedron.jpg Graphic file (type bmp)
 <icosahedron.jpg>
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: 3spins.png Graphic file (type bmp)
 <3spins.png>
+File: 3spins-ferro.png Graphic file (type bmp)
+<3spins-ferro.png>
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: 4spins.png Graphic file (type bmp)
 <4spins.png>
+File: 4spins-ferro.png Graphic file (type bmp)
+<4spins-ferro.png>
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: 5spins.png Graphic file (type bmp)
 <5spins.png>
+File: 5spins-ferro.png Graphic file (type bmp)
+<5spins-ferro.png>
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[10] Excluding 'comment' comment. [11] [12] (./notes.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 624--625
+
+ []
+
+[10]
+File: ee_anti.png Graphic file (type bmp)
+<ee_anti.png>
+File: ee_ferro.png Graphic file (type bmp)
+<ee_ferro.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11] [12]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 663.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 663.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 663.
+
+[13] [14] (./notes.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -531,15 +564,15 @@ L3 programming layer <2023-08-29>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: DC276B027859AD672C6D271D0B376BD9;592.
+(rerunfilecheck)             Checksum: 6840ED18895CEC426B71AEF836EE598D;1179.
  ) 
 Here is how much of TeX's memory you used:
- 10609 strings out of 475591
- 160462 string characters out of 5777375
+ 10673 strings out of 475591
+ 161591 string characters out of 5777375
  1935432 words of memory out of 5000000
- 31797 multiletter control sequences out of 15000+600000
- 564845 words of font info for 72 fonts, out of 8000000 for 9000
+ 31849 multiletter control sequences out of 15000+600000
+ 566708 words of font info for 79 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 72i,15n,79p,1330b,506s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,15n,79p,1550b,506s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on notes.pdf (12 pages).
+Output written on notes.pdf (14 pages).

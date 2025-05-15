@@ -483,7 +483,7 @@ We numerically analyzed the PXP model for a chain of 12 spins with periodic boun
 To probe the local structure of scarred eigenstates, we examined the RDM of the spins \([5,6,7]\) (equivalent results were observed for all triplets of adjacent spins, as expected from translation invariance). For each eigenstate, we computed the rank of the 3-spin RDM. The results are reported in the table below.
 
 We found that all 3-spin RDMs associated with scarred eigenstates have \textbf{rank 5} (not full rank, 8), and consistently contain \textbf{three zero rows and columns}, corresponding to the \textbf{forbidden states} \( |011\rangle, |110\rangle, |111\rangle \). These are precisely the configurations excluded by the Rydberg blockade constraint.
-This pattern highlights the failure of FRH in the PXP model not because of emergent symmetries or conserved quantities (such as the hidden SU(2) symmetry, present in the free paramagnetic model but not in the PXP model), but because of the nonthermal constraints encoded directly at the level of local Hilbert space structure. The Rydberg blockade enforces a projection onto a kinetically constrained subspace, carving out a rigid structure that persists even in reduced local descriptions of the system.
+This pattern highlights the failure of FRH in the PXP model not because of emergent symmetries or conserved quantities (such as the hidden SU(2) symmetry, present in the free paramagnetic model but not in the PXP model), but because of the constraints encoded directly at the level of local Hilbert space structure. The Rydberg blockade enforces a projection onto a kinetically constrained subspace, carving out a rigid structure that persists even in reduced local descriptions of the system.
 
 \begin{comment}
 \begin{table}[h!]
@@ -514,7 +514,7 @@ Eigenvalue & RDM Rank & Zero Columns \\
 
 \textcolor{red}{mention allowed null states. you can see these degenerate states in fig 3 with neel overlap- vertical tower.}
 
-\section{TFIM on Icosahedron}
+\section{TFIM on the Icosahedron}
 
 The transverse field Ising model (TFIM) can be studied on the icosahedral lattice, where the geometry introduces frustration even in the absence of disorder. The Hamiltonian takes the standard form
 
@@ -565,48 +565,125 @@ In the standard quantum transverse-field Ising model (TFIM), such as on a one-di
 
 By contrast, when the TFIM is defined on the icosahedron—a finite, highly symmetric polyhedron with no translational symmetry—the spatial symmetry group is replaced by the full icosahedral group $I_h$, a non-Abelian finite group of order 120. This group includes 60 proper rotations forming the icosahedral group $I$ (isomorphic to $A_5$), along with inversion symmetry. The global $\mathbb{Z}_2$ spin-flip symmetry remains, but the spatial symmetry structure is fundamentally altered: momentum is no longer a good quantum number, and eigenstates are instead organized according to the irreducible representations of $I_h$. This shift enriches the spectral structure and enables a finer symmetry resolution of both energy levels and entanglement patterns, while also modifying how frustration and degeneracies manifest in the antiferromagnetic case.
 
-\begin{figure}[h!]
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.45\textwidth]{icosahedron.jpg}
     \caption{Vertex labeling of the icosahedron used in the TFIM study. Each site interacts with its 5 neighbors via antiferromagnetic Ising couplings.}
     \label{fig:icosahedron}
 \end{figure}
 
-As shown in the recent work by Parez and Witczak-Krempa~\cite{parez2024}, the forward reduction hypothesis (FRH) is always satisfied for reduced density matrices (RDMs) of two spins. Consequently, FRH alone cannot explain the emergence of many-body scars on this lattice. However, for four- and five-spin RDMs, the FRH condition is no longer satisfied for certain eigenstates. In particular, five nearly degenerate scarred eigenstates appear at energy $E = -6$, exhibiting a structure that violates FRH for these larger subsystems. This degeneracy is a direct consequence of the five-fold rotational symmetry of the icosahedron.
+As shown in the recent work by Parez and Witczak-Krempa~\cite{parez2024}, the forward reduction hypothesis (FRH) is always satisfied for reduced density matrices (RDMs) of two spins. Consequently, FRH alone cannot explain the emergence of many-body scars on this lattice. However, for four- and five-spin RDMs (but not for three-spin RDM!), the FRH condition is no longer satisfied for certain eigenstates. The four and five spins are chosen to correspond to vertices on respectively two and three adjacent plaquettes of the icosahedron. In particular, five nearly degenerate scarred eigenstates appear at negative integer energy $E = -6$ for the antiferromagnetic model, and at integer energy $E = +6$ for the ferromagnetic one, with indices $[1267,1268,1269,1270,1271]$ and $[2826,2827,2828,2829, 2830]$ respectively. By changing the magnitude of TFIM parameters $J,h$ the position and properties of the scarred states do not change; the only thing that seems to affect the position of these scars is the sign of the coupling constant $J$, since that the energy of these scars changes sign between the ferromagnetic and antiferromagnetic model. All of these considerations suggest that the presence of these scars, as well their 5-fold degeneracy, is a direct consequence of the symmetry properties of the icosahedron (\textcolor{red}{create a perturbed version of the code with XY perturbation - ie not Ising - but with icosahedral symmetry, for both ferro and antiferro tfim. if this is true scars should persist}).
 
-\begin{figure}[h!]
+\begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\textwidth]{3spins.png}
-    \caption{Minimum eigenvalue of the three-spin RDM as a function of the eigenvalue of the Hamiltonian $H$. FRH is always satisfied; all eigenvalues remain well above machine precision.}
-    \label{fig:2spins}
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{3spins.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{3spins-ferro.png}
+    \end{minipage}
+    \caption{Minimum eigenvalue of the three-spin RDM as a function of the eigenvalue of the Hamiltonian $H$, for the antiferromagnetic (left) and ferromagnetic (right) TFIM. In both cases, FRH is always satisfied; all eigenvalues remain well above machine precision.}
+    \label{fig:3spins}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\textwidth]{4spins.png}
-    \caption{Minimum eigenvalue of the four-spin RDM. Five eigenstates (in red) near $E = -6$ violate FRH with eigenvalues $\lambda_{\min} \sim 10^{-17}$. These correspond to scarred states.}
-    \label{fig:4spins}
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{4spins.png}
+        \caption{Minimum eigenvalue of the four-spin RDM for the antiferromagnetic TFIM. Five eigenstates (in red) near $E = -6$ violate FRH with eigenvalues $\lambda_{\min} \sim 10^{-16}$. These correspond to scarred states.}
+        \label{fig:4spins_anti}
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{4spins-ferro.png}
+        \caption{Minimum eigenvalue of the four-spin RDM for the ferromagnetic TFIM. Now the five scarred eigenstates have shifted to $E = +6$, suggesting a possible dependence on the sign of $J$.}
+        \label{fig:4spins_ferro}
+    \end{minipage}
 \end{figure}
 
-\begin{figure}[h!]
+
+\begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\textwidth]{5spins.png}
-    \caption{Minimum eigenvalue of the five-spin RDM. The same five scarred states are seen to violate FRH at machine precision.}
-    \label{fig:5spins}
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{5spins.png}
+        \caption{Minimum eigenvalue of the five-spin RDM for the antiferromagnetic TFIM. The five scarred eigenstates (in red) are still present at $E = -6$.}
+        \label{fig:5spins_anti}
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{5spins-ferro.png}
+        \caption{Minimum eigenvalue of the five-spin RDM for the ferromagnetic TFIM. The five scarred eigenstates are still present at $E = +6$.}
+        \label{fig:5spins_ferro}
+    \end{minipage}
 \end{figure}
 
-These scarred states enable the construction of linear combinations (with complex coefficients) that either minimize or maximize the bipartite entanglement entropy, indicating a highly structured entanglement landscape. A symmetry analysis of these entanglement-minimizing combinations suggests that the scars may be stabilized by nonlocal conserved quantities tied to the icosahedral group, although no local charges commuting with the four- or five-spin RDMs could be identified. This contrasts with systems where many-body scars are explained via locally defined integrals of motion, which typically violate FRH already at the two-spin level.
+Let us analyze the properties of these scars, by looking at their entanglement properties (via bipartite entanglement entropy), the rank of their respective RDMs, and how they transform under the icosahedral point group  symmetry transformations $I_h$ (specifically, having five degenerate scars suggest to look at $C_5$).\\
 
-Further insight comes from analyzing the rank of the RDMs. For generic eigenstates, the four-spin RDM has full rank $2^4 = 16$, while for the five scarred states, the rank is reduced to $16 - 5 = 11$. Similarly, the five-spin RDM has full rank $2^5 = 32$ for generic states, and rank $18$ for the scarred states, indicating a loss of $14$ linearly independent directions. The origin of the number 14 remains an open question, potentially related to hidden symmetries or representation-theoretic properties of the icosahedral group.
+\subsection{Entanglement entropy}
 
-\textcolor{red}{add why antiferromagnetic and not ferromagnetic - frustration is only present in the former, i.e. min energy config not reached in a closed loop}
+The bipartite entanglement entropy is computed for the whole spectrum, for the antiferromagnetic and ferromagnetic TFIM, and we look at the specific values of the scarred states. In both cases, only one of the five scars has an EE value that is smaller than that of the states in the bulk of the spectrum, specifically the scar with index 1268 for the antiferromagnetic model, with $EE \simeq 3.08$ and the scar with index 2827 for the ferromagnetic model, with $EE \simeq 3.36$. Given that the scars are degenerate, we can also take a linear combination (with complex coefficients) of all of them and compute the entanglement entropy of this new state. Numerically, we found that by optimizing the coefficients, the minimal value of EE obtained corresponds to $EE \simeq 1\times10^{-6}$ fo the antiferromagnetic TFIM and $EE \simeq 9\times10^{-7}$ for the ferromagnetic TFIM. Therefore, these optimal linear combinations seem to be badly scarred, much more of the single scars.
 
-\begin{comment}
-frh always satisfied for simple tfim model, so this doesn't help explaining ``scars'' in the icosahedral tfim, contrary to what would have happened if these charges were locally defined.
-The transverse field Ising model can also be studied on the icosahedral lattice, where the geometry introduces frustration. The Hamiltonian remains the same as in 1D, but with interactions following the icosahedral connectivity. talk about icosahedron bonds  and structure + symmetry (esp discrete 5-fold rotation), antiferromagnetic tfim model  on it from william paper (G. Parez, W. Witczak-Krempa, ``The Fate of Entanglement," arXiv preprint arXiv:2402.06677 (2024)), show 3 spins rdm frh plot (frh satisfied for  2 spins rdm too), but then shows 4 and 5 spins rdm frh, 5 scarred degenerate states. show plots + naive entanglement entropy plot. degeneracy is 5 as a consequence of 5-fold rotation symmetry, and energy is -6 (why?). bc scars are  degenerate, we can find linear combination w complex coeffs that minimizes (and maximizes too) bipartite entanglement entropy. once we find that, look at the symmetry properties of  go look for local charges commuting with 4/5 spins rdm, that could explain these scars (maybe 5-fold rotation). also print rank of these 4/5 spins rdm. The rank of the 4 spins rdm is full (16) for generic states and 16-5=11 for the 5 scarred states. For 5 spins rdm, full rank = 32 for generic states and 32-14=18 (where does the 14 come from???) for the 5 scarred states. 
-\end{comment}
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{ee_anti.png}
+        \caption{Bipartite entanglement entropy for the whole spectrum of the antiferromagnetic TFIM. The five scarred eigenstates (in red) have EE values similar to those of the states in the bulk, except for one state.}
+        \label{fig:ee_anti}
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{ee_ferro.png}
+        \caption{Bipartite entanglement entropy for the whole spectrum of the ferromagnetic TFIM. Again, the five scarred eigenstates (in red) have EE values similar to those of the states in the bulk, except for one state.}
+        \label{fig:ee_ferro}
+    \end{minipage}
+\end{figure}
 
-\textcolor{red}{For 6 spins rdm, the number of scars increases significantly (441 scarred states for 6 spins rdm) and degeneracy is lifted. for 7+ spins rdm, all states are scarred.}
+\subsection{RDMs rank}
+
+The four- and five-spins RDMs of the five scars have at least a vanishing eigenvalue, so their rank is not going to be full. Let us compute the rank in both cases, and understand why it is not full.
+
+\begin{itemize}
+
+\item \textbf{4 spins}: all of the five scars have 4-spins RDM rank equal to $\mathbf{11}$. The full rank of a 4-spins RDM is 16, so there are \textbf{five} columns of the RDM that are either zero or linearly dependent. Upon inspection of the null space of the matrix, we found that it actually corresponds to the five-dimensional totally symmetric subspace of $S_4$, the permutation group of 4 elements. In our case, the elements are $1/2$ spins, and the totally symmetric subspace correspond to states with total spin $S=2$. In other words, the 4-spins RDM doesn't have support on this subspace, suggesting that the global, 12-spins state must have some antisymmetry properties under the 12-spins permutation group $S_{12}$ instead.
+
+\item \textbf{5 spins}: all of the five scars have 5-spins RDM rank equal to $\mathbf{18}$. The full rank of a 5-spins RDM is 32, so there are \textbf{fourteen} columns of the RDM that are either zero or linearly dependent. The totally symmetric subspace of 5 $1/2$ spins has dimension 6, so there are still 8 dimensions not accounted for. \textcolor{red}{explain}
+
+\end{itemize}
+
+The study of rank of 4- and 5-spins RDMs gave us valuable information regarding the global properties of the scarred states, hinting at a possible antisymmetric structure of such states under the 12-spins permutation group $S_{12}$. In fact, after a careful analysis of the numerical structure of such states, we were able to show that all scarred states (and only them) have exactly 6 spins up and 6 spins down, and 280 non-zero components. Looking at the non-zero components, they seem to appear in 140 pairs, with each pair made up of a positive coefficient and its negative version.\\
+All of this suggests that the scarred states belong to the pair-wise antisymmetric subspace of $S_{12}$, which is denoted by $[6,6]$ using Young tableaux notation.\\
+Note that RDMs rank considerations are applicable to both the antiferromagnetic and ferromagnetic TFIM model, with the only difference being that in the ferromagnetic model the alternating signs of the global scarred states are inverted and the magnitude of the coefficients changes, but the global states still belong to the [6,6] subspace.
+The reason why the 5 scarred states belong to $[6,6]$ needs yet to be explained, but it's most likely due to the interaction of the permutation group $S_{12}$ and the icosahedron symmetry group $I_h$. 
+ 
+\subsection{$C_5$ transformation properties}
+
+The scarred states not only have special properties under the global permutation group $S_{12}$, but also under the cyclic group $C_5$ (five-fold rotations of the icosahedron about an axis passing through opposite vertices). In fact, the 5 scarred states belong to distinct 1-dimensional irreducible representations of $C_5$, or in other words, they are eigenvectors of $C_5$ with distinct eigenvalues or phase factors. By writing the action of $C_5$ in the 12 spins basis as a $2^{12}\times2^{12}$ matrix, and diagonalizing it in the degenerate scarred subspace, we found that:
+
+\begin{equation}
+\tilde{C}_5 |m\rangle = \exp^{i \frac{2\pi}{5} m} |m\rangle \quad m = 0,1,2,3,4
+\end{equation} 
+
+where $\tilde{C}_5$ is the $2^{12}\times2^{12}$ matrix representation of $C_5$, and we already know that the scarred eigenstates of the TFIM Hamiltonian are also eigenstates of $C_5$ because the Hamiltonian is symmetric under $C_5$ ($[H,C_5]=0$). We found that he antiferromagnetic and the ferromagnetic TFIM scars have the following values of $m$:
+
+\begin{itemize}
+
+\item antiferromagnetic TFIM: $[1267,1268,1269,1270,1271] \equiv [m=2,m=3,m=1,m=4,m=0]$
+
+\item ferromagnetic TFIM: $[2826,2827,2828,2829, 2830] \equiv [m=0,m=1,m=4,m=2,m=3]$
+
+\end{itemize}
+
+
+The TFIM model on the icosahedron is not scalable, and therefore not relevant in the thermodynamic limit. It is however a toy model to understand how scars arise from symmetries, and it provides a useful introduction for more complicated models with many body quantum scars, such as the following.
+
+\section{AKLT Model}
+
+use hamiltonian with notation of the paper and outline the properties of the tower of exact scarred states - the aim of this section is to understand why these states have very low rank (inspection of null space for example). note that it's just not the tower states that don't have full rank, but some other states have almost full rank, but not full rank.
 
 \section*{Bibliography}
 \begin{thebibliography}{9}
