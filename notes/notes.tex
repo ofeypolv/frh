@@ -522,6 +522,8 @@ The transverse field Ising model (TFIM) can be studied on the icosahedral lattic
 H = -J \sum_{\langle i, j \rangle} \sigma_i^x \sigma_j^x - h \sum_i \sigma_i^z,
 \end{align}
 
+where $\langle i, j \rangle$ are the nearest-neighbors on the icosahedron.\\
+
 When the TFIM is defined on the icosahedron, the symmetry structure changes significantly due to the absence of translational invariance and the presence of non-Abelian point-group symmetries. The resulting model exhibits:
 
 \begin{itemize}
@@ -649,7 +651,16 @@ The four- and five-spins RDMs of the five scars have at least a vanishing eigenv
 
 \begin{itemize}
 
-\item \textbf{4 spins}: all of the five scars have 4-spins RDM rank equal to $\mathbf{11}$. The full rank of a 4-spins RDM is 16, so there are \textbf{five} columns of the RDM that are either zero or linearly dependent. Upon inspection of the null space of the matrix, we found that it actually corresponds to the five-dimensional totally symmetric subspace of $S_4$, the permutation group of 4 elements. In our case, the elements are $1/2$ spins, and the totally symmetric subspace correspond to states with total spin $S=2$. In other words, the 4-spins RDM doesn't have support on this subspace, suggesting that the global, 12-spins state must have some antisymmetry properties under the 12-spins permutation group $S_{12}$ instead.
+\item \textbf{4 spins}: all of the five scars have 4-spins RDM rank equal to $\mathbf{11}$. The full rank of a 4-spins RDM is 16, so there are \textbf{five} columns of the RDM that are either zero or linearly dependent. Upon inspection of the null space of the matrix, we found that it actually corresponds to the five-dimensional totally symmetric subspace of $S_4$, the permutation group of 4 elements:
+
+\begin{align}
+v_j = &\alpha_{j,0} |0,0,0,0\rangle + \alpha_{j,1} \left(|0,0,0,1\rangle + |0,0,1,0\rangle + |0,1,0,0\rangle +  |1,0,0,0\rangle\right)\nonumber\\
+&+\alpha_{j,2} \left( |0,0,1,1\rangle + |0,1,0,1\rangle + |0,1,1,0\rangle + |1,0,0,1\rangle + |1,0,1,0\rangle \right)\nonumber\\
+&+\alpha_{j,3} \left( |0,1,1,1\rangle + |1,0,1,1\rangle + |1,1,0,1\rangle + |1,1,1,0\rangle\right) + \alpha_{j,4} |1,1,1,1\rangle
+\end{align}
+
+where $v_j$, with $j=0,\hdots,5$ are the vectors spanning the null space of the 4-spins RDM.\\
+In our case, the elements are $1/2$ spins, and the totally symmetric subspace correspond to states with total spin $S=2, \,m_S = \pm 2, \pm 1, 0$. In other words, the 4-spins RDM doesn't have support on this subspace, suggesting that the global, 12-spins state must have some antisymmetry properties under the 12-spins permutation group $S_{12}$ instead.
 
 \item \textbf{5 spins}: all of the five scars have 5-spins RDM rank equal to $\mathbf{18}$. The full rank of a 5-spins RDM is 32, so there are \textbf{fourteen} columns of the RDM that are either zero or linearly dependent. The totally symmetric subspace of 5 $1/2$ spins has dimension 6, so there are still 8 dimensions not accounted for. \textcolor{red}{explain}
 
@@ -665,25 +676,29 @@ The reason why the 5 scarred states belong to $[6,6]$ needs yet to be explained,
 The scarred states not only have special properties under the global permutation group $S_{12}$, but also under the cyclic group $C_5$ (five-fold rotations of the icosahedron about an axis passing through opposite vertices). In fact, the 5 scarred states belong to distinct 1-dimensional irreducible representations of $C_5$, or in other words, they are eigenvectors of $C_5$ with distinct eigenvalues or phase factors. By writing the action of $C_5$ in the 12 spins basis as a $2^{12}\times2^{12}$ matrix, and diagonalizing it in the degenerate scarred subspace, we found that:
 
 \begin{equation}
-\tilde{C}_5 |m\rangle = \exp^{i \frac{2\pi}{5} m} |m\rangle \quad m = 0,1,2,3,4
+C^{12}_5 |m\rangle = \exp^{i \frac{2\pi}{5} m} |m\rangle \quad m = 0,1,2,3,4
 \end{equation} 
 
-where $\tilde{C}_5$ is the $2^{12}\times2^{12}$ matrix representation of $C_5$, and we already know that the scarred eigenstates of the TFIM Hamiltonian are also eigenstates of $C_5$ because the Hamiltonian is symmetric under $C_5$ ($[H,C_5]=0$). We found that he antiferromagnetic and the ferromagnetic TFIM scars have the following values of $m$:
+where $C^{12}_5$ is the $2^{12}\times2^{12}$ matrix representation of $C_5$, and we already know that the scarred eigenstates of the TFIM Hamiltonian are also eigenstates of $C_5$ because the Hamiltonian is symmetric under $C_5$ ($[H,C_5]=0$). We found that he antiferromagnetic and the ferromagnetic TFIM scars have the following values of $m$:
 
 \begin{itemize}
 
-\item antiferromagnetic TFIM: $[1267,1268,1269,1270,1271] \equiv [m=2,m=3,m=1,m=4,m=0]$
+\item antiferromagnetic TFIM: $[1267,1268,1269,1270,1271] \equiv m = [2, 3, 1, 4, 0]$
 
-\item ferromagnetic TFIM: $[2826,2827,2828,2829, 2830] \equiv [m=0,m=1,m=4,m=2,m=3]$
+\item ferromagnetic TFIM: $[2826,2827,2828,2829, 2830] \equiv m = [ 0, 1, 4, 2, 3]$
 
 \end{itemize}
+
+\subsection{Lifting the scars}
+
+It is possible to  lift the five degenerate scars by adding, on top of the nearest-neighbor interaction in the TFIM Hamiltonian
 
 
 The TFIM model on the icosahedron is not scalable, and therefore not relevant in the thermodynamic limit. It is however a toy model to understand how scars arise from symmetries, and it provides a useful introduction for more complicated models with many body quantum scars, such as the following.
 
 \section{AKLT Model}
 
-use hamiltonian with notation of the paper and outline the properties of the tower of exact scarred states - the aim of this section is to understand why these states have very low rank (inspection of null space for example). note that it's just not the tower states that don't have full rank, but some other states have almost full rank, but not full rank.
+%use hamiltonian with notation of the paper and outline the properties of the tower of exact scarred states - the aim of this section is to understand why these states have very low rank (inspection of null space for example). note that it's just not the tower states that don't have full rank, but some other states have almost full rank, but not full rank.
 
 \section*{Bibliography}
 \begin{thebibliography}{9}

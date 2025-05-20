@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.8)  14 MAY 2025 16:44
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.8)  16 MAY 2025 15:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -499,7 +499,12 @@ Overfull \hbox (25.90218pt too wide) in paragraph at lines 477--478
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8] Excluding 'comment' comment. [9]
+[8] Excluding 'comment' comment.
+Underfull \hbox (badness 10000) in paragraph at lines 525--526
+
+ []
+
+[9]
 File: icosahedron.jpg Graphic file (type bmp)
 <icosahedron.jpg>
 
@@ -528,7 +533,7 @@ File: 5spins-ferro.png Graphic file (type bmp)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 624--625
+Underfull \hbox (badness 10000) in paragraph at lines 626--627
 
  []
 
@@ -544,15 +549,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [11] [12]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 663.
+(hyperref)                removing `math shift' on input line 674.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 663.
+(hyperref)                removing `subscript' on input line 674.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 663.
+(hyperref)                removing `math shift' on input line 674.
 
 [13] [14] (./notes.aux)
  ***********
@@ -563,8 +568,14 @@ L3 programming layer <2023-08-29>
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: 6840ED18895CEC426B71AEF836EE598D;1179.
+
+Package rerunfilecheck Warning: File `notes.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `notes.out':
+(rerunfilecheck)             Before: 6840ED18895CEC426B71AEF836EE598D;1179
+(rerunfilecheck)             After:  33134ABFC1427C9288A56CA85D07315E;1327.
  ) 
 Here is how much of TeX's memory you used:
  10673 strings out of 475591
@@ -573,6 +584,6 @@ Here is how much of TeX's memory you used:
  31849 multiletter control sequences out of 15000+600000
  566708 words of font info for 79 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 72i,15n,79p,1550b,506s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,15n,79p,1550b,446s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on notes.pdf (14 pages).
