@@ -1,3 +1,3 @@
 Character( CharacterTable( Group( [ DirectProductElement( [ (1,2,3,4,5), <identity> of ... ] ), 
   DirectProductElement( [ (3,4,5), <identity> of ... ] ), DirectProductElement( [ (), f1 ] ) ] ) ), 
-[ 3, -3, 0, 0, -1, 1, -E(5)-E(5)^4, E(5)+E(5)^4, -E(5)^2-E(5)^3, E(5)^2+E(5)^3 ] )
+[ 4, -4, 1, -1, 0, 0, -1, 1, -1, 1 ] )
