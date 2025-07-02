@@ -1,0 +1,262 @@
+
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsfonts,graphicx}
+\usepackage{authblk}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\title{Summary of Recent Research on Exact Quantum Many-Body Scars}
+\author{Camilla Polvara}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Overview}
+
+This document summarizes recent research focused on \textbf{exact quantum many-body scars} in spin systems, where analytic expressions for the scarred eigenstates are known. These studies circumvent the need to analyze the full Hamiltonian spectrum, instead targeting entanglement properties and reduced density matrices (RDMs) of analytically understood scarred states. All models are assumed to be in 1-dimension and to have periodic boundary conditions (PBC), unless otherwise specified.
+
+\vspace{0.5cm}
+
+\section*{1. Dimer State Scar}
+\begin{itemize}
+    \item \textbf{Model:} Spin-1/2 MG-like model featuring an exact dimer scar state.\\ There is just one scarred state, which is the ground state of the Majumdar-Ghosh Hamiltonian, and it's given by the singlet state:
+    
+    \begin{equation}
+    | \text{dimer} \rangle = \left( 2 + \left( -\frac{1}{2} \right)^{\frac{L}{2} - 2} \right)^{-\frac{1}{2}} \left( |\Psi_1\rangle + |\Psi_2\rangle \right).
+    \end{equation}
+
+    where $L$ is the (even) number of sites, and
+    
+    \begin{align}
+    &|\Psi_1\rangle = | \text{sing} \rangle_{1,2} \otimes | \text{sing} \rangle_{3,4} \otimes \cdots \otimes | \text{sing} \rangle_{L-1,L}, \\
+    &|\Psi_2\rangle = | \text{sing} \rangle_{2,3} \otimes | \text{sing} \rangle_{4,5} \otimes \cdots \otimes | \text{sing} \rangle_{L,1},
+    \end{align}
+    
+    are the two dimer states, with
+    
+    \begin{equation}
+    | \text{sing} \rangle_{i,j} = \frac{1}{\sqrt{2}} \left( | \uparrow \downarrow \rangle_{i,j} - | \downarrow \uparrow \rangle_{i,j} \right).
+    \end{equation}
+    
+    $| \text{sing} \rangle_{i,j}$ the normalized spin singlet between sites $i,j$.
+       
+    \item \textbf{Reference:} \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.155102}{Phys. Rev. B 108, 155102 (2023)}.
+    \item \textbf{Analysis:}
+    \begin{itemize}
+        \item Verified the entanglement entropy against the analytic prediction from the paper.\\ For $L=14,16,18$:
+        
+        \begin{equation}
+        S_A \approx 1.386 \approx 2 \ln 2
+        \end{equation}
+        
+        \item Computed the ranks of all 2-site, 3-site, and 4-site adjacent reduced density matrices:
+        
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|ccc|}
+	\hline
+	\textbf{Dimer scar} & \multicolumn{3}{c|}{\textbf{RDM  Rank}} \\
+	\cline{2-4}
+	& \textbf{2-sites} & \textbf{3-sites} & \textbf{4-sites} \\
+	\hline
+	\text{$| \text{dimer} \rangle$} & 4 & 4 & 5 \\
+	\hline
+	\end{tabular}
+	\caption{RDM ranks for 2, 3, and 4 adjacent sites in the dimer scar state for $L=18$.}
+	\label{tab:ranks}
+	\end{table}
+
+\end{itemize}
+\end{itemize}
+
+\vspace{0.3cm}
+
+\section*{2. Domain-Wall Conserving Spin-1/2 Model}
+\begin{itemize}
+    \item \textbf{Model:} Spin-1/2 model with domain-wall conserving dynamics.
+	
+
+    \item \textbf{Reference:} \href{https://journals.aps.org/prb/pdf/10.1103/PhysRevB.101.024306}{Phys. Rev. B 101, 024306 (2020)}.
+    \item \textbf{Analysis:}
+    \begin{itemize}
+        \item Restricted study to analytically known scarred eigenstates.\\ There are two towers of scars, both of length $L/2 - 1$.\\
+    The first tower is described by:
+	    \begin{equation}
+	|S_n\rangle = \frac{1}{n! \sqrt{\mathcal{N}(L, n)}} \left(Q^\dagger\right)^n |\Omega\rangle, \quad n = 1,\hdots,L/2 - 1
+	\end{equation}
+	
+	where $|\Omega\rangle = |0 \cdots 0\rangle$ and, for PBC, $\mathcal{N}(L, n) = \frac{L}{n} \binom{L - n - 1}{n - 1}$ (\textcolor{red}{not defined for $n=0$, even though it describes the first scar of tower, i.e. state $|\Omega\rangle $}). $Q^\dagger$ is the ladder operator, defined as:
+	
+	\begin{equation}
+	Q^\dagger = \sum_{i = 1}^{L} (-1)^i P^0_{i-1} \, \sigma^+_i \, P^0_{i+1}, 
+	\end{equation}
+	
+	where $\sigma_j^\pm = \frac{1}{2} (\sigma_j^x \pm i \sigma_j^y)$ and $P^0_i = \frac{1}{2} (1 - \sigma^z_i)$ is the local projector onto spin down.\\
+     The second tower, related to the first one, is described as 
+     \begin{equation}
+	|S'_n\rangle = G |S_n\rangle = \frac{1}{n! \sqrt{\mathcal{N}(L, n)}} \left(Q'^\dagger\right)^n |\Omega'\rangle, \quad n = 1,\hdots,L/2 - 1
+	\end{equation}
+	
+	\noindent where $G = \prod_{i=1}^L \sigma_i^x$ is a $\mathbb{Z}_2$ transformation that flips all spins, 
+	$|\Omega'\rangle = |1 \cdots 1\rangle$, and
+	
+	\begin{equation}
+	Q'^\dagger = G Q^\dagger G = \sum_{i = 1}^{L} (-1)^i P^1_{i-1} \, \sigma^-_i \, P^1_{i+1},
+	\end{equation}
+	
+	\noindent with $P^1_i = \frac{1}{2}(1 + \sigma^z_i)$ the local projector onto spin up.
+        \item Computed entanglement entropy and verified its consistency with the original publication, where only $|S_4\rangle$ for L=18 sites was considered (with OBC!)
+        
+         \begin{equation}
+        S^{\,|S_4\rangle}_A \approx 1.22 \approx \frac{1}{2} \ln \left(\frac{18 \pi}{8}\right) + \frac{1}{4}
+        \end{equation}
+        
+        \item Ranks of adjacent 2-site, 3-site, and 4-site (adjacent) RDMs assessed, for both towers
+        
+        \begin{table}[h]
+	\centering
+	\begin{tabular}{|c|ccc|}
+	\hline
+	\textbf{$|S_n\rangle$} & \multicolumn{3}{c|}{\textbf{RDM Rank}} \\
+	\cline{2-4}
+	& \textbf{2-sites} & \textbf{3-sites} & \textbf{4-sites} \\
+	\hline
+	 n = 1 & 2 & 2 & 2 \\
+	 n = 2 & 3 & 5 & 5 \\
+	 n = 3 & 3 & 5 & 7 \\
+	 n = 4 & 3 & 5 & 7 \\  
+	 n = 5 & 3 & 5 & 7 \\
+	 n = 6 & 3 & 5 & 7 \\
+	 n = 7 & 3 & 5 & 7 \\
+	 n = 8 & 3 & 5 & 6 \\
+	\hline
+	\end{tabular}
+	\caption{RDM ranks for 2, 3, and 4 adjacent sites in the $|S_n\rangle$ scar tower for $L=18$.}
+	\label{tab:ranks1}
+	\end{table}
+
+	 \begin{table}[h]
+	\centering
+	\begin{tabular}{|c|ccc|}
+	\hline
+	\textbf{$|S'_n\rangle$} & \multicolumn{3}{c|}{\textbf{RDM Rank}} \\
+	\cline{2-4}
+	& \textbf{2-sites} & \textbf{3-sites} & \textbf{4-sites} \\
+	\hline
+	 n = 1 & 2 & 2 & 2 \\
+	 n = 2 & 3 & 5 & 5 \\
+	 n = 3 & 3 & 5 & 7 \\
+	 n = 4 & 3 & 5 & 7 \\  
+	 n = 5 & 3 & 5 & 7 \\
+	 n = 6 & 3 & 5 & 7 \\
+	 n = 7 & 3 & 5 & 5 \\
+	 n = 8 & 3 & 5 & 6 \\
+	\hline
+	\end{tabular}
+	\caption{RDM ranks for 2, 3, and 4 adjacent sites in the $|S'_n\rangle$ scar tower for $L=18$.}
+	\label{tab:ranks2}
+	\end{table}
+
+\end{itemize}
+\end{itemize}
+
+
+\vspace{0.3cm}
+
+\section*{3. Spin-1 XY Magnet Tower of Scars}
+\begin{itemize}
+    \item \textbf{Model:} Spin-1 XY model exhibiting a tower of scarred eigenstates.
+	
+    \item \textbf{Reference:} \href{https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.123.147201}{Phys. Rev. Lett. 123, 147201 (2019)}.
+    \item \textbf{Analysis:}
+    \begin{itemize}
+        \item Focused on exact scarred states with known analytic forms.\\ There are two towers of scars, both of length $L$.\\
+    The first tower is described by:
+	    \begin{equation}
+	|S_n\rangle = \mathcal{N}(L, n) \left(J^\dagger\right)^n |\Omega\rangle, \quad n = 0,\hdots,L
+	\end{equation}
+	
+	where $|\Omega\rangle = \bigotimes_i \left| m_i = -1 \right\rangle$ and $\mathcal{N}(L, n) = \sqrt{(L-n)!/n!L!}\,$. $J^\dagger$ is the ladder operator, defined as:
+	
+	\begin{equation}
+	J^\dagger = \frac{1}{2}\sum_{i=1}^{L} (-1)^i \left(S^+_i\right)^2, 
+	\end{equation}
+	
+	where $S_i^\pm = S_i^x \pm i S_i^y$.\\
+     The second tower is given by 
+     \begin{equation}
+	|S'_n\rangle \propto \sum_{i_1 \neq \hdots \neq i_n} (-1)^{i_1 + \hdots + i_n} \left(S^+_{i_1}S^+_{i_1+1}\right)\hdots\left(S^+_{i_n}S^+_{i_n+1}\right)  |\Omega\rangle, \quad n = 0,\hdots,L
+	\end{equation}
+        \item Entanglement entropy computed and compared with theoretical values.
+        Only $|S_5\rangle$ for L=10 sites was considered (with OBC!)
+        
+         \begin{equation}
+        S^{\,|S_5\rangle}_A \approx 1.23 \approx \frac{1}{2} \ln \left(\frac{e \pi 10}{8}\right)
+        \end{equation}
+        
+        \item Evaluated ranks of 2- to 4-site adjacent RDMs.
+         \begin{table}[h]
+	\centering
+	\begin{tabular}{|c|ccc|}
+	\hline
+	\textbf{$|S_n\rangle$} & \multicolumn{3}{c|}{\textbf{RDM Rank}} \\
+	\cline{2-4}
+	& \textbf{2-sites} & \textbf{3-sites} & \textbf{4-sites} \\
+	\hline
+	 n = 0 & 1 & 1 & 1 \\
+	 n = 1 & 2 & 2 & 2 \\
+	 n = 2 & 3 & 3 & 3 \\
+	 n = 3 & 3 & 4 & 4 \\
+	 n = 4 & 3 & 4 & 5 \\  
+	 n = 5 & 3 & 4 & 5 \\
+	 n = 6 & 3 & 4 & 5 \\
+	 n = 7 & 3 & 4 & 4 \\
+	 n = 8 & 3 & 3 & 3 \\
+	 n = 9 & 2 & 2 & 2 \\
+	 n = 10 & 3 & 5 & 6 \\
+	\hline
+	\end{tabular}
+	\caption{RDM ranks for 2, 3, and 4 adjacent sites in the $|S_n\rangle$ scar tower for $L=10$.}
+	\label{tab:ranks21}
+	\end{table}
+
+	 \begin{table}[ht]
+	\centering
+	\begin{tabular}{|c|ccc|}
+	\hline
+	\textbf{$|S'_n\rangle$} & \multicolumn{3}{c|}{\textbf{RDM Rank}} \\
+	\cline{2-4}
+	& \textbf{2-sites} & \textbf{3-sites} & \textbf{4-sites} \\
+	\hline
+          n = 0 & 1 & 1 & 1 \\
+	 n = 1 & 4 & 4 & 4 \\
+	 n = 2 & 6 & 8 & 8 \\
+	 n = 3 & 7 & 11 & 12 \\
+	 n = 4 & 7 & 12 & 15 \\  
+	 n = 5 & 7 & 12 & 16 \\
+	 n = 6 & 7 & 12 & 15 \\
+	 n = 7 & 7 & 11 & 12 \\
+	 n = 8 & 6 & 8 & 8 \\
+	 n = 9 & 4 & 4 & 4 \\
+	 n = 10 & 1 & 1 & 1 \\
+	\hline
+	\end{tabular}
+	\caption{RDM ranks for 2, 3, and 4 adjacent sites in the $|S'_n\rangle$ scar tower for $L=10$.}
+	\label{tab:ranks22}
+	\end{table}
+
+    \end{itemize}
+\end{itemize}
+
+
+\vspace{0.5cm}
+\pagebreak
+\section*{Conclusion}
+
+Across all models, the focus was placed exclusively on scarred states with known exact analytic expressions. The investigations confirm key entanglement features and low-rank structure of adjacent reduced density matrices, serving as diagnostics of scarred nonthermal behavior without requiring access to the full spectrum.
+
+\end{document}
