@@ -21,6 +21,7 @@ od;
 stream := OutputTextFile("ih_permutations.txt", false);
 for g in elements do
   perm_list := List([1..12], i -> i^g);
+  perm_list := List(perm_list, x -> x - 1);           # convert to 0-based for Python
   AppendTo(stream, perm_list, "\n");
 od;
 CloseStream(stream);

@@ -1,6 +1,8 @@
 
 \documentclass[11pt]{article}
 \usepackage{amsmath,amsfonts,graphicx}
+\usepackage{subcaption}  % For subfigures
+\usepackage{float}       % For the [H] placement specifier
 \usepackage{authblk}
 \usepackage{geometry}
 \geometry{margin=1in}
@@ -23,7 +25,45 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 
 \section*{1. Dimer State Scar}
 \begin{itemize}
-    \item \textbf{Model:} Spin-1/2 MG-like model featuring an exact dimer scar state.\\ There is just one scarred state, which is the ground state of the Majumdar-Ghosh Hamiltonian, and it's given by the singlet state:
+    \item \textbf{Model:} Spin-1/2 MG-like model featuring an exact dimer scar state.\\
+    This is a one-dimensional spin-$\tfrac{1}{2}$ model with two- and three-body interactions. The Hamiltonian of the model depends on a parameter $t \in \mathbb{R}$ and is given by
+    
+    \begin{equation}
+    H(t) = H_{\mathrm{MG}} + t\, C_{\mathrm{SC}},
+    \end{equation}
+    where
+	\begin{equation}
+	H_{\mathrm{MG}} = \sum_{j=1}^{L} \left[ \left( \mathbf{S}_j + \mathbf{S}_{j+1} + \mathbf{S}_{j+2} \right)^2 - \frac{3}{4} \right],
+	\label{eq:HMG}
+	\end{equation}
+	\begin{equation}
+	C_{\mathrm{SC}} = \sum_{j=1}^{L} \mathbf{S}_j \cdot \left( \mathbf{S}_{j+1} \times \mathbf{S}_{j+2} \right),
+	\label{eq:CSC}
+	\end{equation}
+	and $\mathbf{S}_j = \left(S^x_j, S^y_j, S^z_j\right)$ is the spin-$\tfrac{1}{2}$ operator acting on site $j$:  
+	\begin{align}
+	S^x_j &= \frac{1}{2}
+	\begin{pmatrix}
+	0 & 1 \\
+	1 & 0
+	\end{pmatrix}_j, \\
+	S^y_j &= \frac{1}{2}
+	\begin{pmatrix}
+	0 & -i \\
+	i & \phantom{-}0
+	\end{pmatrix}_j, \\
+	S^z_j &= \frac{1}{2}
+	\begin{pmatrix}
+	1 & 0 \\
+	0 & -1
+	\end{pmatrix}_j.
+	\end{align}
+	
+	The first term $H_{\text{MG}}$ is the Hamiltonian of the Majumdar-Ghosh model (which has the dimer states as ground states), while the second term $C_{\text{SC}}$ is the scalar spin chirality.\\ 
+	
+
+    
+     There is just one scarred state, which is the ground state of the Majumdar-Ghosh Hamiltonian, and it's given by the singlet state:
     
     \begin{equation}
     | \text{dimer} \rangle = \left( 2 + \left( -\frac{1}{2} \right)^{\frac{L}{2} - 2} \right)^{-\frac{1}{2}} \left( |\Psi_1\rangle + |\Psi_2\rangle \right).
@@ -53,6 +93,8 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
         S_A \approx 1.386 \approx 2 \ln 2
         \end{equation}
         
+        Because $S_A$ evaluates to $\approx 2 \ln 2$ for increasing $L$, the dimer scar satisfy the \textit{Area Law} for entanglement: in one dimension, the entanglement entropy remains constant with increasing system size.
+        
         \item Computed the ranks of all 2-site, 3-site, and 4-site adjacent reduced density matrices:
         
 	\begin{table}[h]
@@ -77,27 +119,36 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 
 \section*{2. Domain-Wall Conserving Spin-1/2 Model}
 \begin{itemize}
-    \item \textbf{Model:} Spin-1/2 model with domain-wall conserving dynamics.
+    \item \textbf{Model:} Spin-1/2 model with domain-wall conserving dynamics.\\
+    
+     For a system $L$ spins-$\tfrac{1}{2}$ on a chain, the Hamiltonian reads
+	\begin{equation}
+	H = \sum_{i=1}^{L} \left[ \lambda \left( \sigma^x_i - \sigma^z_{i-1} \sigma^x_i \sigma^z_{i+1} \right) + \mu\, \sigma^z_i + J\, \sigma^z_i \sigma^z_{i+1} \right]
+	\equiv H_\lambda + H_z + H_{zz},
+	\label{eq:H}
+	\end{equation}
+    where $\sigma^{x,y,z}_i$ are Pauli matrices defined on site $i$.
+
 	
 
     \item \textbf{Reference:} \href{https://journals.aps.org/prb/pdf/10.1103/PhysRevB.101.024306}{Phys. Rev. B 101, 024306 (2020)}.
     \item \textbf{Analysis:}
     \begin{itemize}
         \item Restricted study to analytically known scarred eigenstates.\\ There are two towers of scars, both of length $L/2 - 1$.\\
-    The first tower is described by:
-	    \begin{equation}
+         The first tower is described by:
+	 \begin{equation}
 	|S_n\rangle = \frac{1}{n! \sqrt{\mathcal{N}(L, n)}} \left(Q^\dagger\right)^n |\Omega\rangle, \quad n = 1,\hdots,L/2 - 1
 	\end{equation}
 	
-	where $|\Omega\rangle = |0 \cdots 0\rangle$ and, for PBC, $\mathcal{N}(L, n) = \frac{L}{n} \binom{L - n - 1}{n - 1}$ (\textcolor{red}{not defined for $n=0$, even though it describes the first scar of tower, i.e. state $|\Omega\rangle $}). $Q^\dagger$ is the ladder operator, defined as:
+	where $|\Omega\rangle = |0 \cdots 0\rangle$ and, for PBC, $\mathcal{N}(L, n) = \frac{L}{n} \binom{L - n - 1}{n - 1}$ (\textcolor{red}{not defined for $n=0$, even though it describes the first scar of the tower, i.e. state $|\Omega\rangle $}). $Q^\dagger$ is 	the ladder operator, defined as:
 	
 	\begin{equation}
 	Q^\dagger = \sum_{i = 1}^{L} (-1)^i P^0_{i-1} \, \sigma^+_i \, P^0_{i+1}, 
 	\end{equation}
 	
 	where $\sigma_j^\pm = \frac{1}{2} (\sigma_j^x \pm i \sigma_j^y)$ and $P^0_i = \frac{1}{2} (1 - \sigma^z_i)$ is the local projector onto spin down.\\
-     The second tower, related to the first one, is described as 
-     \begin{equation}
+        The second tower, related to the first one, is described as 
+        \begin{equation}
 	|S'_n\rangle = G |S_n\rangle = \frac{1}{n! \sqrt{\mathcal{N}(L, n)}} \left(Q'^\dagger\right)^n |\Omega'\rangle, \quad n = 1,\hdots,L/2 - 1
 	\end{equation}
 	
@@ -111,13 +162,15 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 	\noindent with $P^1_i = \frac{1}{2}(1 + \sigma^z_i)$ the local projector onto spin up.
         \item Computed entanglement entropy and verified its consistency with the original publication, where only $|S_4\rangle$ for L=18 sites was considered (with OBC!)
         
-         \begin{equation}
+        \begin{equation}
         S^{\,|S_4\rangle}_A \approx 1.22 \approx \frac{1}{2} \ln \left(\frac{18 \pi}{8}\right) + \frac{1}{4}
         \end{equation}
         
+        For generic $L$, $S^{\,|S_4\rangle}_A$ scales logarithmically with system size, i.e. $S^{\,|S_4\rangle}_A = \frac{1}{2} \ln \left(\frac{\pi L}{8}\right) + \frac{1}{4}$. Because $S^{\,|S_4\rangle}_A$ is at the top of the tower - it has maximum possible 				value of entanglement entropy among the scars - we can assume that all scars have sub-volume scaling with system size, i.e. constant or at most logarithmic.
+        
         \item Ranks of adjacent 2-site, 3-site, and 4-site (adjacent) RDMs assessed, for both towers
         
-        \begin{table}[h]
+        \begin{table}[H]
 	\centering
 	\begin{tabular}{|c|ccc|}
 	\hline
@@ -139,7 +192,7 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 	\label{tab:ranks1}
 	\end{table}
 
-	 \begin{table}[h]
+	 \begin{table}[H]
 	\centering
 	\begin{tabular}{|c|ccc|}
 	\hline
@@ -160,6 +213,59 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 	\caption{RDM ranks for 2, 3, and 4 adjacent sites in the $|S'_n\rangle$ scar tower for $L=18$.}
 	\label{tab:ranks2}
 	\end{table}
+	
+	The chain length $L$  dependence of the 2,3,4-sites RDM of the scar at the top of both tower was investigated too.
+	
+	\begin{figure}[H]
+    \centering
+    % First image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{dw_scar_2.png}
+        \caption{}
+        \label{fig:image1}
+    \end{subfigure}
+    % Second image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{dw_scar_3.png}
+        \caption{}
+        \label{fig:image2}
+    \end{subfigure}    % Third image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{dw_scar_4.png}
+        \caption{}
+        \label{fig:image3}
+    \end{subfigure}
+
+    % Common caption
+    \caption{Innermost 2,3,4-sites RDM  rank (Fig. (a), (b), (c) respectively) of the top scar of the tower $|S_n\rangle$ as a function of increasing $L$.}
+    \label{fig:dw_scars_tower}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    % First image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{dw_scar_2p.png}
+        \caption{}
+        \label{fig:image1p}
+    \end{subfigure}
+    % Second image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{dw_scar_3p.png}
+        \caption{}
+        \label{fig:image2p}
+    \end{subfigure}    % Third image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{dw_scar_4p.png}
+        \caption{}
+        \label{fig:image3p}
+    \end{subfigure}
+
+    % Common caption
+    \caption{Innermost 2,3,4-sites RDM  rank (Fig. (a), (b), (c) respectively) of the top scar of the tower $|S'_n\rangle$ as a function of increasing $L$.}
+    \label{fig:dw_scars_towerp}
+\end{figure}
+
 
 \end{itemize}
 \end{itemize}
@@ -169,7 +275,15 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 
 \section*{3. Spin-1 XY Magnet Tower of Scars}
 \begin{itemize}
-    \item \textbf{Model:} Spin-1 XY model exhibiting a tower of scarred eigenstates.
+    \item \textbf{Model:} Spin-1 XY model exhibiting a tower of scarred eigenstates.\\
+    The Hamiltonian of the spin-1 XY model is:
+	\begin{equation}
+	H = J \sum_{\langle i,j \rangle} \left( S^x_i S^x_j + S^y_i S^y_j \right) 
+	+ h \sum_i S^z_i + D \sum_i \left(S^z_i\right)^2,
+	\end{equation}
+	
+	where $S^\alpha_i$ ($\alpha = x, y, z$) are spin-1 operators defined on the sites of a 1-dimensional chain of length L, and $\langle i,j \rangle$ denotes nearest neighbors.  
+
 	
     \item \textbf{Reference:} \href{https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.123.147201}{Phys. Rev. Lett. 123, 147201 (2019)}.
     \item \textbf{Analysis:}
@@ -198,14 +312,16 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
         S^{\,|S_5\rangle}_A \approx 1.23 \approx \frac{1}{2} \ln \left(\frac{e \pi 10}{8}\right)
         \end{equation}
         
+        For generic $L$, $S^{\,|S_5\rangle}_A$ scales logarithmically with system size, i.e. $S^{\,|S_5\rangle}_A = \frac{1}{2} \ln \left(\frac{e \pi L}{8}\right)$. Because $S^{\,|S_5\rangle}_A$ is at the top of the tower - it has maximum possible 						value of entanglement entropy among the scars - we can assume that all scars have sub-volume scaling with system size, i.e. constant or at most logarithmic.
+        
         \item Evaluated ranks of 2- to 4-site adjacent RDMs.
-         \begin{table}[h]
+         \begin{table}[H]
 	\centering
 	\begin{tabular}{|c|ccc|}
 	\hline
 	\textbf{$|S_n\rangle$} & \multicolumn{3}{c|}{\textbf{RDM Rank}} \\
 	\cline{2-4}
-	& \textbf{2-sites} & \textbf{3-sites} & \textbf{4-sites} \\
+	& \textbf{2-sites} & \textbf{3-sites} & \textbf{4-sites}\\
 	\hline
 	 n = 0 & 1 & 1 & 1 \\
 	 n = 1 & 2 & 2 & 2 \\
@@ -224,7 +340,7 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 	\label{tab:ranks21}
 	\end{table}
 
-	 \begin{table}[ht]
+	 \begin{table}[H]
 	\centering
 	\begin{tabular}{|c|ccc|}
 	\hline
@@ -245,9 +361,59 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 	 n = 10 & 1 & 1 & 1 \\
 	\hline
 	\end{tabular}
-	\caption{RDM ranks for 2, 3, and 4 adjacent sites in the $|S'_n\rangle$ scar tower for $L=10$.}
+	\caption{RDM ranks for 2, 3, and 4 adjacent sites in the $|S'_n\rangle$ scar tower for $L=10$.\\ \textbf{The scars $|S'_n\rangle$ are less rank-deficient than the $|S_n\rangle$ scars}.}
 	\label{tab:ranks22}
 	\end{table}
+	
+	\begin{figure}[H]
+    \centering
+    % First image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{xy_scar_2.png}
+        \caption{}
+        \label{fig:image1xy}
+    \end{subfigure}
+    % Second image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{xy_scar_3.png}
+        \caption{}
+        \label{fig:image2xy}
+    \end{subfigure}    % Third image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{xy_scar_4.png}
+        \caption{}
+        \label{fig:image3xy}
+    \end{subfigure}
+
+    % Common caption
+    \caption{Innermost 2,3,4-sites RDM  rank (Fig. (a), (b), (c) respectively) of the top scar of the tower $|S_n\rangle$ as a function of increasing $L$.}
+    \label{fig:xy_scars_tower}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    % First image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{xy_scar_2p.png}
+        \caption{}
+        \label{fig:image1pxy}
+    \end{subfigure}
+    % Second image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{xy_scar_3p.png}
+        \caption{}
+        \label{fig:image2pxy}
+    \end{subfigure}    % Third image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{xy_scar_4p.png}
+        \caption{}
+        \label{fig:image3pxy}
+    \end{subfigure}
+
+    % Common caption
+    \caption{Innermost 2,3,4-sites RDM  rank (Fig. (a), (b), (c) respectively) of the top scar of the tower $|S'_n\rangle$ as a function of increasing $L$.}
+    \label{fig:xy_scars_towerp}
+\end{figure}
 
     \end{itemize}
 \end{itemize}
