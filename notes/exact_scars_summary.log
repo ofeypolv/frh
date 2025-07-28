@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.8)  11 JUL 2025 13:37
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.8)  26 JUL 2025 23:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -354,7 +354,11 @@ File: l3backend-xetex.def 2023-04-19 L3 backend support: XeTeX
 \g__pdf_backend_annotation_int=\count294
 \g__pdf_backend_link_int=\count295
 )
-(./exact_scars_summary.aux)
+(./exact_scars_summary.aux
+
+LaTeX Warning: Label `tab:ranks21' multiply defined.
+
+)
 \openout1 = `exact_scars_summary.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -368,8 +372,7 @@ LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
 6.
-
-(c:/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
+ (c:/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 16.
@@ -446,7 +449,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--63
 [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
@@ -477,25 +480,32 @@ File: xy_scar_3p.png Graphic file (type bmp)
 <xy_scar_3p.png>
 File: xy_scar_4p.png Graphic file (type bmp)
 <xy_scar_4p.png>
- [8] [9] [10] (./exact_scars_summary.aux)
+ [8] [9]
+File: hb_scar_2.png Graphic file (type bmp)
+<hb_scar_2.png>
+File: hb_scar_3.png Graphic file (type bmp)
+<hb_scar_3.png>
+File: hb_scar_4.png Graphic file (type bmp)
+<hb_scar_4.png>
+ [10] [11] [12] (./exact_scars_summary.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `exact_scars_summary.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 11604 strings out of 475591
- 183641 string characters out of 5777375
- 1929432 words of memory out of 5000000
- 32788 multiletter control sequences out of 15000+600000
- 564086 words of font info for 68 fonts, out of 8000000 for 9000
+ 11657 strings out of 475591
+ 184478 string characters out of 5777375
+ 1931432 words of memory out of 5000000
+ 32834 multiletter control sequences out of 15000+600000
+ 567610 words of font info for 82 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  72i,17n,79p,544b,682s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on exact_scars_summary.pdf (10 pages).
+Output written on exact_scars_summary.pdf (12 pages).

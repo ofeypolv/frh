@@ -82,7 +82,8 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
     | \text{sing} \rangle_{i,j} = \frac{1}{\sqrt{2}} \left( | \uparrow \downarrow \rangle_{i,j} - | \downarrow \uparrow \rangle_{i,j} \right).
     \end{equation}
     
-    $| \text{sing} \rangle_{i,j}$ the normalized spin singlet between sites $i,j$.
+    $| \text{sing} \rangle_{i,j}$ the normalized spin singlet between sites $i,j$.\\
+    The scarred state is annihilated by $C_{\text{SC}}$ (as well as by $H_{\text{MG}}$), and thus it is a zero-energy eigenstate of $H$: $H(t)| \text{dimer} \rangle = 0$.
        
     \item \textbf{Reference:} \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.155102}{Phys. Rev. B 108, 155102 (2023)}.
     \item \textbf{Analysis:}
@@ -131,13 +132,13 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 
 	
 
-    \item \textbf{Reference:} \href{https://journals.aps.org/prb/pdf/10.1103/PhysRevB.101.024306}{Phys. Rev. B 101, 024306 (2020)}.
+    \item \textbf{Reference:} \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.101.024306}{Phys. Rev. B 101, 024306 (2020)}.
     \item \textbf{Analysis:}
     \begin{itemize}
-        \item Restricted study to analytically known scarred eigenstates.\\ There are two towers of scars, both of length $L/2 - 1$.\\
+        \item Restricted study to analytically known scarred eigenstates.\\ There are two towers of scars, both of length $L/2$ for OBC and $L/2 + 1$ for PBC.\\
          The first tower is described by:
 	 \begin{equation}
-	|S_n\rangle = \frac{1}{n! \sqrt{\mathcal{N}(L, n)}} \left(Q^\dagger\right)^n |\Omega\rangle, \quad n = 1,\hdots,L/2 - 1
+	|S_n\rangle = \frac{1}{n! \sqrt{\mathcal{N}(L, n)}} \left(Q^\dagger\right)^n |\Omega\rangle, \quad n = 0,\hdots,L/2 - 1 \, (L/2)
 	\end{equation}
 	
 	where $|\Omega\rangle = |0 \cdots 0\rangle$ and, for PBC, $\mathcal{N}(L, n) = \frac{L}{n} \binom{L - n - 1}{n - 1}$ (\textcolor{red}{not defined for $n=0$, even though it describes the first scar of the tower, i.e. state $|\Omega\rangle $}). $Q^\dagger$ is 	the ladder operator, defined as:
@@ -149,7 +150,7 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 	where $\sigma_j^\pm = \frac{1}{2} (\sigma_j^x \pm i \sigma_j^y)$ and $P^0_i = \frac{1}{2} (1 - \sigma^z_i)$ is the local projector onto spin down.\\
         The second tower, related to the first one, is described as 
         \begin{equation}
-	|S'_n\rangle = G |S_n\rangle = \frac{1}{n! \sqrt{\mathcal{N}(L, n)}} \left(Q'^\dagger\right)^n |\Omega'\rangle, \quad n = 1,\hdots,L/2 - 1
+	|S'_n\rangle = G |S_n\rangle = \frac{1}{n! \sqrt{\mathcal{N}(L, n)}} \left(Q'^\dagger\right)^n |\Omega'\rangle, \quad n = 0,\hdots,L/2 - 1 \, (L/2)
 	\end{equation}
 	
 	\noindent where $G = \prod_{i=1}^L \sigma_i^x$ is a $\mathbb{Z}_2$ transformation that flips all spins, 
@@ -159,7 +160,8 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 	Q'^\dagger = G Q^\dagger G = \sum_{i = 1}^{L} (-1)^i P^1_{i-1} \, \sigma^-_i \, P^1_{i+1},
 	\end{equation}
 	
-	\noindent with $P^1_i = \frac{1}{2}(1 + \sigma^z_i)$ the local projector onto spin up.
+	\noindent with $P^1_i = \frac{1}{2}(1 + \sigma^z_i)$ the local projector onto spin up.\\
+	Both scar towers are annihilated by $H_{\lambda}$, which breaks U(1): $H_{\lambda} |S_n\rangle = H_{\lambda} |S'_n\rangle = 0$.
         \item Computed entanglement entropy and verified its consistency with the original publication, where only $|S_4\rangle$ for L=18 sites was considered (with OBC!)
         
         \begin{equation}
@@ -277,7 +279,7 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 \begin{itemize}
     \item \textbf{Model:} Spin-1 XY model exhibiting a tower of scarred eigenstates.\\
     The Hamiltonian of the spin-1 XY model is:
-	\begin{equation}
+	\begin{equation}\label{eqq}
 	H = J \sum_{\langle i,j \rangle} \left( S^x_i S^x_j + S^y_i S^y_j \right) 
 	+ h \sum_i S^z_i + D \sum_i \left(S^z_i\right)^2,
 	\end{equation}
@@ -285,10 +287,10 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 	where $S^\alpha_i$ ($\alpha = x, y, z$) are spin-1 operators defined on the sites of a 1-dimensional chain of length L, and $\langle i,j \rangle$ denotes nearest neighbors.  
 
 	
-    \item \textbf{Reference:} \href{https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.123.147201}{Phys. Rev. Lett. 123, 147201 (2019)}.
+    \item \textbf{Reference:} \href{https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.123.147201}{Phys. Rev. Lett. 123, 147201 (2019)}.
     \item \textbf{Analysis:}
     \begin{itemize}
-        \item Focused on exact scarred states with known analytic forms.\\ There are two towers of scars, both of length $L$.\\
+        \item Focused on exact scarred states with known analytic forms.\\ There are two towers of scars, both of length $L+1$.\\
     The first tower is described by:
 	    \begin{equation}
 	|S_n\rangle = \mathcal{N}(L, n) \left(J^\dagger\right)^n |\Omega\rangle, \quad n = 0,\hdots,L
@@ -305,6 +307,7 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
      \begin{equation}
 	|S'_n\rangle \propto \sum_{i_1 \neq \hdots \neq i_n} (-1)^{i_1 + \hdots + i_n} \left(S^+_{i_1}S^+_{i_1+1}\right)\hdots\left(S^+_{i_n}S^+_{i_n+1}\right)  |\Omega\rangle, \quad n = 0,\hdots,L
 	\end{equation}
+	Both scar towers are annihilated by the first term of \eqref{eqq}, which breaks what is known as Q-SU(2) symmetry (a special SU(2) symmetry that only scars have - see the reference \href{https://arxiv.org/pdf/2007.16207}{https://arxiv.org/pdf/2007.16207} for explanation): $J \sum_{\langle i,j \rangle} \left( S^x_i S^x_j + S^y_i S^y_j \right)  |S_n\rangle = J \sum_{\langle i,j \rangle} \left( S^x_i S^x_j + S^y_i S^y_j \right)  |S'_n\rangle = 0$.
         \item Entanglement entropy computed and compared with theoretical values.
         Only $|S_5\rangle$ for L=10 sites was considered (with OBC!)
         
@@ -333,7 +336,7 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 	 n = 7 & 3 & 4 & 4 \\
 	 n = 8 & 3 & 3 & 3 \\
 	 n = 9 & 2 & 2 & 2 \\
-	 n = 10 & 3 & 5 & 6 \\
+	 n = 10 & 1 & 1 & 1 \\
 	\hline
 	\end{tabular}
 	\caption{RDM ranks for 2, 3, and 4 adjacent sites in the $|S_n\rangle$ scar tower for $L=10$.}
@@ -416,6 +419,96 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 \end{figure}
 
     \end{itemize}
+    \end{itemize}
+       
+\vspace{0.3cm}
+
+\section*{4. Hubbard/Hirsch $\eta$-pairing Tower of Scars}
+\begin{itemize}
+  \item \textbf{Model:} 1D fermionic lattice model with on-site interactions and bond-charge coupling, known as the Hirsch model. The Hamiltonian is written as:
+    \begin{equation}
+    H = H_{\text{Hubbard}} + H_{\text{Hirsch}},
+    \end{equation}
+    where
+    \begin{align}
+    H_{\text{Hubbard}} &= - t \sum_{\langle i, j \rangle, \sigma} \left( c^\dagger_{i\sigma} c_{j\sigma} + \text{h.c.} \right) + U \sum_i n_{i\uparrow} n_{i\downarrow} - \mu \sum_{i, \sigma} n_{i\sigma}, \\
+    H_{\text{Hirsch}} &= X \sum_{\langle i, j \rangle, \sigma} \left( n_{i\bar{\sigma}} + n_{j\bar{\sigma}} \right) \left( c^\dagger_{i\sigma} c_{j\sigma} + \text{h.c.} \right),
+    \end{align}
+    and \( X \in \mathbb{R} \) is the Hirsch parameter that controls the strength of the bond-charge interaction. Here, \( c^\dagger_{i\sigma} \) creates a fermion of spin \( \sigma \in \{\uparrow, \downarrow\} \) at site \( i \), and \( n_{i\sigma} = c^\dagger_{i\sigma} c_{i\sigma} \). The sum \( \langle i, j \rangle \) runs over nearest neighbors, and \( \bar{\sigma} \) denotes the opposite spin of \( \sigma \).
+
+    \item \textbf{Reference:} \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.102.075132}{Phys. Rev. B 102, 075132 (2020)}.
+
+    \item \textbf{Scarred States:} There exists a \textit{single tower} of scarred eigenstates, of length $L+1$ ($L$ is the chain length), of the form:
+    \begin{equation}
+    |S_n\rangle = (\eta^\dag)^n |0\rangle, \quad n = 0,\hdots,L
+    \end{equation}
+    where \( \eta^\dag = \sum_i (-1)^i c^\dagger_{i\uparrow} c^\dagger_{i\downarrow} \) is the \(\eta\)-pairing operator and \( |0\rangle \) is the vacuum state. These states are exact eigenstates of \( H \) with energy \( E_n = n\,U \), and they form a highest-weight tower under the SU(2) \(\eta\)-pairing symmetry. The scars are annihilated by the SU(2) \(\eta\)-pairing symmetry-breaking term $H_{\text{Hirsch}}$: $H_{\text{Hirsch}}|S_n\rangle  = 0$.
+
+    \item \textbf{Properties:}
+    \begin{itemize}
+        \item All scarred states have total momentum \( \pi \) and fixed number of doublons.
+        \item The bipartite entanglement entropy scales logarithmically with subsystem size:
+        \begin{equation}
+        S^{|S_n\rangle }_A = \frac{1}{2} \left\{ 1 + \ln \left[ \frac{2 \pi n}{L} \right( 1 - \frac{n}{L}\left) \frac{L}{2}\right] \right\},
+        \end{equation}
+        consistent with sub-volume law behavior, typical of many-body scars. The bipartite entanglement entropy was computed and its consistency with the original publication was verified, where only $|S_4\rangle$ for L=12 sites was considered: 
+        $S^{|S_4\rangle }_A = 1/2 \left[1 + \ln \left(8\pi/3\right) \right] \sim 1.26$.
+         
+        \item Evaluated ranks of 2- to 4-site adjacent RDMs.
+         \begin{table}[H]
+	\centering
+	\begin{tabular}{|c|ccc|}
+	\hline
+	\textbf{$|S_n\rangle$} & \multicolumn{3}{c|}{\textbf{RDM Rank}} \\
+	\cline{2-4}
+	& \textbf{2-sites} & \textbf{3-sites} & \textbf{4-sites}\\
+	\hline
+	 n = 0 & 1 & 1 & 1 \\
+	 n = 1 & 2 & 2 & 2 \\
+	 n = 2 & 3 & 3 & 3 \\
+	 n = 3 & 3 & 4 & 4 \\
+	 n = 4 & 3 & 4 & 5 \\  
+	 n = 5 & 3 & 4 & 5 \\
+	 n = 6 & 3 & 4 & 5 \\
+	 n = 7 & 3 & 4 & 5 \\
+	 n = 8 & 3 & 4 & 5 \\
+	 n = 9 & 3 & 4 & 4 \\
+	 n = 10 & 3 & 3 & 3 \\
+	 n = 11 & 2 & 2 & 2 \\
+	 n = 12 & 1 & 1 & 1 \\
+	\hline
+	\end{tabular}
+	\caption{RDM ranks for 2, 3, and 4 adjacent sites in the $|S_n\rangle$ scar tower for $L=12$.}
+	\label{tab:ranks21}
+	\end{table}
+    \end{itemize}
+    
+    \begin{figure}[H]
+    \centering
+    % First image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{hb_scar_2.png}
+        \caption{}
+        \label{fig:image1h}
+    \end{subfigure}
+    % Second image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{hb_scar_3.png}
+        \caption{}
+        \label{fig:image2hb}
+    \end{subfigure}    % Third image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{hb_scar_4.png}
+        \caption{}
+        \label{fig:image3hb}
+    \end{subfigure}
+
+    % Common caption
+    \caption{Innermost 2,3,4-sites RDM  rank (Fig. (a), (b), (c) respectively) of the top scar of the tower $|S_n\rangle$ as a function of increasing $L$.}
+    \label{fig:hb_scars_tower}
+\end{figure}
+
+
 \end{itemize}
 
 
