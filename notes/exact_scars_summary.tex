@@ -9,6 +9,7 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 
+
 \title{Summary of Recent Research on Exact Quantum Many-Body Scars}
 \author{Camilla Polvara}
 \date{\today}
@@ -88,7 +89,7 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
     \item \textbf{Reference:} \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.108.155102}{Phys. Rev. B 108, 155102 (2023)}.
     \item \textbf{Analysis:}
     \begin{itemize}
-        \item Verified the entanglement entropy against the analytic prediction from the paper.\\ For $L=14,16,18$:
+        \item Verified the bipartite entanglement entropy against the analytic prediction from the paper.\\ For $L=14,16,18$:
         
         \begin{equation}
         S_A \approx 1.386 \approx 2 \ln 2
@@ -162,7 +163,7 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 	
 	\noindent with $P^1_i = \frac{1}{2}(1 + \sigma^z_i)$ the local projector onto spin up.\\
 	Both scar towers are annihilated by $H_{\lambda}$, which breaks U(1): $H_{\lambda} |S_n\rangle = H_{\lambda} |S'_n\rangle = 0$.
-        \item Computed entanglement entropy and verified its consistency with the original publication, where only $|S_4\rangle$ for L=18 sites was considered (with OBC!)
+        \item Computed bipartite entanglement entropy and verified its consistency with the original publication, where only $|S_4\rangle$ for L=18 sites was considered (with OBC!)
         
         \begin{equation}
         S^{\,|S_4\rangle}_A \approx 1.22 \approx \frac{1}{2} \ln \left(\frac{18 \pi}{8}\right) + \frac{1}{4}
@@ -308,7 +309,7 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 	|S'_n\rangle \propto \sum_{i_1 \neq \hdots \neq i_n} (-1)^{i_1 + \hdots + i_n} \left(S^+_{i_1}S^+_{i_1+1}\right)\hdots\left(S^+_{i_n}S^+_{i_n+1}\right)  |\Omega\rangle, \quad n = 0,\hdots,L
 	\end{equation}
 	Both scar towers are annihilated by the first term of \eqref{eqq}, which breaks what is known as Q-SU(2) symmetry (a special SU(2) symmetry that only scars have - see the reference \href{https://arxiv.org/pdf/2007.16207}{https://arxiv.org/pdf/2007.16207} for explanation): $J \sum_{\langle i,j \rangle} \left( S^x_i S^x_j + S^y_i S^y_j \right)  |S_n\rangle = J \sum_{\langle i,j \rangle} \left( S^x_i S^x_j + S^y_i S^y_j \right)  |S'_n\rangle = 0$.
-        \item Entanglement entropy computed and compared with theoretical values.
+        \item Bipartite entanglement entropy computed and compared with theoretical values.
         Only $|S_5\rangle$ for L=10 sites was considered (with OBC!)
         
          \begin{equation}
@@ -438,28 +439,94 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 
     \item \textbf{Reference:} \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.102.075132}{Phys. Rev. B 102, 075132 (2020)}.
 
-    \item \textbf{Scarred States:} There exists a \textit{single tower} of scarred eigenstates, of length $L+1$ ($L$ is the chain length), of the form:
+    \item \textbf{Analysis:}\\
+    
+    \begin{itemize} 
+    
+    \item There exists \textit{three} towers of scarred states, all of length $L+1$ ($L$ is the chain length).\\
+    The first one is the known tower of $\eta$-pairing states, of the form:
     \begin{equation}
-    |S_n\rangle = (\eta^\dag)^n |0\rangle, \quad n = 0,\hdots,L
+    |\eta_n\rangle = (\eta^\dag)^n |0\rangle, \quad n = 0,\hdots,L
     \end{equation}
-    where \( \eta^\dag = \sum_i (-1)^i c^\dagger_{i\uparrow} c^\dagger_{i\downarrow} \) is the \(\eta\)-pairing operator and \( |0\rangle \) is the vacuum state. These states are exact eigenstates of \( H \) with energy \( E_n = n\,U \), and they form a highest-weight tower under the SU(2) \(\eta\)-pairing symmetry. The scars are annihilated by the SU(2) \(\eta\)-pairing symmetry-breaking term $H_{\text{Hirsch}}$: $H_{\text{Hirsch}}|S_n\rangle  = 0$.
+    
+    where
+    
+    \begin{equation}
+    \eta^\dag = \sum_i (-1)^i c^\dagger_{i\uparrow} c^\dagger_{i\downarrow}
+    \end{equation}
+    
+     is the \(\eta\)-pairing operator and \( |0\rangle \) is the vacuum state. These states are exact eigenstates of \( H \) with energy \( E_n = n\,U \), and they form a highest-weight tower under the SU(2) \(\eta\)-pairing symmetry. The scars are annihilated by  	     the SU(2) \(\eta\)-pairing symmetry-breaking term $H_{\text{Hirsch}}$: $H_{\text{Hirsch}}|S_n\rangle  = 0$.\\
+    \vspace{1mm}\\
+    The other two towers can be obtained by applying an appropriate ladder operator on the $\eta$-pairing states. We call these towers \(\tau\)-pairing states $|\tau_{m,n}\rangle$, and \(\varsigma\)-pairing states $|\varsigma_n\rangle$:
+    
+    \begin{align}
+    &|\tau_{m,n}\rangle = (\tau^\dag)^m |\eta_n\rangle = (\tau^\dag)^m (\eta^\dag)^n |0\rangle \quad m=0,\hdots,L \\
+    &|\varsigma_n\rangle = \varsigma^\dag |\eta_n\rangle = \varsigma^\dag (\eta^\dag)^n |0\rangle 
+    \end{align}
 
-    \item \textbf{Properties:}
-    \begin{itemize}
-        \item All scarred states have total momentum \( \pi \) and fixed number of doublons.
-        \item The bipartite entanglement entropy scales logarithmically with subsystem size:
-        \begin{equation}
-        S^{|S_n\rangle }_A = \frac{1}{2} \left\{ 1 + \ln \left[ \frac{2 \pi n}{L} \right( 1 - \frac{n}{L}\left) \frac{L}{2}\right] \right\},
+    where
+    
+    \begin{align}
+    &\tau^\dag = \sum_i (-1)^i c^\dagger_{i\uparrow} c^\dagger_{i+1\uparrow}\\
+    &\varsigma^\dag = \sum_i (-1)^i \left( c^\dagger_{i\uparrow} c^\dagger_{i+1\downarrow} - c^\dagger_{i\downarrow} c^\dagger_{i+1\uparrow} \right)
+    \end{align}
+    
+    $\tau^\dagger$ creates a nearest-neighbor triplet $\lvert\uparrow, \uparrow\rangle$ with momentum $\pi$, while $\varsigma^\dagger$ creates a nearest-neighbor singlet $\lvert\uparrow, \downarrow\rangle - \lvert\downarrow, \uparrow\rangle$ with momentum $\pi$. For PBC, we set $c^\dagger_{L+1\sigma} \equiv c^\dagger_{1\sigma}$. These states are again exact eigenstates of \( H \) with energy \( E_n = n\,U \). Additionally, $|\tau_{m,n}\rangle$ has total spin $S=m$.\\
+Note that both $|\tau_{m,n}\rangle$, $|\varsigma_n\rangle$, unlike the $\eta$-pairing states, are in general not normalized, and therefore need to be normalized before looking at properties such as entanglement entropy or RDM rank.\\
+Both towers \( |\tau_{m,n}\rangle \) and \( |\varsigma_n\rangle \) (as well as the $\eta$-pairing tower \( |\eta_n\rangle \)) are annihilated by the following three kinetic terms, which preserve spin and particle number while commuting with the \(\eta\)-pairing operator:
+
+\begin{equation}
+H_1 = \sum_{j,\sigma_1,\sigma_2} |\sigma_1, \sigma_2\rangle \langle \sigma_1, \sigma_2|_{j,j+1}
+\end{equation}
+\begin{equation}
+H_2 = \sum_j \left[ \left(n_{j,\uparrow} - \tfrac{1}{2}\right)\left(n_{j,\downarrow} - \tfrac{1}{2}\right) + \tfrac{1}{4} \right] \left[ \left(n_{j+1,\uparrow} - \tfrac{1}{2}\right)\left(n_{j+1,\downarrow} - \tfrac{1}{2}\right) + \tfrac{1}{4} \right]
+\end{equation}
+\begin{equation}
+H_3 = \sum_j \left[ \left(n_{j,\uparrow} - \tfrac{1}{2}\right)\left(n_{j,\downarrow} - \tfrac{1}{2}\right) + \tfrac{1}{4} \right] (n_{j+1,\uparrow} + n_{j+1,\downarrow} - 2 n_{j+1,\uparrow} n_{j+1,\downarrow}) + \text{h.c.}
+\end{equation}
+
+These operators act on nearest-neighbor sites and are constructed to preserve the particle content and spin sector of the scarred states. Each term vanishes when acting on any of the three towers: they do not induce doublon-holon hopping nor break the singlet/triplet structure, and thus satisfy
+\begin{equation}
+H_i |\eta_n\rangle = H_i |\tau_{m,n}\rangle = H_i |\varsigma_n\rangle = 0, \quad \text{for } i = 1,2,3.
+\end{equation}
+
+
+        \item For the $\eta$-pairing states, the bipartite entanglement entropy is given by scales logarithmically with subsystem size, as one can see from its asymptotic limit ($L\rightarrow\infty$) formula, in the original reference:
+        
+        \begin{equation}\label{aaa}
+        \rho_A = \sum_{k=0}^{K} \lambda_k |k\rangle \langle k| \Rightarrow S^{|\eta_n\rangle }_A = - \sum_{k=0}^{K} \lambda_k \ln \lambda_k,
         \end{equation}
-        consistent with sub-volume law behavior, typical of many-body scars. The bipartite entanglement entropy was computed and its consistency with the original publication was verified, where only $|S_4\rangle$ for L=12 sites was considered: 
-        $S^{|S_4\rangle }_A = 1/2 \left[1 + \ln \left(8\pi/3\right) \right] \sim 1.26$.
+        
+        where $K =\min{\left(n, L_A\right)}$ and
+        
+        \begin{align}\label{bbb}
+        & \lambda_k = \frac{\left( \begin{array}{c} L - L_A \\ n-k \end{array} \right)\left( \begin{array}{c} L_A \\ k \end{array} \right)}{\left( \begin{array}{c} L \\ n \end{array} \right)}\\
+        & |k\rangle = \sqrt{\frac{\left( L_A - k \right)!}{L_A!k!}} \left( \sum_{i=1}^{L_A} \left( -1\right)^i c^\dag_{i\uparrow} c^\dag_{i\downarrow} \right)^{\hspace{-0.1mm}k} |0\rangle_{\hspace{-0.1mm}A}
+        \end{align}
+         For bipartite entanglement, $L_A = \frac{L}{2}$.\\
+        By taking the asymptotic limit $L\rightarrow\infty$ of Eq. \eqref{aaa} one can show that the bipartite ee scales logarithmically with system size:
+        
+        \begin{equation}
+         S^{|\eta_n\rangle }_A = \frac{1}{2} \left\{ 1+ \ln \left[ \pi n \left( 1-\frac{n}{L}\right) \right] \right\}
+        \end{equation}
+        
+        consistent with sub-volume law behavior, typical of many-body scars.\\
+        The bipartite entanglement entropy was computed and its consistency with Eq. \eqref{aaa} was verified, where we chose $|\eta_6\rangle$ for L=12 sites:
+        
+        \begin{equation}
+        S^{|\eta_6\rangle }_A = - \sum_{k=0}^{6} \lambda_k \ln \lambda_k, \quad \lambda_k = \frac{\binom{6}{6-k}\binom{6}{k}}{\binom{12}{6}} =  \frac{\binom{6}{6-k}\binom{6}{k}}{924}
+        \end{equation}
+        
+        which gives $S^{|\eta_6\rangle }_A \approx 1.32$, and it agrees with the numerical result. The agreement was also verified for each one of the eigenvalues $\lambda_k$.
          
-        \item Evaluated ranks of 2- to 4-site adjacent RDMs.
+        \item Evaluated ranks of 2- to 4-site adjacent RDMs.\\
+        Note that, only for the tower $|\eta_n\rangle$, we can theoretically check the rank values from Eq. \eqref{aaa},\eqref{bbb}: given that the RDM $\rho_A$ is in its Schmidt form, its rank is simply the number of non-zero eigenvalues $\lambda_k$. All of these theoretical ranks do in fact match their numerical counterparts.\\
+        
          \begin{table}[H]
 	\centering
 	\begin{tabular}{|c|ccc|}
 	\hline
-	\textbf{$|S_n\rangle$} & \multicolumn{3}{c|}{\textbf{RDM Rank}} \\
+	\textbf{$|\eta_n\rangle$} & \multicolumn{3}{c|}{\textbf{RDM Rank}} \\
 	\cline{2-4}
 	& \textbf{2-sites} & \textbf{3-sites} & \textbf{4-sites}\\
 	\hline
@@ -478,10 +545,190 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 	 n = 12 & 1 & 1 & 1 \\
 	\hline
 	\end{tabular}
-	\caption{RDM ranks for 2, 3, and 4 adjacent sites in the $|S_n\rangle$ scar tower for $L=12$.}
+	\caption{RDM ranks for 2, 3, and 4 adjacent sites in the $|\eta_n\rangle$ scar tower for $L=12$.}
 	\label{tab:ranks21}
 	\end{table}
-    \end{itemize}
+
+\begin{table}[H]
+\centering
+
+% Row 1: m = 1, 2, 3
+\begin{tabular}{ccc}
+% m = 1
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	\multicolumn{4}{|c|}{\textbf{RDM Rank ($m = 1$)}} \\
+	\hline
+	$n$ & 2-sites & 3-sites & 4-sites \\
+	\hline
+	0 & 4 & 4 & 4 \\
+	1 & 7 & 8 & 8 \\
+	2 & 8 & 11 & 12 \\
+	3 & 8 & 12 & 15 \\
+	4 & 8 & 12 & 16 \\
+	5 & 8 & 12 & 16 \\
+	6 & 8 & 12 & 16 \\
+	7 & 8 & 12 & 15 \\
+	8 & 8 & 11 & 12 \\
+	9 & 7 & 8 & 8 \\
+	10 & 4 & 4 & 4 \\
+	11 & 0 & 0 & 0 \\
+	12 & 0 & 0 & 0 \\
+	\hline
+\end{tabular}
+&
+% m = 2
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	\multicolumn{4}{|c|}{\textbf{RDM Rank ($m = 2$)}} \\
+	\hline
+	$n$ & 2-sites & 3-sites & 4-sites \\
+	\hline
+	0 & 4 & 6 & 8 \\
+	1 & 7 & 11 & 15 \\
+	2 & 8 & 14 & 20 \\
+	3 & 8 & 15 & 23 \\
+	4 & 8 & 15 & 24 \\
+	5 & 8 & 15 & 23 \\
+	6 & 8 & 14 & 20 \\
+	7 & 7 & 11 & 15 \\
+	8 & 4 & 6 & 8 \\
+	9 & 0 & 0 & 0 \\
+	10 & 0 & 0 & 0 \\
+	11 & 0 & 0 & 0 \\
+	12 & 0 & 0 & 0 \\
+	\hline
+\end{tabular}
+&
+% m = 3
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	\multicolumn{4}{|c|}{\textbf{RDM Rank ($m = 3$)}} \\
+	\hline
+	$n$ & 2-sites & 3-sites & 4-sites \\
+	\hline
+	0 & 4 & 6 & 8 \\
+	1 & 7 & 11 & 15 \\
+	2 & 8 & 14 & 20 \\
+	3 & 8 & 15 & 22 \\
+	4 & 8 & 14 & 20 \\
+	5 & 7 & 11 & 15 \\
+	6 & 4 & 6 & 8 \\
+	7 & 0 & 0 & 0 \\
+	8 & 0 & 0 & 0 \\
+	9 & 0 & 0 & 0 \\
+	10 & 0 & 0 & 0 \\
+	11 & 0 & 0 & 0 \\
+	12 & 0 & 0 & 0 \\
+	\hline
+\end{tabular}
+\end{tabular}
+
+\vspace{1em}
+
+% Row 2: m = 4, 5, 6
+\begin{tabular}{ccc}
+% m = 4
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	\multicolumn{4}{|c|}{\textbf{RDM Rank ($m = 4$)}} \\
+	\hline
+	$n$ & 2-sites & 3-sites & 4-sites \\
+	\hline
+	0 & 4 & 6 & 8 \\
+	1 & 7 & 11 & 14 \\
+	2 & 8 & 13 & 16 \\
+	3 & 7 & 11 & 14 \\
+	4 & 4 & 6 & 8 \\
+	5 & 0 & 0 & 0 \\
+	6 & 0 & 0 & 0 \\
+	7 & 0 & 0 & 0 \\
+	8 & 0 & 0 & 0 \\
+	9 & 0 & 0 & 0 \\
+	10 & 0 & 0 & 0 \\
+	11 & 0 & 0 & 0 \\
+	12 & 0 & 0 & 0 \\
+	\hline
+\end{tabular}
+&
+% m = 5
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	\multicolumn{4}{|c|}{\textbf{RDM Rank ($m = 5$)}} \\
+	\hline
+	$n$ & 2-sites & 3-sites & 4-sites \\
+	\hline
+	0 & 4 & 4 & 4 \\
+	1 & 6 & 6 & 6 \\
+	2 & 4 & 4 & 4 \\
+	3 & 0 & 0 & 0 \\
+	4 & 0 & 0 & 0 \\
+	5 & 0 & 0 & 0 \\
+	6 & 0 & 0 & 0 \\
+	7 & 0 & 0 & 0 \\
+	8 & 0 & 0 & 0 \\
+	9 & 0 & 0 & 0 \\
+	10 & 0 & 0 & 0 \\
+	11 & 0 & 0 & 0 \\
+	12 & 0 & 0 & 0 \\
+	\hline
+\end{tabular}
+&
+% m = 6
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	\multicolumn{4}{|c|}{\textbf{RDM Rank ($m = 6$)}} \\
+	\hline
+	$n$ & 2-sites & 3-sites & 4-sites \\
+	\hline
+	0 & 1 & 1 & 1 \\
+	1 & 0 & 0 & 0 \\
+	2 & 0 & 0 & 0 \\
+	3 & 0 & 0 & 0 \\
+	4 & 0 & 0 & 0 \\
+	5 & 0 & 0 & 0 \\
+	6 & 0 & 0 & 0 \\
+	7 & 0 & 0 & 0 \\
+	8 & 0 & 0 & 0 \\
+	9 & 0 & 0 & 0 \\
+	10 & 0 & 0 & 0 \\
+	11 & 0 & 0 & 0 \\
+	12 & 0 & 0 & 0 \\
+	\hline
+\end{tabular}
+\end{tabular}
+
+\caption{RDM ranks for states $|\tau_{m,n}\rangle$ for various $m$ and $n$, across 2-, 3-, and 4-sites RDMs for $L=12$.}
+\end{table}
+
+	
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|ccc|}
+	\hline
+	\textbf{$|\varsigma_n\rangle$} & \multicolumn{3}{c|}{\textbf{RDM Rank}} \\
+	\cline{2-4}
+	& \textbf{2-sites} & \textbf{3-sites} & \textbf{4-sites}\\
+	\hline
+	 n = 0 & 6 & 6 & 6 \\
+	 n = 1 & 11 & 12 & 12 \\
+	 n = 2 & 12 & 17 & 18 \\
+	 n = 3 & 12 & 18 & 23 \\
+	 n = 4 & 12 & 18 & 24 \\  
+	 n = 5 & 12 & 18 & 24 \\
+	 n = 6 & 12 & 18 & 24 \\
+	 n = 7 & 12 & 18 & 23 \\
+	 n = 8 & 12 & 17 & 18 \\
+	 n = 9 & 11 & 12 & 12 \\
+	 n = 10 & 6 & 6 & 6 \\
+	 n = 11 & 0 & 0 & 0 \\
+	 n = 12 & 0 & 0 & 0 \\
+	\hline
+	\end{tabular}
+	\caption{RDM ranks for 2, 3, and 4 adjacent sites in the $|\varsigma_n\rangle$ scar tower for $L=12$.}
+	\label{tab:ranks22}
+	\end{table}
+
     
     \begin{figure}[H]
     \centering
@@ -504,11 +751,61 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
     \end{subfigure}
 
     % Common caption
-    \caption{Innermost 2,3,4-sites RDM  rank (Fig. (a), (b), (c) respectively) of the top scar of the tower $|S_n\rangle$ as a function of increasing $L$.}
+    \caption{Innermost 2,3,4-sites RDM  rank (Fig. (a), (b), (c) respectively) of the top scar of the tower $|\eta_n\rangle$ as a function of increasing $L$.}
     \label{fig:hb_scars_tower}
 \end{figure}
 
+\begin{figure}[H]
+    \centering
+    % First image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{hb_scar_2.png}
+        \caption{}
+        \label{fig:image1h}
+    \end{subfigure}
+    % Second image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{hb_scar_3.png}
+        \caption{}
+        \label{fig:image2hb}
+    \end{subfigure}    % Third image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{hb_scar_4.png}
+        \caption{}
+        \label{fig:image3hb}
+    \end{subfigure}
 
+    % Common caption
+    \caption{Innermost 2,3,4-sites RDM  rank (Fig. (a), (b), (c) respectively) of the top scar of the tower $|\tau_{m,n}\rangle$ as a function of increasing $L$.}
+    \label{fig:hb_scars_tower}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    % First image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{hb_scar_2.png}
+        \caption{}
+        \label{fig:image1h}
+    \end{subfigure}
+    % Second image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{hb_scar_3.png}
+        \caption{}
+        \label{fig:image2hb}
+    \end{subfigure}    % Third image
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\linewidth]{hb_scar_4.png}
+        \caption{}
+        \label{fig:image3hb}
+    \end{subfigure}
+
+    % Common caption
+    \caption{Innermost 2,3,4-sites RDM  rank (Fig. (a), (b), (c) respectively) of the top scar of the tower $|\varsigma_n\rangle$ as a function of increasing $L$.}
+    \label{fig:hb_scars_tower}
+\end{figure}
+
+    \end{itemize}
 \end{itemize}
 
 
