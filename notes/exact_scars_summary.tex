@@ -142,7 +142,18 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 	|S_n\rangle = \frac{1}{n! \sqrt{\mathcal{N}(L, n)}} \left(Q^\dagger\right)^n |\Omega\rangle, \quad n = 0,\hdots,L/2 - 1 \, (L/2)
 	\end{equation}
 	
-	where $|\Omega\rangle = |0 \cdots 0\rangle$ and, for PBC, $\mathcal{N}(L, n) = \frac{L}{n} \binom{L - n - 1}{n - 1}$ (\textcolor{red}{not defined for $n=0$, even though it describes the first scar of the tower, i.e. state $|\Omega\rangle $}). $Q^\dagger$ is 	the ladder operator, defined as:
+	where $|\Omega\rangle = |0 \cdots 0\rangle$ and
+	
+	\begin{equation}
+	\mathcal{N}(L, n) = \begin{cases}
+	\binom{L - n - 1}{n} \quad &\text{OBC}\\
+	\frac{L}{n} \binom{L - n - 1}{n - 1} \quad &\text{PBC}\\
+	\end{cases}
+	\end{equation}
+	
+	(\textcolor{red}{PBC not defined for $n=0$, even though it describes the first scar of the tower, i.e. state $|\Omega\rangle $}). 
+	 
+	 $Q^\dagger$ is 	the ladder operator, defined as:
 	
 	\begin{equation}
 	Q^\dagger = \sum_{i = 1}^{L} (-1)^i P^0_{i-1} \, \sigma^+_i \, P^0_{i+1}, 
@@ -163,13 +174,38 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 	
 	\noindent with $P^1_i = \frac{1}{2}(1 + \sigma^z_i)$ the local projector onto spin up.\\
 	Both scar towers are annihilated by $H_{\lambda}$, which breaks U(1): $H_{\lambda} |S_n\rangle = H_{\lambda} |S'_n\rangle = 0$.
-        \item Computed bipartite entanglement entropy and verified its consistency with the original publication, where only $|S_4\rangle$ for L=18 sites was considered (with OBC!)
+        \item Bipartite entanglement entropy computed and compared with theoretical values.
+        For the states $|S_n\rangle$, we have an exact formula for the bipartite entanglement entropy. Following the original reference, this is given by:
         
-        \begin{equation}
-        S^{\,|S_4\rangle}_A \approx 1.22 \approx \frac{1}{2} \ln \left(\frac{18 \pi}{8}\right) + \frac{1}{4}
+        \begin{equation}\label{aaa1}
+        S^{|S_n\rangle }_A = - \sum_{k=0}^{K} \sum_{s=\pm} \lambda_{k,s} \ln \lambda_{k,s},
         \end{equation}
         
-        For generic $L$, $S^{\,|S_4\rangle}_A$ scales logarithmically with system size, i.e. $S^{\,|S_4\rangle}_A = \frac{1}{2} \ln \left(\frac{\pi L}{8}\right) + \frac{1}{4}$. Because $S^{\,|S_4\rangle}_A$ is at the top of the tower - it has maximum possible 				value of entanglement entropy among the scars - we can assume that all scars have sub-volume scaling with system size, i.e. constant or at most logarithmic.
+        where $K =\min{\left(n, \lfloor L_A/2 \rfloor\right)}$ and $\lambda_{k,s}$ are the eigenvalues of the RDM $\rho_A$ over subsystem A, which are 
+        
+        \begin{equation}\label{bbb1a}
+        \lambda_{k,\pm} \left( L, L_A, n\right) = \frac{D_{1,k}m_{1,k} + D_{2,k}m_{2,k} \pm \sqrt{\left(D_{1,k}m_{1,k} - D_{2,k}m_{2,k}\right)^2 + 4 D_{1,k}D_{2,k}m^2_{2,k}}}{2\mathcal{N}}
+        \end{equation}
+        
+        where
+        
+        \begin{align}
+        &\mathcal{N} = \mathcal{N}\left(L, n\right)\\
+        &D_{1,k} = D_{1,k}\left(L_A\right) = \mathcal{N}\left(L_A, k\right)\\
+        &D_{2,k} = D_{2,k}\left(L_A\right) = \mathcal{N}\left(L_A - 1, k - 1\right)\\
+        &m_{1,k} = m_{1,k}\left(L-L_A\right) = \mathcal{N}\left(L-L_A, n-k\right) + \mathcal{N}\left(L-L_A -1, n-k -1\right)\\
+        &m_{2,k} = m_{2,k}\left(L-L_A\right) = \mathcal{N}\left(L-L_A, n-k\right)\\
+        \end{align}
+        
+        For bipartite entanglement, $L_A = \frac{L}{2}$.\\
+        By taking the asymptotic limit $L\rightarrow\infty$ of Eq. \eqref{bbb1a} one can show that the bipartite ee scales logarithmically with system size.
+        The bipartite entanglement entropy was numerically computed and its consistency with Eq. \eqref{bbb1a} was verified, where we chose $|S_4\rangle$ for L=18 sites (with OBC!):
+        
+        \begin{equation}
+        S^{|S_4\rangle }_A = - \sum_{k=0}^{4}\sum_{s=\pm} \lambda_{k,s} \ln \lambda_{k,s}
+        \end{equation}
+        
+        which gives $S^{|S_4\rangle }_A \approx 1.22$, and it agrees with the numerical result.\\
         
         \item Ranks of adjacent 2-site, 3-site, and 4-site (adjacent) RDMs assessed, for both towers
         
@@ -310,13 +346,35 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
 	\end{equation}
 	Both scar towers are annihilated by the first term of \eqref{eqq}, which breaks what is known as Q-SU(2) symmetry (a special SU(2) symmetry that only scars have - see the reference \href{https://arxiv.org/pdf/2007.16207}{https://arxiv.org/pdf/2007.16207} for explanation): $J \sum_{\langle i,j \rangle} \left( S^x_i S^x_j + S^y_i S^y_j \right)  |S_n\rangle = J \sum_{\langle i,j \rangle} \left( S^x_i S^x_j + S^y_i S^y_j \right)  |S'_n\rangle = 0$.
         \item Bipartite entanglement entropy computed and compared with theoretical values.
-        Only $|S_5\rangle$ for L=10 sites was considered (with OBC!)
+        For the states $|S_n\rangle$, we have an exact formula for the bipartite entanglement entropy. Following the original reference, we can start from the reduced density matrix of a subsystem A:
         
-         \begin{equation}
-        S^{\,|S_5\rangle}_A \approx 1.23 \approx \frac{1}{2} \ln \left(\frac{e \pi 10}{8}\right)
+        \begin{equation}\label{aaa1}
+        \rho_A = \sum_{k=0}^{K} \lambda_k |k\rangle \langle k| \Rightarrow S^{|S_n\rangle }_A = - \sum_{k=0}^{K} \lambda_k \ln \lambda_k,
         \end{equation}
         
-        For generic $L$, $S^{\,|S_5\rangle}_A$ scales logarithmically with system size, i.e. $S^{\,|S_5\rangle}_A = \frac{1}{2} \ln \left(\frac{e \pi L}{8}\right)$. Because $S^{\,|S_5\rangle}_A$ is at the top of the tower - it has maximum possible 						value of entanglement entropy among the scars - we can assume that all scars have sub-volume scaling with system size, i.e. constant or at most logarithmic.
+        where $K =\min{\left(n, L_A\right)}$ and
+        
+        \begin{equation}\label{bbb1}
+        \lambda_k = \frac{\left( \begin{array}{c} L - L_A \\ n-k \end{array} \right)\left( \begin{array}{c} L_A \\ k \end{array} \right)}{\left( \begin{array}{c} L \\ n \end{array} \right)}
+        \end{equation}
+        
+        $|k\rangle$ are the associated eigenvectors. For bipartite entanglement, $L_A = \frac{L}{2}$.\\
+        By taking the asymptotic limit $L\rightarrow\infty$ of Eq. \eqref{aaa1} one can show that the bipartite ee scales logarithmically with system size:
+        
+        \begin{equation}
+         S^{|S_n\rangle }_A = \frac{1}{2} \left\{ 1+ \ln \left[\pi \nu \left( 1-\nu\right) L\right] \right\}
+        \end{equation}
+        
+        where $\nu=\frac{n}{L}$. This formula is consistent with sub-volume law behavior, typical of many-body scars.\\
+        The bipartite entanglement entropy was numerically computed and its consistency with Eq. \eqref{aaa1} was verified, where we chose $|S_5\rangle$ for L=10 sites (with OBC!):
+        
+        \begin{equation}
+        S^{|S_5\rangle }_A = - \sum_{k=0}^{5} \lambda_k \ln \lambda_k, \quad \lambda_k = \frac{\binom{5}{5-k}\binom{5}{k}}{\binom{10}{5}} =  \frac{\binom{5}{5-k}\binom{5}{k}}{252}
+        \end{equation}
+        
+        which gives $S^{|S_5\rangle }_A \approx 1.23$, and it agrees with the numerical result.\\
+        
+        For generic $L$, $S^{\,|S_5\rangle}_A$ scales logarithmically with system size, i.e. $S^{\,|S_5\rangle}_A = \frac{1}{2} \ln \left(\frac{e \pi L}{8}\right)$. Because $S^{\,|S_5\rangle}_A$ is at the top of the tower - it has maximum possible value of entanglement entropy among the scars - we can assume that all scars have sub-volume scaling with system size, i.e. constant or at most logarithmic.
         
         \item Evaluated ranks of 2- to 4-site adjacent RDMs.
          \begin{table}[H]
@@ -431,11 +489,11 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
     H = H_{\text{Hubbard}} + H_{\text{Hirsch}},
     \end{equation}
     where
-    \begin{align}
+    \begin{align}\label{eqh}
     H_{\text{Hubbard}} &= - t \sum_{\langle i, j \rangle, \sigma} \left( c^\dagger_{i\sigma} c_{j\sigma} + \text{h.c.} \right) + U \sum_i n_{i\uparrow} n_{i\downarrow} - \mu \sum_{i, \sigma} n_{i\sigma}, \\
     H_{\text{Hirsch}} &= X \sum_{\langle i, j \rangle, \sigma} \left( n_{i\bar{\sigma}} + n_{j\bar{\sigma}} \right) \left( c^\dagger_{i\sigma} c_{j\sigma} + \text{h.c.} \right),
     \end{align}
-    and \( X \in \mathbb{R} \) is the Hirsch parameter that controls the strength of the bond-charge interaction. Here, \( c^\dagger_{i\sigma} \) creates a fermion of spin \( \sigma \in \{\uparrow, \downarrow\} \) at site \( i \), and \( n_{i\sigma} = c^\dagger_{i\sigma} c_{i\sigma} \). The sum \( \langle i, j \rangle \) runs over nearest neighbors, and \( \bar{\sigma} \) denotes the opposite spin of \( \sigma \).
+    and \( X \in \mathbb{R} \) is the Hirsch parameter that controls the strength of the bond-charge interaction. Here, \( c^\dagger_{i\sigma} \) creates a fermion of spin \( \sigma \in \{\uparrow, \downarrow\} \) at site \( i \), and \( n_{i\sigma} = c^\dagger_{i\sigma} c_{i\sigma} \). The sum \( \langle i, j \rangle \) runs over nearest neighbors, and \( \bar{\sigma} \) denotes the opposite spin of \( \sigma \). Without loss of generality, we can set $\mu=0$.
 
     \item \textbf{Reference:} \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.102.075132}{Phys. Rev. B 102, 075132 (2020)}.
 
@@ -473,26 +531,51 @@ This document summarizes recent research focused on \textbf{exact quantum many-b
     
     $\tau^\dagger$ creates a nearest-neighbor triplet $\lvert\uparrow, \uparrow\rangle$ with momentum $\pi$, while $\varsigma^\dagger$ creates a nearest-neighbor singlet $\lvert\uparrow, \downarrow\rangle - \lvert\downarrow, \uparrow\rangle$ with momentum $\pi$. For PBC, we set $c^\dagger_{L+1\sigma} \equiv c^\dagger_{1\sigma}$. These states are again exact eigenstates of \( H \) with energy \( E_n = n\,U \). Additionally, $|\tau_{m,n}\rangle$ has total spin $S=m$.\\
 Note that both $|\tau_{m,n}\rangle$, $|\varsigma_n\rangle$, unlike the $\eta$-pairing states, are in general not normalized, and therefore need to be normalized before looking at properties such as entanglement entropy or RDM rank.\\
-Both towers \( |\tau_{m,n}\rangle \) and \( |\varsigma_n\rangle \) (as well as the $\eta$-pairing tower \( |\eta_n\rangle \)) are annihilated by the following three kinetic terms, which preserve spin and particle number while commuting with the \(\eta\)-pairing operator:
+Both towers \( |\tau_{m,n}\rangle \) and \( |\varsigma_n\rangle \) are annihilated by the following three kinetic terms, which preserve spin and particle number while commuting with the \(\eta\)-pairing operator:
 
 \begin{equation}
-H_1 = \sum_{j,\sigma_1,\sigma_2} |\sigma_1, \sigma_2\rangle \langle \sigma_1, \sigma_2|_{j,j+1}
+H_{\text{kin},1} = \sum_{j,\sigma} |h, \sigma\rangle \langle \sigma, h|_{j,j+1} + h.c.
 \end{equation}
 \begin{equation}
-H_2 = \sum_j \left[ \left(n_{j,\uparrow} - \tfrac{1}{2}\right)\left(n_{j,\downarrow} - \tfrac{1}{2}\right) + \tfrac{1}{4} \right] \left[ \left(n_{j+1,\uparrow} - \tfrac{1}{2}\right)\left(n_{j+1,\downarrow} - \tfrac{1}{2}\right) + \tfrac{1}{4} \right]
+H_{\text{kin},2} = \sum_{j} \left(|h, d\rangle + |d, h\rangle \right) \left(|\uparrow, \downarrow\rangle - |\downarrow, \uparrow\rangle \right)_{j,j+1}  + h.c.
 \end{equation}
 \begin{equation}
-H_3 = \sum_j \left[ \left(n_{j,\uparrow} - \tfrac{1}{2}\right)\left(n_{j,\downarrow} - \tfrac{1}{2}\right) + \tfrac{1}{4} \right] (n_{j+1,\uparrow} + n_{j+1,\downarrow} - 2 n_{j+1,\uparrow} n_{j+1,\downarrow}) + \text{h.c.}
+H_{\text{kin},3} = \sum_{j,\sigma} |d, \sigma\rangle \langle \sigma, d|_{j,j+1} + h.c.
 \end{equation}
 
-These operators act on nearest-neighbor sites and are constructed to preserve the particle content and spin sector of the scarred states. Each term vanishes when acting on any of the three towers: they do not induce doublon-holon hopping nor break the singlet/triplet structure, and thus satisfy
+where, following the notation of the original paper, we have defined the states on site $j$:
+
+\begin{align}
+& |h\rangle_j = |n_{j,\uparrow} = 0, n_{j,\downarrow} = 0\rangle \\
+& |d\rangle_j = |n_{j,\uparrow} = 1, n_{j,\downarrow} = 1\rangle \\
+& |\uparrow\rangle_j = |n_{j,\uparrow} = 1, n_{j,\downarrow} = 0\rangle \\
+& |\downarrow\rangle_j = |n_{j,\uparrow} = 0, n_{j,\downarrow} = 1\rangle
+\end{align}
+
+The original Hamiltonian \eqref{eqh} can be expressed in terms of these kinetic terms:
+
+\begin{align}
+    H_{\text{Hubbard}} &= - t \left(H_{\text{kin},1} + H_{\text{kin},2} - H_{\text{kin},3}\right) + U \sum_j |d\rangle \langle d|_j, \\
+    H_{\text{Hirsch}} &= X \left(H_{\text{kin},2} - 2 H_{\text{kin},3}\right).
+    \end{align}
+    
+To show that the towers \( |\tau_{m,n}\rangle \) and \( |\varsigma_n\rangle \) are annihilated by the three kinetic terms
+
 \begin{equation}
-H_i |\eta_n\rangle = H_i |\tau_{m,n}\rangle = H_i |\varsigma_n\rangle = 0, \quad \text{for } i = 1,2,3.
+H_{\text{kin},a} |\tau_{m,n}\rangle = H_{\text{kin},a} |\varsigma_n\rangle = 0, \quad \text{for } a = 1,2,3.
+\end{equation}
+
+one can first demonstrates that \( |\tau_{m,0}\rangle \) and \( |\varsigma_0\rangle \) are annihilated by them, then that 
+
+\begin{equation}
+[H_{\text{kin},a}, \eta^\dag ] |\tau_{m,n}\rangle = [H_{\text{kin},a}, \eta^\dag ] |\varsigma_n\rangle = 0, \quad \text{for } a = 1,2,3.
 \end{equation}
 
 
-        \item For the $\eta$-pairing states, the bipartite entanglement entropy is given by scales logarithmically with subsystem size, as one can see from its asymptotic limit ($L\rightarrow\infty$) formula, in the original reference:
-        
+
+
+        \item For the $\eta$-pairing states, we have an exact formula for the bipartite entanglement entropy. Following the original reference, we can start from the reduced density matrix of a subsystem A:
+               
         \begin{equation}\label{aaa}
         \rho_A = \sum_{k=0}^{K} \lambda_k |k\rangle \langle k| \Rightarrow S^{|\eta_n\rangle }_A = - \sum_{k=0}^{K} \lambda_k \ln \lambda_k,
         \end{equation}
@@ -572,8 +655,8 @@ H_i |\eta_n\rangle = H_i |\tau_{m,n}\rangle = H_i |\varsigma_n\rangle = 0, \quad
 	8 & 8 & 11 & 12 \\
 	9 & 7 & 8 & 8 \\
 	10 & 4 & 4 & 4 \\
-	11 & 0 & 0 & 0 \\
-	12 & 0 & 0 & 0 \\
+	11 & - & - & - \\
+	12 & - & - & - \\
 	\hline
 \end{tabular}
 &
@@ -593,10 +676,10 @@ H_i |\eta_n\rangle = H_i |\tau_{m,n}\rangle = H_i |\varsigma_n\rangle = 0, \quad
 	6 & 8 & 14 & 20 \\
 	7 & 7 & 11 & 15 \\
 	8 & 4 & 6 & 8 \\
-	9 & 0 & 0 & 0 \\
-	10 & 0 & 0 & 0 \\
-	11 & 0 & 0 & 0 \\
-	12 & 0 & 0 & 0 \\
+	9 & - & - & - \\
+	10 & - & - & - \\
+	11 & - & - & - \\
+	12 & - & - & - \\
 	\hline
 \end{tabular}
 &
@@ -614,12 +697,12 @@ H_i |\eta_n\rangle = H_i |\tau_{m,n}\rangle = H_i |\varsigma_n\rangle = 0, \quad
 	4 & 8 & 14 & 20 \\
 	5 & 7 & 11 & 15 \\
 	6 & 4 & 6 & 8 \\
-	7 & 0 & 0 & 0 \\
-	8 & 0 & 0 & 0 \\
-	9 & 0 & 0 & 0 \\
-	10 & 0 & 0 & 0 \\
-	11 & 0 & 0 & 0 \\
-	12 & 0 & 0 & 0 \\
+	7 & - & - & - \\
+	8 & - & - & - \\
+	9 & - & - & - \\
+	10 & - & - & - \\
+	11 & - & - & - \\
+	12 & - & - & - \\
 	\hline
 \end{tabular}
 \end{tabular}
@@ -640,14 +723,14 @@ H_i |\eta_n\rangle = H_i |\tau_{m,n}\rangle = H_i |\varsigma_n\rangle = 0, \quad
 	2 & 8 & 13 & 16 \\
 	3 & 7 & 11 & 14 \\
 	4 & 4 & 6 & 8 \\
-	5 & 0 & 0 & 0 \\
-	6 & 0 & 0 & 0 \\
-	7 & 0 & 0 & 0 \\
-	8 & 0 & 0 & 0 \\
-	9 & 0 & 0 & 0 \\
-	10 & 0 & 0 & 0 \\
-	11 & 0 & 0 & 0 \\
-	12 & 0 & 0 & 0 \\
+	5 & - & - & - \\
+	6 & - & - & - \\
+	7 & - & - & - \\
+	8 & - & - & - \\
+	9 & - & - & - \\
+	10 & - & - & - \\
+	11 & - & - & - \\
+	12 & - & - & - \\
 	\hline
 \end{tabular}
 &
@@ -661,16 +744,16 @@ H_i |\eta_n\rangle = H_i |\tau_{m,n}\rangle = H_i |\varsigma_n\rangle = 0, \quad
 	0 & 4 & 4 & 4 \\
 	1 & 6 & 6 & 6 \\
 	2 & 4 & 4 & 4 \\
-	3 & 0 & 0 & 0 \\
-	4 & 0 & 0 & 0 \\
-	5 & 0 & 0 & 0 \\
-	6 & 0 & 0 & 0 \\
-	7 & 0 & 0 & 0 \\
-	8 & 0 & 0 & 0 \\
-	9 & 0 & 0 & 0 \\
-	10 & 0 & 0 & 0 \\
-	11 & 0 & 0 & 0 \\
-	12 & 0 & 0 & 0 \\
+	3 & - & - & - \\
+	4 & - & - & - \\
+	5 & - & - & - \\
+	6 & - & - & - \\
+	7 & - & - & - \\
+	8 & - & - & - \\
+	9 & - & - & - \\
+	10 & - & - & - \\
+	11 & - & - & - \\
+	12 & - & - & - \\
 	\hline
 \end{tabular}
 &
@@ -682,23 +765,23 @@ H_i |\eta_n\rangle = H_i |\tau_{m,n}\rangle = H_i |\varsigma_n\rangle = 0, \quad
 	$n$ & 2-sites & 3-sites & 4-sites \\
 	\hline
 	0 & 1 & 1 & 1 \\
-	1 & 0 & 0 & 0 \\
-	2 & 0 & 0 & 0 \\
-	3 & 0 & 0 & 0 \\
-	4 & 0 & 0 & 0 \\
-	5 & 0 & 0 & 0 \\
-	6 & 0 & 0 & 0 \\
-	7 & 0 & 0 & 0 \\
-	8 & 0 & 0 & 0 \\
-	9 & 0 & 0 & 0 \\
-	10 & 0 & 0 & 0 \\
-	11 & 0 & 0 & 0 \\
-	12 & 0 & 0 & 0 \\
+	1 & - & - & - \\
+	2 & - & - & - \\
+	3 & - & - & - \\
+	4 & - & - & - \\
+	5 & - & - & - \\
+	6 & - & - & - \\
+	7 & - & - & - \\
+	8 & - & - & - \\
+	9 & - & - & - \\
+	10 & - & - & - \\
+	11 & - & - & - \\
+	12 & - & - & - \\
 	\hline
 \end{tabular}
 \end{tabular}
 
-\caption{RDM ranks for states $|\tau_{m,n}\rangle$ for various $m$ and $n$, across 2-, 3-, and 4-sites RDMs for $L=12$.}
+\caption{RDM ranks for states $|\tau_{m,n}\rangle$ for various $m$ and $n$, across 2-, 3-, and 4-sites RDMs for $L=12$. The $-$ symbol indicates that the corresponding state is forbidden by the Pauli exclusion principle, and thus the density matrix is not defined in that case.}
 \end{table}
 
 	
@@ -721,8 +804,8 @@ H_i |\eta_n\rangle = H_i |\tau_{m,n}\rangle = H_i |\varsigma_n\rangle = 0, \quad
 	 n = 8 & 12 & 17 & 18 \\
 	 n = 9 & 11 & 12 & 12 \\
 	 n = 10 & 6 & 6 & 6 \\
-	 n = 11 & 0 & 0 & 0 \\
-	 n = 12 & 0 & 0 & 0 \\
+	 n = 11 & - & - & - \\
+	 n = 12 & - & - & - \\
 	\hline
 	\end{tabular}
 	\caption{RDM ranks for 2, 3, and 4 adjacent sites in the $|\varsigma_n\rangle$ scar tower for $L=12$.}
@@ -734,24 +817,24 @@ H_i |\eta_n\rangle = H_i |\tau_{m,n}\rangle = H_i |\varsigma_n\rangle = 0, \quad
     \centering
     % First image
     \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{hb_scar_2.png}
+        \includegraphics[width=\linewidth]{hb_scar_2e.png}
         \caption{}
         \label{fig:image1h}
     \end{subfigure}
     % Second image
     \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{hb_scar_3.png}
+        \includegraphics[width=\linewidth]{hb_scar_3e.png}
         \caption{}
         \label{fig:image2hb}
     \end{subfigure}    % Third image
     \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{hb_scar_4.png}
+        \includegraphics[width=\linewidth]{hb_scar_4e.png}
         \caption{}
         \label{fig:image3hb}
     \end{subfigure}
 
     % Common caption
-    \caption{Innermost 2,3,4-sites RDM  rank (Fig. (a), (b), (c) respectively) of the top scar of the tower $|\eta_n\rangle$ as a function of increasing $L$.}
+    \caption{Innermost 2,3,4-sites RDM  rank (Fig. (a), (b), (c) respectively) of the top scar ($n=L/2$) of the tower $|\eta_n\rangle$ as a function of increasing $L$.}
     \label{fig:hb_scars_tower}
 \end{figure}
 
@@ -759,24 +842,24 @@ H_i |\eta_n\rangle = H_i |\tau_{m,n}\rangle = H_i |\varsigma_n\rangle = 0, \quad
     \centering
     % First image
     \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{hb_scar_2.png}
+        \includegraphics[width=\linewidth]{hb_scar_2t.png}
         \caption{}
         \label{fig:image1h}
     \end{subfigure}
     % Second image
     \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{hb_scar_3.png}
+        \includegraphics[width=\linewidth]{hb_scar_3t.png}
         \caption{}
         \label{fig:image2hb}
     \end{subfigure}    % Third image
     \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{hb_scar_4.png}
+        \includegraphics[width=\linewidth]{hb_scar_4t.png}
         \caption{}
         \label{fig:image3hb}
     \end{subfigure}
 
     % Common caption
-    \caption{Innermost 2,3,4-sites RDM  rank (Fig. (a), (b), (c) respectively) of the top scar of the tower $|\tau_{m,n}\rangle$ as a function of increasing $L$.}
+    \caption{Innermost 2,3,4-sites RDM rank (Fig. (a), (b), (c) respectively) of the top scar ($m=2, n=2,3,4$) of the tower $|\tau_{m,n}\rangle$ as a function of increasing $L$.}
     \label{fig:hb_scars_tower}
 \end{figure}
 
@@ -784,24 +867,24 @@ H_i |\eta_n\rangle = H_i |\tau_{m,n}\rangle = H_i |\varsigma_n\rangle = 0, \quad
     \centering
     % First image
     \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{hb_scar_2.png}
+        \includegraphics[width=\linewidth]{hb_scar_2s.png}
         \caption{}
         \label{fig:image1h}
     \end{subfigure}
     % Second image
     \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{hb_scar_3.png}
+        \includegraphics[width=\linewidth]{hb_scar_3s.png}
         \caption{}
         \label{fig:image2hb}
     \end{subfigure}    % Third image
     \begin{subfigure}{0.45\textwidth}
-        \includegraphics[width=\linewidth]{hb_scar_4.png}
+        \includegraphics[width=\linewidth]{hb_scar_4s.png}
         \caption{}
         \label{fig:image3hb}
     \end{subfigure}
 
     % Common caption
-    \caption{Innermost 2,3,4-sites RDM  rank (Fig. (a), (b), (c) respectively) of the top scar of the tower $|\varsigma_n\rangle$ as a function of increasing $L$.}
+    \caption{Innermost 2,3,4-sites RDM  rank (Fig. (a), (b), (c) respectively) of the top scar ($n=L/2 - 1$) of the tower $|\varsigma_n\rangle$ as a function of increasing $L$.}
     \label{fig:hb_scars_tower}
 \end{figure}
 

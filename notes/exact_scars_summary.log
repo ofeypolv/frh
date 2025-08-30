@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.8)  6 AUG 2025 13:51
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.8)  29 AUG 2025 20:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -356,6 +356,9 @@ File: l3backend-xetex.def 2023-04-19 L3 backend support: XeTeX
 )
 (./exact_scars_summary.aux
 
+LaTeX Warning: Label `aaa1' multiply defined.
+
+
 LaTeX Warning: Label `tab:ranks21' multiply defined.
 
 
@@ -499,73 +502,84 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--125
  []
 
 [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
+
+ []
+
+[4]
 File: dw_scar_2.png Graphic file (type bmp)
 <dw_scar_2.png>
 File: dw_scar_3.png Graphic file (type bmp)
 <dw_scar_3.png>
 File: dw_scar_4.png Graphic file (type bmp)
 <dw_scar_4.png>
- [4]
+ [5]
 File: dw_scar_2p.png Graphic file (type bmp)
 <dw_scar_2p.png>
 File: dw_scar_3p.png Graphic file (type bmp)
 <dw_scar_3p.png>
 File: dw_scar_4p.png Graphic file (type bmp)
 <dw_scar_4p.png>
- [5] [6] [7]
+ [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 375--376
+
+ []
+
+[8]
 File: xy_scar_2.png Graphic file (type bmp)
 <xy_scar_2.png>
 File: xy_scar_3.png Graphic file (type bmp)
 <xy_scar_3.png>
 File: xy_scar_4.png Graphic file (type bmp)
 <xy_scar_4.png>
+ [9]
 File: xy_scar_2p.png Graphic file (type bmp)
 <xy_scar_2p.png>
 File: xy_scar_3p.png Graphic file (type bmp)
 <xy_scar_3p.png>
 File: xy_scar_4p.png Graphic file (type bmp)
 <xy_scar_4p.png>
- [8]
-Underfull \hbox (badness 10000) in paragraph at lines 442--443
+ [10]
+Underfull \hbox (badness 10000) in paragraph at lines 500--501
 
  []
 
-[9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 522--524
+[11] [12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 605--607
 
  []
 
-[11]
-Overfull \hbox (12.33371pt too wide) in paragraph at lines 556--626
+
+Overfull \hbox (12.33371pt too wide) in paragraph at lines 639--709
  [][] 
  []
 
 
-Overfull \hbox (12.33371pt too wide) in paragraph at lines 630--700
+Overfull \hbox (12.33371pt too wide) in paragraph at lines 713--783
  [][] 
  []
 
-[12] [13]
-File: hb_scar_2.png Graphic file (type bmp)
-<hb_scar_2.png>
-File: hb_scar_3.png Graphic file (type bmp)
-<hb_scar_3.png>
-File: hb_scar_4.png Graphic file (type bmp)
-<hb_scar_4.png>
-File: hb_scar_2.png Graphic file (type bmp)
-<hb_scar_2.png>
-File: hb_scar_3.png Graphic file (type bmp)
-<hb_scar_3.png>
-File: hb_scar_4.png Graphic file (type bmp)
-<hb_scar_4.png>
- [14]
-File: hb_scar_2.png Graphic file (type bmp)
-<hb_scar_2.png>
-File: hb_scar_3.png Graphic file (type bmp)
-<hb_scar_3.png>
-File: hb_scar_4.png Graphic file (type bmp)
-<hb_scar_4.png>
- [15] [16] [17] (./exact_scars_summary.aux)
+[14] [15]
+File: hb_scar_2e.png Graphic file (type bmp)
+<hb_scar_2e.png>
+File: hb_scar_3e.png Graphic file (type bmp)
+<hb_scar_3e.png>
+File: hb_scar_4e.png Graphic file (type bmp)
+<hb_scar_4e.png>
+File: hb_scar_2t.png Graphic file (type bmp)
+<hb_scar_2t.png>
+File: hb_scar_3t.png Graphic file (type bmp)
+<hb_scar_3t.png>
+File: hb_scar_4t.png Graphic file (type bmp)
+<hb_scar_4t.png>
+ [16]
+File: hb_scar_2s.png Graphic file (type bmp)
+<hb_scar_2s.png>
+File: hb_scar_3s.png Graphic file (type bmp)
+<hb_scar_3s.png>
+File: hb_scar_4s.png Graphic file (type bmp)
+<hb_scar_4s.png>
+ [17] [18] [19] (./exact_scars_summary.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -578,12 +592,12 @@ Package rerunfilecheck Info: File `exact_scars_summary.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 11661 strings out of 475591
- 184542 string characters out of 5777375
+ 11721 strings out of 475591
+ 185691 string characters out of 5777375
  1962432 words of memory out of 5000000
- 32838 multiletter control sequences out of 15000+600000
+ 32892 multiletter control sequences out of 15000+600000
  567610 words of font info for 82 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 72i,17n,79p,544b,682s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,17n,79p,544b,684s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on exact_scars_summary.pdf (17 pages).
+Output written on exact_scars_summary.pdf (19 pages).
