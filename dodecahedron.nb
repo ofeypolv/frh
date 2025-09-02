@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     72253,       1334]
-NotebookOptionsPosition[     71390,       1314]
-NotebookOutlinePosition[     71792,       1330]
-CellTagsIndexPosition[     71749,       1327]
+NotebookDataLength[     72282,       1335]
+NotebookOptionsPosition[     71419,       1315]
+NotebookOutlinePosition[     71821,       1331]
+CellTagsIndexPosition[     71778,       1328]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -23,7 +23,7 @@ Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", " ", 
-   RowBox[{"use", " ", "icosahedron", " ", "function"}], "*)"}], 
+   RowBox[{"use", " ", "dodecahedron", " ", "function"}], "*)"}], 
   "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{"Graphics3D", "[", 
@@ -76,8 +76,9 @@ Cell[BoxData[
   3.9489862222239704`*^9}, {3.948986283555834*^9, 3.948986599855112*^9}, {
   3.948986630096344*^9, 3.9489867159804764`*^9}, {3.9489871253513336`*^9, 
   3.9489871257308903`*^9}, {3.949070424851021*^9, 3.949070553402857*^9}, {
-  3.965817163970743*^9, 3.965817233463167*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"bf5c5f40-ba53-1341-9fc6-a28e2ebf366e"],
+  3.965817163970743*^9, 3.965817233463167*^9}, {3.965829524835041*^9, 
+  3.965829529549288*^9}},ExpressionUUID->"bf5c5f40-ba53-1341-9fc6-\
+a28e2ebf366e"],
 
 Cell[BoxData[
  Graphics3DBox[
@@ -1330,11 +1331,11 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[576, 22, 2653, 57, 161, "Input",ExpressionUUID->"bf5c5f40-ba53-1341-9fc6-a28e2ebf366e"],
-Cell[3232, 81, 23030, 387, 353, 4809, 89, "CachedBoxData", "BoxData", "Output",ExpressionUUID->"cc0dad97-7c40-d047-aa57-e69e4948758d"],
-Cell[26265, 470, 2310, 37, 194, "Output",ExpressionUUID->"8e94d91b-a0f4-7a45-8f88-c1c4a4789ae7"],
-Cell[28578, 509, 2362, 69, 51, "Output",ExpressionUUID->"181268cc-0980-8045-8d3c-9fb031fa94d7"],
-Cell[30943, 580, 40431, 731, 353, 11258, 253, "CachedBoxData", "BoxData", "Output",ExpressionUUID->"a1df13c0-8d27-e44e-84c7-7637086f8f21"]
+Cell[576, 22, 2682, 58, 161, "Input",ExpressionUUID->"bf5c5f40-ba53-1341-9fc6-a28e2ebf366e"],
+Cell[3261, 82, 23030, 387, 353, 4809, 89, "CachedBoxData", "BoxData", "Output",ExpressionUUID->"cc0dad97-7c40-d047-aa57-e69e4948758d"],
+Cell[26294, 471, 2310, 37, 194, "Output",ExpressionUUID->"8e94d91b-a0f4-7a45-8f88-c1c4a4789ae7"],
+Cell[28607, 510, 2362, 69, 51, "Output",ExpressionUUID->"181268cc-0980-8045-8d3c-9fb031fa94d7"],
+Cell[30972, 581, 40431, 731, 353, 11258, 253, "CachedBoxData", "BoxData", "Output",ExpressionUUID->"a1df13c0-8d27-e44e-84c7-7637086f8f21"]
 }, Open  ]]
 }
 ]
