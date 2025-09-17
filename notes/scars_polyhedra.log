@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.8)  16 SEP 2025 16:15
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.8)  17 SEP 2025 16:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**scars_polyhedra_template.tex
-(./scars_polyhedra_template.tex
+**scars_polyhedra.tex
+(./scars_polyhedra.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
 (c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
@@ -360,8 +360,8 @@ File: l3backend-xetex.def 2023-04-19 L3 backend support: XeTeX
 \g__pdf_backend_annotation_int=\count292
 \g__pdf_backend_link_int=\count293
 )
-(./scars_polyhedra_template.aux)
-\openout1 = `scars_polyhedra_template.aux'.
+(./scars_polyhedra.aux)
+\openout1 = `scars_polyhedra.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
@@ -374,8 +374,7 @@ LaTeX Font Info:    ... okay on input line 36.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
 6.
-
-(c:/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
+ (c:/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 36.
@@ -425,9 +424,9 @@ LaTeX Font Info:    ... okay on input line 36.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 36.
-(./scars_polyhedra_template.out) (./scars_polyhedra_template.out)
+(./scars_polyhedra.out) (./scars_polyhedra.out)
 \@outlinefile=\write3
-\openout3 = `scars_polyhedra_template.out'.
+\openout3 = `scars_polyhedra.out'.
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
 
@@ -441,74 +440,56 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
+File: tetrahedron.pdf Graphic file (type pdf)
+<use tetrahedron.pdf>
  [1
 
 ]
 File: icosahedron.pdf Graphic file (type pdf)
 <use icosahedron.pdf>
 
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 85--85
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 90--90
  []|\TU/lmr/bx/n/10.95 Degeneracy| 
  []
 
 
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 85--85
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 90--90
  []|\TU/lmr/bx/n/10.95 Annihilated 
  []
 
 File: icosahedron.pdf Graphic file (type pdf)
 <use icosahedron.pdf>
 [2]
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
+File: octahedron.pdf Graphic file (type pdf)
+<use octahedron.pdf>
  [3]
 File: icosahedron.pdf Graphic file (type pdf)
 <use icosahedron.pdf>
-
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 140--140
+ [4]
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 144--144
  []|\TU/lmr/bx/n/10.95 Degeneracy| 
  []
 
 
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 140--140
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 144--144
  []|\TU/lmr/bx/n/10.95 Annihilated 
  []
 
 File: icosahedron.pdf Graphic file (type pdf)
 <use icosahedron.pdf>
-[4]
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
- [5]
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
-
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 196--196
- []|\TU/lmr/bx/n/10.95 Degeneracy| 
- []
-
-
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 196--196
- []|\TU/lmr/bx/n/10.95 Annihilated 
- []
-
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
-[6]
+[5]
+File: cube.pdf Graphic file (type pdf)
+<use cube.pdf>
+ [6]
 File: icosahedron.pdf Graphic file (type pdf)
 <use icosahedron.pdf>
  [7]
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
-
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 252--252
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 199--199
  []|\TU/lmr/bx/n/10.95 Degeneracy| 
  []
 
 
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 252--252
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 199--199
  []|\TU/lmr/bx/n/10.95 Annihilated 
  []
 
@@ -520,25 +501,43 @@ File: icosahedron.pdf Graphic file (type pdf)
  [9]
 File: icosahedron.pdf Graphic file (type pdf)
 <use icosahedron.pdf>
-
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 308--308
+ [10]
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 254--254
  []|\TU/lmr/bx/n/10.95 Degeneracy| 
  []
 
 
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 308--308
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 254--254
  []|\TU/lmr/bx/n/10.95 Annihilated 
  []
 
 File: icosahedron.pdf Graphic file (type pdf)
 <use icosahedron.pdf>
-[10]
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
- [11]
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
+[11]
+File: dodecahedron.pdf Graphic file (type pdf)
+<use dodecahedron.pdf>
  [12]
+File: icosahedron.pdf Graphic file (type pdf)
+<use icosahedron.pdf>
+ [13]
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 309--309
+ []|\TU/lmr/bx/n/10.95 Degeneracy| 
+ []
+
+
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 309--309
+ []|\TU/lmr/bx/n/10.95 Annihilated 
+ []
+
+File: icosahedron.pdf Graphic file (type pdf)
+<use icosahedron.pdf>
+[14]
+File: triakistetrahedron.pdf Graphic file (type pdf)
+<use triakistetrahedron.pdf>
+ [15]
+File: icosahedron.pdf Graphic file (type pdf)
+<use icosahedron.pdf>
+ [16]
 Overfull \hbox (1.22063pt too wide) in paragraph at lines 369--369
  []|\TU/lmr/bx/n/10.95 Degeneracy| 
  []
@@ -550,130 +549,111 @@ Overfull \hbox (2.17328pt too wide) in paragraph at lines 369--369
 
 File: icosahedron.pdf Graphic file (type pdf)
 <use icosahedron.pdf>
-[13]
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
- [14]
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
-
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 425--425
- []|\TU/lmr/bx/n/10.95 Degeneracy| 
- []
-
-
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 425--425
- []|\TU/lmr/bx/n/10.95 Annihilated 
- []
-
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
-[15]
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
- [16]
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
-
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 481--481
- []|\TU/lmr/bx/n/10.95 Degeneracy| 
- []
-
-
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 481--481
- []|\TU/lmr/bx/n/10.95 Annihilated 
- []
-
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
 [17]
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
+File: rhombicdodecahedron.pdf Graphic file (type pdf)
+<use rhombicdodecahedron.pdf>
  [18]
 File: icosahedron.pdf Graphic file (type pdf)
 <use icosahedron.pdf>
-
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 537--537
+ [19]
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 424--424
  []|\TU/lmr/bx/n/10.95 Degeneracy| 
  []
 
 
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 537--537
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 424--424
  []|\TU/lmr/bx/n/10.95 Annihilated 
  []
 
 File: icosahedron.pdf Graphic file (type pdf)
 <use icosahedron.pdf>
-[19]
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
- [20]
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
-
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 593--593
- []|\TU/lmr/bx/n/10.95 Degeneracy| 
- []
-
-
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 593--593
- []|\TU/lmr/bx/n/10.95 Annihilated 
- []
-
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
-[21]
+[20]
+File: triakisoctahedron.pdf Graphic file (type pdf)
+<use triakisoctahedron.pdf>
+ [21]
 File: icosahedron.pdf Graphic file (type pdf)
 <use icosahedron.pdf>
  [22]
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
- [23]
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 654--654
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 479--479
  []|\TU/lmr/bx/n/10.95 Degeneracy| 
  []
 
 
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 654--654
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 479--479
  []|\TU/lmr/bx/n/10.95 Annihilated 
  []
 
 File: icosahedron.pdf Graphic file (type pdf)
 <use icosahedron.pdf>
-[24]
+[23]
+File: tetrakishexahedron.pdf Graphic file (type pdf)
+<use tetrakishexahedron.pdf>
+ [24]
 File: icosahedron.pdf Graphic file (type pdf)
 <use icosahedron.pdf>
  [25]
-File: icosahedron.pdf Graphic file (type pdf)
-<use icosahedron.pdf>
-
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 710--710
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 534--534
  []|\TU/lmr/bx/n/10.95 Degeneracy| 
  []
 
 
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 710--710
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 534--534
  []|\TU/lmr/bx/n/10.95 Annihilated 
  []
 
 File: icosahedron.pdf Graphic file (type pdf)
 <use icosahedron.pdf>
-[26] [27] (./scars_polyhedra_template.aux)
+[26]
+File: truncatedtetrahedron.pdf Graphic file (type pdf)
+<use truncatedtetrahedron.pdf>
+ [27]
+File: icosahedron.pdf Graphic file (type pdf)
+<use icosahedron.pdf>
+ [28]
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 595--595
+ []|\TU/lmr/bx/n/10.95 Degeneracy| 
+ []
+
+
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 595--595
+ []|\TU/lmr/bx/n/10.95 Annihilated 
+ []
+
+File: icosahedron.pdf Graphic file (type pdf)
+<use icosahedron.pdf>
+[29]
+File: cuboctahedron.pdf Graphic file (type pdf)
+<use cuboctahedron.pdf>
+ [30]
+File: icosahedron.pdf Graphic file (type pdf)
+<use icosahedron.pdf>
+ [31]
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 650--650
+ []|\TU/lmr/bx/n/10.95 Degeneracy| 
+ []
+
+
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 650--650
+ []|\TU/lmr/bx/n/10.95 Annihilated 
+ []
+
+File: icosahedron.pdf Graphic file (type pdf)
+<use icosahedron.pdf>
+[32] [33] (./scars_polyhedra.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
-Package rerunfilecheck Info: File `scars_polyhedra_template.out' has not change
-d.
+Package rerunfilecheck Info: File `scars_polyhedra.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 10702 strings out of 475591
- 163078 string characters out of 5777375
- 1919432 words of memory out of 5000000
- 31895 multiletter control sequences out of 15000+600000
+ 10804 strings out of 475591
+ 165507 string characters out of 5777375
+ 1918432 words of memory out of 5000000
+ 31997 multiletter control sequences out of 15000+600000
  565371 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 72i,13n,79p,561b,446s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,13n,79p,552b,440s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on scars_polyhedra_template.pdf (27 pages).
+Output written on scars_polyhedra.pdf (33 pages).

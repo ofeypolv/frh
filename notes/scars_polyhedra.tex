@@ -29,7 +29,7 @@
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 
 % ---------- Header ----------
-\title{Scars of the Simple Ising Model on Discrete Geometries (Polyhedra)}
+\title{Scars of the Transverse Field Ising Model on Discrete Geometries (Polyhedra)}
 \author{}
 \date{\today}
 
@@ -40,7 +40,13 @@
 % OVERALL PARAGRAPH (global statement for the whole note)
 % ============================================================
 \section*{Introduction}
-We are studying scars of the simple Ising model on discrete geometries (polyhedra). Here, \emph{scars} are identified as special, sparser eigenstates of the Hamiltonian which are simultaneously eigenstates of the Ising term and of the transverse-field (TF) term separately; in addition, each such state is annihilated by exactly one of the two terms.
+We are studying scars of the simple Ising model on discrete geometries (polyhedra). Here, \emph{scars} are identified as special, sparser eigenstates of the Hamiltonian which are simultaneously eigenstates of the Ising term and of the transverse-field (TF) term separately; in addition, each such state is annihilated by exactly one of the two terms. In all of the following examples, the Hamiltonian is
+
+\begin{equation}
+\Htot, \quad \Hising = J \sum_{\langle i,j\rangle} \sigma_i^x \sigma_j^x, \quad  \Htf = h \sum_i \sigma_i^z
+\end{equation}
+
+where $J=1, h=3$ (antiferromagnetic).
 
 \section*{Platonic Solids}
 % ============================================================
@@ -53,19 +59,18 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
 \subsubsection*{Overview and data.}
 \begin{center}
   % Put your graphic at the very beginning of the subparagraph
-  \includegraphics[width=.6\linewidth]{icosahedron}
+  \includegraphics[width=.6\linewidth]{tetrahedron}
 \end{center}
 
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Duality / paired solid:} \texttt{<DUALITY or “self-dual”>}.
-  \item \textbf{Vertices (V), Faces (F), Edges (E):} $V=\texttt{<V>}$,\; $F=\texttt{<F>}$,\; $E=\texttt{<E>}$.
-  \item \textbf{Solid point group:} \texttt{<POINT-GROUP>}.\\
-        \textbf{Vertex stabilizer subgroup:} \texttt{<STABILIZER>}.
-  \item \textbf{Hamiltonian:} \(
-        \Htot,\quad
-        \dim\mathcal{H} = 2^{V}\ \text{(spin-$\tfrac12$ on each vertex).}
+  \item \textbf{Duality / paired solid:} self-dual, tetrahedron
+  \item \textbf{Vertices (V), Faces (F), Edges (E):} $V = 4$,\; $F = 3$ (equilateral triangles),\; $E = 6$.
+  \item \textbf{Solid point group:} $T_d \cong S_4$\\
+        \textbf{Vertex stabilizer subgroup:} $C_3$ for rotations only, $D_3$ for full symmetry group.
+  \item \textbf{Hilbert space:} \(
+        \dim\mathcal{H} = 2^{4} = 16\ \text{(spin-$\tfrac12$ on each vertex).}
         \)
-  \item \textbf{Eigenvalue range / normalization:} \texttt{<Specify conventions>}.
+  \item \textbf{Eigenvalue range:} $[-12.37, 12.71]$.
 \end{itemize}
 
 \subsubsection*{Scar structure: sets and multiplets.}
@@ -108,7 +113,7 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
 \subsubsection*{Overview and data.}
 \begin{center}
   % Put your graphic at the very beginning of the subparagraph
-  \includegraphics[width=.6\linewidth]{icosahedron}
+  \includegraphics[width=.6\linewidth]{octahedron}
 \end{center}
 
 \begin{itemize}[leftmargin=1.5em]
@@ -116,11 +121,10 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
   \item \textbf{Vertices (V), Faces (F), Edges (E):} $V=\texttt{<V>}$,\; $F=\texttt{<F>}$,\; $E=\texttt{<E>}$.
   \item \textbf{Solid point group:} \texttt{<POINT-GROUP>}.\\
         \textbf{Vertex stabilizer subgroup:} \texttt{<STABILIZER>}.
-  \item \textbf{Hamiltonian:} \(
-        \Htot,\quad
+  \item \textbf{Hilbert space:} \(
         \dim\mathcal{H} = 2^{V}\ \text{(spin-$\tfrac12$ on each vertex).}
         \)
-  \item \textbf{Eigenvalue range / normalization:} \texttt{<Specify conventions>}.
+  \item \textbf{Eigenvalue range:} \texttt{<Specify conventions>}.
 \end{itemize}
 
 \subsubsection*{Scar structure: sets and multiplets.}
@@ -164,7 +168,7 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
 \subsubsection*{Overview and data.}
 \begin{center}
   % Put your graphic at the very beginning of the subparagraph
-  \includegraphics[width=.6\linewidth]{icosahedron}
+  \includegraphics[width=.6\linewidth]{cube}
 \end{center}
 
 \begin{itemize}[leftmargin=1.5em]
@@ -172,11 +176,10 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
   \item \textbf{Vertices (V), Faces (F), Edges (E):} $V=\texttt{<V>}$,\; $F=\texttt{<F>}$,\; $E=\texttt{<E>}$.
   \item \textbf{Solid point group:} \texttt{<POINT-GROUP>}.\\
         \textbf{Vertex stabilizer subgroup:} \texttt{<STABILIZER>}.
-  \item \textbf{Hamiltonian:} \(
-        \Htot,\quad
+  \item \textbf{Hilbert space:} \(
         \dim\mathcal{H} = 2^{V}\ \text{(spin-$\tfrac12$ on each vertex).}
         \)
-  \item \textbf{Eigenvalue range / normalization:} \texttt{<Specify conventions>}.
+  \item \textbf{Eigenvalue range:} \texttt{<Specify conventions>}.
 \end{itemize}
 
 \subsubsection*{Scar structure: sets and multiplets.}
@@ -228,11 +231,10 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
   \item \textbf{Vertices (V), Faces (F), Edges (E):} $V=\texttt{<V>}$,\; $F=\texttt{<F>}$,\; $E=\texttt{<E>}$.
   \item \textbf{Solid point group:} \texttt{<POINT-GROUP>}.\\
         \textbf{Vertex stabilizer subgroup:} \texttt{<STABILIZER>}.
-  \item \textbf{Hamiltonian:} \(
-        \Htot,\quad
+  \item \textbf{Hilbert space:} \(
         \dim\mathcal{H} = 2^{V}\ \text{(spin-$\tfrac12$ on each vertex).}
         \)
-  \item \textbf{Eigenvalue range / normalization:} \texttt{<Specify conventions>}.
+  \item \textbf{Eigenvalue range:} \texttt{<Specify conventions>}.
 \end{itemize}
 
 \subsubsection*{Scar structure: sets and multiplets.}
@@ -276,7 +278,7 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
 \subsubsection*{Overview and data.}
 \begin{center}
   % Put your graphic at the very beginning of the subparagraph
-  \includegraphics[width=.6\linewidth]{icosahedron}
+  \includegraphics[width=.6\linewidth]{dodecahedron}
 \end{center}
 
 \begin{itemize}[leftmargin=1.5em]
@@ -284,11 +286,10 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
   \item \textbf{Vertices (V), Faces (F), Edges (E):} $V=\texttt{<V>}$,\; $F=\texttt{<F>}$,\; $E=\texttt{<E>}$.
   \item \textbf{Solid point group:} \texttt{<POINT-GROUP>}.\\
         \textbf{Vertex stabilizer subgroup:} \texttt{<STABILIZER>}.
-  \item \textbf{Hamiltonian:} \(
-        \Htot,\quad
+  \item \textbf{Hilbert space:} \(
         \dim\mathcal{H} = 2^{V}\ \text{(spin-$\tfrac12$ on each vertex).}
         \)
-  \item \textbf{Eigenvalue range / normalization:} \texttt{<Specify conventions>}.
+  \item \textbf{Eigenvalue range:} \texttt{<Specify conventions>}.
 \end{itemize}
 
 \subsubsection*{Scar structure: sets and multiplets.}
@@ -337,7 +338,7 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
 \subsubsection*{Overview and data.}
 \begin{center}
   % Put your graphic at the very beginning of the subparagraph
-  \includegraphics[width=.6\linewidth]{icosahedron}
+  \includegraphics[width=.6\linewidth]{triakistetrahedron}
 \end{center}
 
 \begin{itemize}[leftmargin=1.5em]
@@ -345,11 +346,10 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
   \item \textbf{Vertices (V), Faces (F), Edges (E):} $V=\texttt{<V>}$,\; $F=\texttt{<F>}$,\; $E=\texttt{<E>}$.
   \item \textbf{Solid point group:} \texttt{<POINT-GROUP>}.\\
         \textbf{Vertex stabilizer subgroup:} \texttt{<STABILIZER>}.
-  \item \textbf{Hamiltonian:} \(
-        \Htot,\quad
+  \item \textbf{Hilbert space:} \(
         \dim\mathcal{H} = 2^{V}\ \text{(spin-$\tfrac12$ on each vertex).}
         \)
-  \item \textbf{Eigenvalue range / normalization:} \texttt{<Specify conventions>}.
+  \item \textbf{Eigenvalue range:} \texttt{<Specify conventions>}.
 \end{itemize}
 
 \subsubsection*{Scar structure: sets and multiplets.}
@@ -393,7 +393,7 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
 \subsubsection*{Overview and data.}
 \begin{center}
   % Put your graphic at the very beginning of the subparagraph
-  \includegraphics[width=.6\linewidth]{icosahedron}
+  \includegraphics[width=.6\linewidth]{rhombicdodecahedron}
 \end{center}
 
 \begin{itemize}[leftmargin=1.5em]
@@ -401,11 +401,10 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
   \item \textbf{Vertices (V), Faces (F), Edges (E):} $V=\texttt{<V>}$,\; $F=\texttt{<F>}$,\; $E=\texttt{<E>}$.
   \item \textbf{Solid point group:} \texttt{<POINT-GROUP>}.\\
         \textbf{Vertex stabilizer subgroup:} \texttt{<STABILIZER>}.
-  \item \textbf{Hamiltonian:} \(
-        \Htot,\quad
+  \item \textbf{Hilbert space:} \(
         \dim\mathcal{H} = 2^{V}\ \text{(spin-$\tfrac12$ on each vertex).}
         \)
-  \item \textbf{Eigenvalue range / normalization:} \texttt{<Specify conventions>}.
+  \item \textbf{Eigenvalue range:} \texttt{<Specify conventions>}.
 \end{itemize}
 
 \subsubsection*{Scar structure: sets and multiplets.}
@@ -449,7 +448,7 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
 \subsubsection*{Overview and data.}
 \begin{center}
   % Put your graphic at the very beginning of the subparagraph
-  \includegraphics[width=.6\linewidth]{icosahedron}
+  \includegraphics[width=.6\linewidth]{triakisoctahedron}
 \end{center}
 
 \begin{itemize}[leftmargin=1.5em]
@@ -457,11 +456,10 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
   \item \textbf{Vertices (V), Faces (F), Edges (E):} $V=\texttt{<V>}$,\; $F=\texttt{<F>}$,\; $E=\texttt{<E>}$.
   \item \textbf{Solid point group:} \texttt{<POINT-GROUP>}.\\
         \textbf{Vertex stabilizer subgroup:} \texttt{<STABILIZER>}.
-  \item \textbf{Hamiltonian:} \(
-        \Htot,\quad
+  \item \textbf{Hilbert space:} \(
         \dim\mathcal{H} = 2^{V}\ \text{(spin-$\tfrac12$ on each vertex).}
         \)
-  \item \textbf{Eigenvalue range / normalization:} \texttt{<Specify conventions>}.
+  \item \textbf{Eigenvalue range:} \texttt{<Specify conventions>}.
 \end{itemize}
 
 \subsubsection*{Scar structure: sets and multiplets.}
@@ -505,7 +503,7 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
 \subsubsection*{Overview and data.}
 \begin{center}
   % Put your graphic at the very beginning of the subparagraph
-  \includegraphics[width=.6\linewidth]{icosahedron}
+  \includegraphics[width=.6\linewidth]{tetrakishexahedron}
 \end{center}
 
 \begin{itemize}[leftmargin=1.5em]
@@ -513,11 +511,10 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
   \item \textbf{Vertices (V), Faces (F), Edges (E):} $V=\texttt{<V>}$,\; $F=\texttt{<F>}$,\; $E=\texttt{<E>}$.
   \item \textbf{Solid point group:} \texttt{<POINT-GROUP>}.\\
         \textbf{Vertex stabilizer subgroup:} \texttt{<STABILIZER>}.
-  \item \textbf{Hamiltonian:} \(
-        \Htot,\quad
+  \item \textbf{Hilbert space:} \(
         \dim\mathcal{H} = 2^{V}\ \text{(spin-$\tfrac12$ on each vertex).}
         \)
-  \item \textbf{Eigenvalue range / normalization:} \texttt{<Specify conventions>}.
+  \item \textbf{Eigenvalue range:} \texttt{<Specify conventions>}.
 \end{itemize}
 
 \subsubsection*{Scar structure: sets and multiplets.}
@@ -555,61 +552,6 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
 
 % -------------------- Polyhedron Block: END --------------------
 
-% -------------------- Polyhedron Block: START --------------------
-\subsection*{Dodecahedron}
-
-\subsubsection*{Overview and data.}
-\begin{center}
-  % Put your graphic at the very beginning of the subparagraph
-  \includegraphics[width=.6\linewidth]{icosahedron}
-\end{center}
-
-\begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Duality / paired solid:} \texttt{<DUALITY or “self-dual”>}.
-  \item \textbf{Vertices (V), Faces (F), Edges (E):} $V=\texttt{<V>}$,\; $F=\texttt{<F>}$,\; $E=\texttt{<E>}$.
-  \item \textbf{Solid point group:} \texttt{<POINT-GROUP>}.\\
-        \textbf{Vertex stabilizer subgroup:} \texttt{<STABILIZER>}.
-  \item \textbf{Hamiltonian:} \(
-        \Htot,\quad
-        \dim\mathcal{H} = 2^{V}\ \text{(spin-$\tfrac12$ on each vertex).}
-        \)
-  \item \textbf{Eigenvalue range / normalization:} \texttt{<Specify conventions>}.
-\end{itemize}
-
-\subsubsection*{Scar structure: sets and multiplets.}
-\begin{center}
-  \includegraphics[width=.6\linewidth]{icosahedron}
-\end{center}
-
-\begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Number of scar sets:} \texttt{<1 or 2>}. 
-  \item For each scar set $S_k$, fill one table per set:
-\end{itemize}
-
-\noindent\textit{Scar set} $S_{\texttt{<k>}}$:
-\begin{center}
-\begin{tabular}{L{3.5cm} C{2.2cm} C{2.2cm} C{2.2cm} C{3.0cm} C{3.2cm}}
-\toprule
-\textbf{Multiplet label} & \textbf{Energy $E$} & \textbf{Degeneracy} & \textbf{Annihilated by} & \textbf{Non-zero components (vs.\ $2^{V}$)} \\
-\midrule
-\texttt{<m1>} & $\pm$ \texttt{<int>} & \texttt{<deg> } &
-\texttt{$\Hising$ / $\Htf$ / both} & \texttt{<\# non-zero> / $2^{\texttt{<V>}}$} \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\subsubsection*{Local properties (RDMs).}
-\begin{center}
-  \includegraphics[width=.6\linewidth]{icosahedron}
-\end{center}
-
-\begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=2,3,4,5,6$ sites, with $n < V/2$.
-  \item \textbf{Compactness criterion:} \texttt{<how subsets chosen>}.
-  \item \textbf{Diagnostics:} \texttt{<observables, entropies, purity, etc.>}.
-\end{itemize}
-
-% -------------------- Polyhedron Block: END --------------------
 
 \section*{Archimedean Solids}
 % ============================================================
@@ -622,7 +564,7 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
 \subsubsection*{Overview and data.}
 \begin{center}
   % Put your graphic at the very beginning of the subparagraph
-  \includegraphics[width=.6\linewidth]{icosahedron}
+  \includegraphics[width=.6\linewidth]{truncatedtetrahedron}
 \end{center}
 
 \begin{itemize}[leftmargin=1.5em]
@@ -630,11 +572,10 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
   \item \textbf{Vertices (V), Faces (F), Edges (E):} $V=\texttt{<V>}$,\; $F=\texttt{<F>}$,\; $E=\texttt{<E>}$.
   \item \textbf{Solid point group:} \texttt{<POINT-GROUP>}.\\
         \textbf{Vertex stabilizer subgroup:} \texttt{<STABILIZER>}.
-  \item \textbf{Hamiltonian:} \(
-        \Htot,\quad
+  \item \textbf{Hilbert space:} \(
         \dim\mathcal{H} = 2^{V}\ \text{(spin-$\tfrac12$ on each vertex).}
         \)
-  \item \textbf{Eigenvalue range / normalization:} \texttt{<Specify conventions>}.
+  \item \textbf{Eigenvalue range:} \texttt{<Specify conventions>}.
 \end{itemize}
 
 \subsubsection*{Scar structure: sets and multiplets.}
@@ -678,7 +619,7 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
 \subsubsection*{Overview and data.}
 \begin{center}
   % Put your graphic at the very beginning of the subparagraph
-  \includegraphics[width=.6\linewidth]{icosahedron}
+  \includegraphics[width=.6\linewidth]{cuboctahedron}
 \end{center}
 
 \begin{itemize}[leftmargin=1.5em]
@@ -686,11 +627,10 @@ We are studying scars of the simple Ising model on discrete geometries (polyhedr
   \item \textbf{Vertices (V), Faces (F), Edges (E):} $V=\texttt{<V>}$,\; $F=\texttt{<F>}$,\; $E=\texttt{<E>}$.
   \item \textbf{Solid point group:} \texttt{<POINT-GROUP>}.\\
         \textbf{Vertex stabilizer subgroup:} \texttt{<STABILIZER>}.
-  \item \textbf{Hamiltonian:} \(
-        \Htot,\quad
+  \item \textbf{Hilbert space:} \(
         \dim\mathcal{H} = 2^{V}\ \text{(spin-$\tfrac12$ on each vertex).}
         \)
-  \item \textbf{Eigenvalue range / normalization:} \texttt{<Specify conventions>}.
+  \item \textbf{Eigenvalue range:} \texttt{<Specify conventions>}.
 \end{itemize}
 
 \subsubsection*{Scar structure: sets and multiplets.}
