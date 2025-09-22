@@ -20,6 +20,7 @@
 \newcommand{\Hising}{H_{\mathrm{Ising}}}
 \newcommand{\Htf}{H_{\mathrm{TF}}}
 \newcommand{\Htot}{H=\Hising+\Htf}
+\renewcommand{\footnoterule}{}
 
 % A small helper for nice math in tables
 \newcommand{\NNZ}{\#\text{non-zero components}}
@@ -65,8 +66,7 @@ where $J=1, h=3$ (antiferromagnetic, non critical).
 \begin{itemize}[leftmargin=1.5em]
   \item \textbf{Duality / paired solid:} self-dual, tetrahedron
   \item \textbf{Vertices (V), Faces (F), Edges (E):} $V = 4$,\; $F = 3$ (equilateral triangles),\; $E = 6$
-  \item \textbf{Solid point group:} $T_d$\\
-        \textbf{Vertex stabilizer subgroup:} $C_3$ for rotations only, $D_3$ for full symmetry group
+  \item \textbf{Point group:} $T_d$
   \item \textbf{Hilbert space:} \(
         \dim\mathcal{H} = 2^{4} = 16\ \text{(spin-$\tfrac12$ on each vertex)}
         \)
@@ -95,7 +95,7 @@ $S_1$ & -2 & 2 & $\Htf$ & 4,6 \\
 \begin{itemize}[leftmargin=1.5em]
   \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=1$ sites, with $n < V/2, (V = 4)$
   \item \textbf{Compactness criterion:} NA, the single point ${0}$ was chosen
-  \item \textbf{Diagnostics:} 1-site RDMs for both scars are full rank (system size $V=4$ is too small)
+  \item \textbf{Diagnostics:} 1-site RDMs for both scars have full rank (system size $V=4$ is too small)
 \end{itemize}
 
 % -------------------- Polyhedron Block: END --------------------
@@ -112,8 +112,7 @@ $S_1$ & -2 & 2 & $\Htf$ & 4,6 \\
 \begin{itemize}[leftmargin=1.5em]
   \item \textbf{Duality / paired solid:} cube
   \item \textbf{Vertices (V), Faces (F), Edges (E):} $V = 6$,\; $F = 8$ (equilateral triangles),\; $E = 12$
-  \item \textbf{Solid point group:} $O_h$\\
-        \textbf{Vertex stabilizer subgroup:} $C_4$ for rotations only, $C_{4v}$ for full symmetry group
+  \item \textbf{Point group:} $O_h$
   \item \textbf{Hilbert space:} \(
         \dim\mathcal{H} = 2^{6} = 64\ \text{(spin-$\tfrac12$ on each vertex)}
         \)
@@ -145,8 +144,8 @@ $S_3$ & 6 & 3 & $\Hising$ & 12 \\
 
 \begin{itemize}[leftmargin=1.5em]
   \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=2$ sites, with $n < V/2, (V=6)$
-  \item \textbf{Compactness criterion:} nearest-neighbor, for example $[0,1]$
-   \item \textbf{Diagnostics:} 2-sites RDMs for all 7 scars are full rank (system size $V=6$ is too small)
+  \item \textbf{Compactness criterion:} nearest-neighbor, for example $[0,1]$ (see highlighted edges in figure)
+   \item \textbf{Diagnostics:} 2-sites RDMs for all 7 scars have full rank (system size $V=6$ is too small)
 \end{itemize}
 
 % -------------------- Polyhedron Block: END --------------------
@@ -163,8 +162,7 @@ $S_3$ & 6 & 3 & $\Hising$ & 12 \\
 \begin{itemize}[leftmargin=1.5em]
   \item \textbf{Duality / paired solid:} octahedron
   \item \textbf{Vertices (V), Faces (F), Edges (E):} $V = 8$,\; $F = 6$ (squares),\; $E = 12$
-  \item \textbf{Solid point group:} $O_h$\\
-        \textbf{Vertex stabilizer subgroup:} $C_3$ for rotations only, $C_{3v}$ for full symmetry group
+  \item \textbf{Point group:} $O_h$
   \item \textbf{Hilbert space:} \(
         \dim\mathcal{H} = 2^{8} = 256\ \text{(spin-$\tfrac12$ on each vertex)}
         \)
@@ -194,8 +192,8 @@ $S_2$ & 2 & 3 & $\Htf$ & 48 \\
 
 \begin{itemize}[leftmargin=1.5em]
   \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=2,3$ sites, with $n < V/2, (V = 8)$
-  \item \textbf{Compactness criterion:} nearest-neighbor + most compact, for example $[0,1], [0,1,2]$
-  \item \textbf{Diagnostics:} 2-sites RDMs for all 6 scars are full rank (system size $V=8$ is too small)
+  \item \textbf{Compactness criterion:} nearest-neighbor + most compact, for example $[0,1] (n = 2), [0,1,2] (n = 3)$ (see highlighted edges in figure)
+  \item \textbf{Diagnostics:} 2/3-sites RDMs for all 6 scars have full rank (system size $V=8$ is too small)
 \end{itemize}
 
 % -------------------- Polyhedron Block: END --------------------
@@ -212,8 +210,7 @@ $S_2$ & 2 & 3 & $\Htf$ & 48 \\
 \begin{itemize}[leftmargin=1.5em]
   \item \textbf{Duality / paired solid:} dodecahedron
   \item \textbf{Vertices (V), Faces (F), Edges (E):} $V = 12$,\; $F = 20$ (equilateral triangles),\; $E = 30$
-  \item \textbf{Solid point group:} $I_h$\\
-        \textbf{Vertex stabilizer subgroup:} $C_5$ for rotations only, $D_5$ for full symmetry group
+  \item \textbf{Point group:} $I_h$
   \item \textbf{Hilbert space:} \(
         \dim\mathcal{H} = 2^{12} = 4096\ \text{(spin-$\tfrac12$ on each vertex)}
         \)
@@ -241,8 +238,8 @@ $S_1$ & -6 & 5 & $\Htf$ & 280 \\
 
 \begin{itemize}[leftmargin=1.5em]
   \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=2,3,4,5$ sites, with $n < V/2, (V=12)$.
-  \item \textbf{Compactness criterion:} \texttt{<how subsets chosen>}.
-  \item \textbf{Diagnostics:} \begin{itemize} \item 2/3-sites RDMs for all 5 scars are full rank \item 4-sites RDMs for all 5 scars have reduced rank of 11 = 16 - 5 \item 5-sites RDMs for all 5 scars have reduced rank of 18 = 32 - 14 \end{itemize}
+  \item \textbf{Compactness criterion:} nearest-neighbor + most compact, for example $[0,2] \, (n = 2), [0,2,9] \, (n = 3), [0,2,7,9] \,  (n = 4), [0,2,7,9,11] \, (n = 5)$ (see highlighted edges in figure)
+  \item \textbf{Diagnostics:} \begin{itemize} \item 2/3-sites RDMs for all 5 scars have full rank \item 4-sites RDMs for all 5 scars have reduced rank of 11 = 16 - 5 \item 5-sites RDMs for all 5 scars have reduced rank of 18 = 32 - 14 \end{itemize}
 \end{itemize}
 
 % -------------------- Polyhedron Block: END --------------------
@@ -258,13 +255,12 @@ $S_1$ & -6 & 5 & $\Htf$ & 280 \\
 
 \begin{itemize}[leftmargin=1.5em]
   \item \textbf{Duality / paired solid:} icosahedron
-  \item \textbf{Vertices (V), Faces (F), Edges (E):} $V = 20$,\; $F = 12$ (equilateral triangles),\; $E = 30$
-  \item \textbf{Solid point group:} $I_h$\\
-        \textbf{Vertex stabilizer subgroup:} $C_3$ for rotations only, $D_3$ for full symmetry group
+  \item \textbf{Vertices (V), Faces (F), Edges (E):} $V = 20$,\; $F = 12$ (pentagons),\; $E = 30$
+  \item \textbf{Point group:} $I_h$
   \item \textbf{Hilbert space:} \(
         \dim\mathcal{H} = 2^{20} = 1,048,576\ \text{(spin-$\tfrac12$ on each vertex)}
         \)
-  \item \textbf{Eigenvalue range:} $[-12.37, 12.71]$
+  \item \textbf{Eigenvalue range:} $[-62.51, 62.61]$
 \end{itemize}
 
 \subsubsection*{Scar structure: sets and multiplets}
@@ -279,17 +275,19 @@ $S_1$ & -6 & 5 & $\Htf$ & 280 \\
 \toprule
 \textbf{Multiplet label} & \textbf{Energy $E$} & \textbf{Degeneracy} & \textbf{Annihilated by} & \textbf{Non-zero components (vs.\ $2^{20} = 1,048,576$)} \\
 \midrule
-$S_1$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / both} & \texttt{<\# non-zero> / $2^{\texttt{<V>}}$} \\
+$S_1$ &  & & $\Htf$ & \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-\subsubsection*{Local properties (RDMs).}
+\subsubsection*{Local properties (RDMs)}
 
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=2,3,4,5,6,7,8,9$ sites, with $n < V/2, (V=20)$.
-  \item \textbf{Compactness criterion:} \texttt{<how subsets chosen>}.
-  \item \textbf{Diagnostics:} \texttt{<observables, entropies, purity, etc.>}.
+  \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=2,3,4,5,6,7,8,9$ sites, with $n < V/2, (V=20)$
+  \item \textbf{Compactness criterion:} nearest-neighbor + most compact, for example $[4,10] \, (n = 2), [4,6,10] \, (n = 3), [2,4,6,10] \,  (n = 4), [2,4,6,10,18] \, (n = 5), [1,2,4,6,10,18] \, (n = 6), \newline
+   [1,2,4,5,6,10,18] \, (n = 7), [1,2,4,5,6,10,11,18] \, (n = 8), [1,2,4,5,6,7,10,11,18] \, (n = 9)$ (see highlighted edges in figure)
+  \item \textbf{Diagnostics:} \begin{itemize} \item 2/3-sites RDMs for all scars have full rank \item 4-sites RDMs for all scars have reduced rank \item 5-sites RDMs for all scars have reduced rank\item 6-sites RDMs for all scars have reduced rank
+  \item 7-sites RDMs for all scars have reduced rank \item 8-sites RDMs for all scars have reduced rank \item 9-sites RDMs for all scars have reduced rank\end{itemize}
 \end{itemize}
 
 % -------------------- Polyhedron Block: END --------------------
@@ -309,41 +307,38 @@ $S_1$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / bot
 \end{center}
 
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Duality / paired solid:} self-dual, tetrahedron
-  \item \textbf{Vertices (V), Faces (F), Edges (E):} $V = 4$,\; $F = 3$ (equilateral triangles),\; $E = 6$
-  \item \textbf{Solid point group:} $T_d \cong S_4$\\
-        \textbf{Vertex stabilizer subgroup:} $C_3$ for rotations only, $D_3$ for full symmetry group
+  \item \textbf{Duality / paired solid:} truncated tetrahedron (archimedean)
+  \item \textbf{Vertices (V), Faces (F), Edges (E):} $V = 8$ (4 on the primary tetrahedron, 4 at the tip of the 4 pyramids built on top of each face of the tetrahedron),\; $F = 12$ (isosceles triangles),\; $E = 18$
+  \item \textbf{Point group:} $T_d$
   \item \textbf{Hilbert space:} \(
-        \dim\mathcal{H} = 2^{4} = 16\ \text{(spin-$\tfrac12$ on each vertex)}
+        \dim\mathcal{H} = 2^{8} = 256\ \text{(spin-$\tfrac12$ on each vertex)}
         \)
-  \item \textbf{Eigenvalue range:} $[-12.37, 12.71]$
+  \item \textbf{Eigenvalue range:} $[-25.10, 27.07]$
 \end{itemize}
 
 \subsubsection*{Scar structure: sets and multiplets}
 
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Number of scar sets:} 2
+  \item \textbf{Number of scar sets:} 1
   \end{itemize}
   \hspace{6mm}For each scar set $S_k$:\\
 
 \begin{center}
 \begin{tabular}{L{3.5cm} C{2.2cm} C{2.2cm} C{2.2cm} C{3.0cm} C{3.2cm}}
 \toprule
-\textbf{Multiplet label} & \textbf{Energy $E$} & \textbf{Degeneracy} & \textbf{Annihilated by} & \textbf{Non-zero components (vs.\ $2^{V}$)} \\
+\textbf{Multiplet label} & \textbf{Energy $E$} & \textbf{Degeneracy} & \textbf{Annihilated by} & \textbf{Non-zero components (vs.\ $2^{8} = 256$)} \\
 \midrule
-$S_1$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / both} & \texttt{<\# non-zero> / $2^{\texttt{<V>}}$} \\
-\midrule
-$S_2$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / both} & \texttt{<\# non-zero> / $2^{\texttt{<V>}}$} \\
+$S_1$ & -2 & 3 & $\Htf$ & 36\\
 \bottomrule
 \end{tabular}
 \end{center}
 
-\subsubsection*{Local properties (RDMs).}
+\subsubsection*{Local properties (RDMs)}
 
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=2,3,4,5,6$ sites, with $n < V/2$.
-  \item \textbf{Compactness criterion:} \texttt{<how subsets chosen>}.
-  \item \textbf{Diagnostics:} \texttt{<observables, entropies, purity, etc.>}.
+  \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=2,3$ sites, with $n < V/2, (V=8)$
+  \item \textbf{Compactness criterion:} nearest-neighbor + most compact, for example $[1,2] (n = 2), [1,2,5] (n = 3)$ (see highlighted edges in figure)
+  \item \textbf{Diagnostics:} 2/3-sites RDMs for all 3 scars have full rank (system size $V=8$ is too small)
 \end{itemize}
 
 % -------------------- Polyhedron Block: END ---------------------
@@ -358,41 +353,44 @@ $S_2$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / bot
 \end{center}
 
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Duality / paired solid:} self-dual, tetrahedron
-  \item \textbf{Vertices (V), Faces (F), Edges (E):} $V = 4$,\; $F = 3$ (equilateral triangles),\; $E = 6$
-  \item \textbf{Solid point group:} $T_d \cong S_4$\\
-        \textbf{Vertex stabilizer subgroup:} $C_3$ for rotations only, $D_3$ for full symmetry group
+  \item \textbf{Duality / paired solid:} cuboctahedron (archimedean)
+  \item \textbf{Vertices (V), Faces (F), Edges (E):} $V = 14$ (8 acute vertices where 3 rhombi meet, 6 obtuse vertices where 4 rhombi meet),\; $F = 12$ (rhombi),\; $E = 24$
+  \item \textbf{Point group:} $O_h$
   \item \textbf{Hilbert space:} \(
-        \dim\mathcal{H} = 2^{4} = 16\ \text{(spin-$\tfrac12$ on each vertex)}
+        \dim\mathcal{H} = 2^{14} = 16,384\ \text{(spin-$\tfrac12$ on each vertex)}
         \)
-  \item \textbf{Eigenvalue range:} $[-12.37, 12.71]$
+  \item \textbf{Eigenvalue range:} $[-44.28, 44.28]$
 \end{itemize}
 
 \subsubsection*{Scar structure: sets and multiplets}
 
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Number of scar sets:} 2
+  \item \textbf{Number of scar sets:} 4
   \end{itemize}
   \hspace{6mm}For each scar set $S_k$:\\
 
 \begin{center}
 \begin{tabular}{L{3.5cm} C{2.2cm} C{2.2cm} C{2.2cm} C{3.0cm} C{3.2cm}}
 \toprule
-\textbf{Multiplet label} & \textbf{Energy $E$} & \textbf{Degeneracy} & \textbf{Annihilated by} & \textbf{Non-zero components (vs.\ $2^{V}$)} \\
+\textbf{Multiplet label} & \textbf{Energy $E$} & \textbf{Degeneracy} & \textbf{Annihilated by} & \textbf{Non-zero components (vs.\ $2^{14} = 16,384$)} \\
 \midrule
-$S_1$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / both} & \texttt{<\# non-zero> / $2^{\texttt{<V>}}$} \\
+$S_1$ & -12 & 3 & $\Hising$ & 432\\
 \midrule
-$S_2$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / both} & \texttt{<\# non-zero> / $2^{\texttt{<V>}}$} \\
+$S_2$ & -6 & 18 & $\Hising$ & 432\\
+\midrule
+$S_3$ & 6 & 18 & $\Hising$ & 432\\
+\midrule
+$S_4$ & 12 & 3 & $\Hising$ & 432\\
 \bottomrule
 \end{tabular}
 \end{center}
 
-\subsubsection*{Local properties (RDMs).}
+\subsubsection*{Local properties (RDMs)}
 
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=2,3,4,5,6$ sites, with $n < V/2$.
-  \item \textbf{Compactness criterion:} \texttt{<how subsets chosen>}.
-  \item \textbf{Diagnostics:} \texttt{<observables, entropies, purity, etc.>}.
+  \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=2,3,4,5,6$ sites, with $n < V/2, (V=14)$
+  \item \textbf{Compactness criterion:} nearest-neighbor + most compact, for example $[0,1] \, (n = 2), [0,1,4] \, (n = 3), [0,1,4,6] \,  (n = 4), [0,1,5,6,10] \, (n = 5), [0,1,4,5,6,10] \, (n = 6)$ (see highlighted edges in figure)
+  \item \textbf{Diagnostics:} \begin{itemize} \item 2/3-sites RDMs for all scars have full rank \item 4-sites RDMs for the $S_1,S_4$ scars have reduced rank of 12, and for $S_2,S_3$ have full rank \item 5-sites RDMs for the $S_1,S_4$ scars have reduced rank of 16, and for $S_2,S_3$ have reduced rank of 28 \item 6-sites RDMs for the $S_1,S_4$ scars have reduced rank of 20, and for $S_2,S_3$ have reduced rank of 50 \end{itemize}
 \end{itemize}
 
 % -------------------- Polyhedron Block: END --------------------
@@ -407,14 +405,13 @@ $S_2$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / bot
 \end{center}
 
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Duality / paired solid:} self-dual, tetrahedron
-  \item \textbf{Vertices (V), Faces (F), Edges (E):} $V = 4$,\; $F = 3$ (equilateral triangles),\; $E = 6$
-  \item \textbf{Solid point group:} $T_d \cong S_4$\\
-        \textbf{Vertex stabilizer subgroup:} $C_3$ for rotations only, $D_3$ for full symmetry group
+  \item \textbf{Duality / paired solid:} truncated cube (archimedean)
+  \item \textbf{Vertices (V), Faces (F), Edges (E):} $V = 14$ (6 on the primary octahedron, 8 at the tip of the 8 pyramids built on top of each face of the octahedron),\; $F = 24$ (isosceles triangles),\; $E = 36$
+  \item \textbf{Point group:} $O_h$
   \item \textbf{Hilbert space:} \(
-        \dim\mathcal{H} = 2^{4} = 16\ \text{(spin-$\tfrac12$ on each vertex)}
+        \dim\mathcal{H} = 2^{14} = 16,384\ \text{(spin-$\tfrac12$ on each vertex)}
         \)
-  \item \textbf{Eigenvalue range:} $[-12.37, 12.71]$
+  \item \textbf{Eigenvalue range:} $[-44.21, 50.01]$
 \end{itemize}
 
 \subsubsection*{Scar structure: sets and multiplets}
@@ -427,21 +424,23 @@ $S_2$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / bot
 \begin{center}
 \begin{tabular}{L{3.5cm} C{2.2cm} C{2.2cm} C{2.2cm} C{3.0cm} C{3.2cm}}
 \toprule
-\textbf{Multiplet label} & \textbf{Energy $E$} & \textbf{Degeneracy} & \textbf{Annihilated by} & \textbf{Non-zero components (vs.\ $2^{V}$)} \\
+\textbf{Multiplet label} & \textbf{Energy $E$} & \textbf{Degeneracy} & \textbf{Annihilated by} & \textbf{Non-zero components (vs.\ $2^{14} = 16,384$)} \\
 \midrule
-$S_1$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / both} & \texttt{<\# non-zero> / $2^{\texttt{<V>}}$} \\
+$S_1$ & -4 & 1 & $\Htf$ & 192 \\
 \midrule
-$S_2$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / both} & \texttt{<\# non-zero> / $2^{\texttt{<V>}}$} \\
+$S_2$ & 0 & 4 & both\footnotemark & 368 \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-\subsubsection*{Local properties (RDMs).}
+\footnotetext{The eigenvalues are not exactly zero for $\Hising$, but very small, of the order of $10^{-13/14}$.}
+
+\subsubsection*{Local properties (RDMs)}
 
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=2,3,4,5,6$ sites, with $n < V/2$.
-  \item \textbf{Compactness criterion:} \texttt{<how subsets chosen>}.
-  \item \textbf{Diagnostics:} \texttt{<observables, entropies, purity, etc.>}.
+  \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=2,3,4,5,6$ sites, with $n < V/2, (V=14)$
+  \item \textbf{Compactness criterion:} nearest-neighbor + most compact, for example $[5,6] \, (n = 2), [5,6,9] \, (n = 3), [5,6,9,13] \,  (n = 4), [4,5,6,9,13] \, (n = 5), [4,5,6,8,9,13] \, (n = 6)$ (see highlighted edges in figure)
+  \item \textbf{Diagnostics:} \begin{itemize} \item 2/3-sites RDMs for all scars have full rank \item 4-sites RDMs for the $S_1$ scar have reduced rank of 8, and for $S_2$ have full rank \item 5-sites RDMs for the $S_1$ scar have reduced rank of 8, and for $S_2$ have reduced rank of 16 \item 6-sites RDMs for the $S_1$ scar have reduced rank of 16, and for $S_2$ have reduced rank of 20 \end{itemize}
 \end{itemize}
 
 % -------------------- Polyhedron Block: END --------------------
@@ -449,21 +448,20 @@ $S_2$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / bot
 % -------------------- Polyhedron Block: START --------------------
 \subsection*{Tetrakis Hexahedron}
 
-\subsubsection*{Overview and data.}\subsubsection*{Overview and data}
+\subsubsection*{Overview and data}
 \begin{center}
   % Put your graphic at the very beginning of the subparagraph
   \includegraphics[width=.6\linewidth]{tetrakishexahedron}
 \end{center}
 
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Duality / paired solid:} self-dual, tetrahedron
-  \item \textbf{Vertices (V), Faces (F), Edges (E):} $V = 4$,\; $F = 3$ (equilateral triangles),\; $E = 6$
-  \item \textbf{Solid point group:} $T_d \cong S_4$\\
-        \textbf{Vertex stabilizer subgroup:} $C_3$ for rotations only, $D_3$ for full symmetry group
+  \item \textbf{Duality / paired solid:} truncated octahedron (archimedean)
+  \item \textbf{Vertices (V), Faces (F), Edges (E):} $V = 14$  (8 on the primary cube/hexahedron, 6 at the tip of the 8 pyramids built on top of each face of the cube/hexahedron),\; $F = 24$ (isosceles triangles),\; $F = 24$ (isosceles triangles),\; $E = 36$
+  \item \textbf{Point group:} $O_h$
   \item \textbf{Hilbert space:} \(
-        \dim\mathcal{H} = 2^{4} = 16\ \text{(spin-$\tfrac12$ on each vertex)}
+        \dim\mathcal{H} = 2^{14} = 16,384\ \text{(spin-$\tfrac12$ on each vertex)}
         \)
-  \item \textbf{Eigenvalue range:} $[-12.37, 12.71]$
+  \item \textbf{Eigenvalue range:} $[-44.39, 48.90]$
 \end{itemize}
 
 \subsubsection*{Scar structure: sets and multiplets}
@@ -476,25 +474,29 @@ $S_2$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / bot
 \begin{center}
 \begin{tabular}{L{3.5cm} C{2.2cm} C{2.2cm} C{2.2cm} C{3.0cm} C{3.2cm}}
 \toprule
-\textbf{Multiplet label} & \textbf{Energy $E$} & \textbf{Degeneracy} & \textbf{Annihilated by} & \textbf{Non-zero components (vs.\ $2^{V}$)} \\
+\textbf{Multiplet label} & \textbf{Energy $E$} & \textbf{Degeneracy} & \textbf{Annihilated by} & \textbf{Non-zero components (vs.\ $2^{14} = 16,384$)} \\
 \midrule
-$S_1$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / both} & \texttt{<\# non-zero> / $2^{\texttt{<V>}}$} \\
+$S_1$ & -4 & 12 & $\Htf$ & 1172 \\
 \midrule
-$S_2$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / both} & \texttt{<\# non-zero> / $2^{\texttt{<V>}}$} \\
+$S_2$ & 0 & 1 & both\footnotemark & 192 \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-\subsubsection*{Local properties (RDMs).}
+\footnotetext{The eigenvalue is not exactly zero for $\Hising$, but very small, of the order of $10^{-14}$.}
+
+\subsubsection*{Local properties (RDMs)}
 
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=2,3,4,5,6$ sites, with $n < V/2$.
-  \item \textbf{Compactness criterion:} \texttt{<how subsets chosen>}.
-  \item \textbf{Diagnostics:} \texttt{<observables, entropies, purity, etc.>}.
+  \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=2,3,4,5,6$ sites, with $n < V/2, (V=14)$
+  \item \textbf{Compactness criterion:} nearest-neighbor + most compact, for example $[1,5] \, (n = 2), [1,5,7] \, (n = 3), [1,5,9,13] \,  (n = 4), [1,5,7,9,13] \, (n = 5), [0,1,5,7,9,13] \, (n = 6)$ (see highlighted edges in figure)
+  \item \textbf{Diagnostics:} \begin{itemize} \item 2/3-sites RDMs for all scars have full rank \item 4-sites RDMs for the $S_1$ scars have full rank, and for $S_2$ have reduced rank of 6  \item 5-sites RDMs for the $S_1$ scar have reduced rank of 26, and for $S_2$ have reduced rank of 12 \item 6-sites RDMs for the $S_1$ scar have reduced rank of 52, and for $S_2$ have reduced rank of 24 \end{itemize}
 \end{itemize}
+
 
 % -------------------- Polyhedron Block: END --------------------
 
+\noindent\textbf{NB: in the triakis octahedron and tetrakis hexahedron there is a clear hierarchy of the vertices - the vertices of the primary solids, the octahedron and the cube, are prioritized when computing reduced sites RDMs. This explains why the 6th vertices of 4 and 0 were respectively added to the 6-sites subsets.}
 
 \section*{Archimedean Solids}
 % ============================================================
@@ -511,41 +513,40 @@ $S_2$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / bot
 \end{center}
 
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Duality / paired solid:} self-dual, tetrahedron
-  \item \textbf{Vertices (V), Faces (F), Edges (E):} $V = 4$,\; $F = 3$ (equilateral triangles),\; $E = 6$
-  \item \textbf{Solid point group:} $T_d \cong S_4$\\
-        \textbf{Vertex stabilizer subgroup:} $C_3$ for rotations only, $D_3$ for full symmetry group
+  \item \textbf{Duality / paired solid:} triakis tetrahedron (catalan)
+  \item \textbf{Vertices (V), Faces (F), Edges (E):} $V = 12$,\; $F = 8$ (4 equilateral triangles, 4 hexagons),\; $E = 18$
+  \item \textbf{Point group:} $T_d$
   \item \textbf{Hilbert space:} \(
-        \dim\mathcal{H} = 2^{4} = 16\ \text{(spin-$\tfrac12$ on each vertex)}
+        \dim\mathcal{H} = 2^{12} = 4,096\ \text{(spin-$\tfrac12$ on each vertex)}
         \)
-  \item \textbf{Eigenvalue range:} $[-12.37, 12.71]$
+  \item \textbf{Eigenvalue range:} $[-37.36, 37.71]$
 \end{itemize}
 
 \subsubsection*{Scar structure: sets and multiplets}
 
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Number of scar sets:} 2
+  \item \textbf{Number of scar sets:} 1
   \end{itemize}
   \hspace{6mm}For each scar set $S_k$:\\
 
 \begin{center}
 \begin{tabular}{L{3.5cm} C{2.2cm} C{2.2cm} C{2.2cm} C{3.0cm} C{3.2cm}}
 \toprule
-\textbf{Multiplet label} & \textbf{Energy $E$} & \textbf{Degeneracy} & \textbf{Annihilated by} & \textbf{Non-zero components (vs.\ $2^{V}$)} \\
+\textbf{Multiplet label} & \textbf{Energy $E$} & \textbf{Degeneracy} & \textbf{Annihilated by} & \textbf{Non-zero components (vs.\ $2^{12} = 4,096$)} \\
 \midrule
-$S_1$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / both} & \texttt{<\# non-zero> / $2^{\texttt{<V>}}$} \\
-\midrule
-$S_2$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / both} & \texttt{<\# non-zero> / $2^{\texttt{<V>}}$} \\
+$S_1$ & 0 & 1 & both\footnotemark & 48\\
 \bottomrule
 \end{tabular}
 \end{center}
 
-\subsubsection*{Local properties (RDMs).}
+\footnotetext{The eigenvalue is not exactly zero for $\Hising$, but very small, of the order of $10^{-14}$.}
+
+\subsubsection*{Local properties (RDMs)}
 
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=2,3,4,5,6$ sites, with $n < V/2$.
-  \item \textbf{Compactness criterion:} \texttt{<how subsets chosen>}.
-  \item \textbf{Diagnostics:} \texttt{<observables, entropies, purity, etc.>}.
+  \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=2,3,4,5$ sites, with $n < V/2, (V=12)$
+  \item \textbf{Compactness criterion:} nearest-neighbor + most compact, for example $[0,2] \, (n = 2), [0,2,8] \, (n = 3), [2,3,4,5] \,  (n = 4), [2,3,4,5,9] \, (n = 5)$ (see highlighted edges in figure)
+  \item \textbf{Diagnostics:} all RDMs for the scar have full rank
 \end{itemize}
 
 % -------------------- Polyhedron Block: END --------------------
@@ -560,46 +561,38 @@ $S_2$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / bot
 \end{center}
 
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Duality / paired solid:} self-dual, tetrahedron
-  \item \textbf{Vertices (V), Faces (F), Edges (E):} $V = 4$,\; $F = 3$ (equilateral triangles),\; $E = 6$
-  \item \textbf{Solid point group:} $T_d \cong S_4$\\
-        \textbf{Vertex stabilizer subgroup:} $C_3$ for rotations only, $D_3$ for full symmetry group
+  \item \textbf{Duality / paired solid:} rhombic dodecahedron (catalan)
+  \item \textbf{Vertices (V), Faces (F), Edges (E):} $V = 12$,\; $F = 14$ (8 equilateral triangles, 6 squares),\; $E = 24$
+  \item \textbf{Point group:} $O_h$
   \item \textbf{Hilbert space:} \(
-        \dim\mathcal{H} = 2^{4} = 16\ \text{(spin-$\tfrac12$ on each vertex)}
+        \dim\mathcal{H} = 2^{12} = 4,096\ \text{(spin-$\tfrac12$ on each vertex)}
         \)
-  \item \textbf{Eigenvalue range:} $[-12.37, 12.71]$
+  \item \textbf{Eigenvalue range:} $[-37.73, 38.81]$
 \end{itemize}
 
 \subsubsection*{Scar structure: sets and multiplets}
 
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Number of scar sets:} 2
+  \item \textbf{Number of scar sets:} no scars observed
   \end{itemize}
-  \hspace{6mm}For each scar set $S_k$:\\
 
-\begin{center}
-\begin{tabular}{L{3.5cm} C{2.2cm} C{2.2cm} C{2.2cm} C{3.0cm} C{3.2cm}}
-\toprule
-\textbf{Multiplet label} & \textbf{Energy $E$} & \textbf{Degeneracy} & \textbf{Annihilated by} & \textbf{Non-zero components (vs.\ $2^{V}$)} \\
-\midrule
-$S_1$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / both} & \texttt{<\# non-zero> / $2^{\texttt{<V>}}$} \\
-\midrule
-$S_2$ & $\pm$ \texttt{<int>} & \texttt{<deg>} & \texttt{$\Hising$ / $\Htf$ / both} & \texttt{<\# non-zero> / $2^{\texttt{<V>}}$} \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\subsubsection*{Local properties (RDMs).}
+\subsubsection*{Local properties (RDMs)}
 
 \begin{itemize}[leftmargin=1.5em]
-  \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=2,3,4,5,6$ sites, with $n < V/2$.
-  \item \textbf{Compactness criterion:} \texttt{<how subsets chosen>}.
-  \item \textbf{Diagnostics:} \texttt{<observables, entropies, purity, etc.>}.
+  \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=2,3,4,5$ sites, with $n < V/2, (V=12)$
+  \item \textbf{Compactness criterion:} nearest-neighbor + most compact, for example $[0,2] \, (n = 2), [0,2,4] \, (n = 3), [0,1,2,5] \,  (n = 4), [0,1,2,4,5] \, (n = 5)$ (see highlighted edges in figure)
+  \item \textbf{Diagnostics:} all RDMs have full rank because there are no scars
 \end{itemize}
 
 % -------------------- Polyhedron Block: END --------------------
 
-\paragraph*{Conclusions}
-The eigenstates corresponding to eigenvalue 0, which are annihilated by both $\Hising$ and $\Htf$, are probably not proper scars, since they are not really sparse.
+\paragraph*{Observations/Conclusions}
+
+\begin{itemize}
+\item The number of scars depends on whether the solid is Platonic, Catalan or Archimedean, and possibly it corresponds to the vertex orbits number of each solid class: Platonic and Archimedean solids have only 1 vertex orbit, since they are vertex-transitive, and so they have only 1 type of scar - up to algebraic sign (exception that I still do not understand: cuboctahedron doesn't seem to have any scar); Catalan have 2 vertex orbits, because they have two types of vertices, and they have two type of vertices, again up to an algebraic sign.\\
+\item The degeneracy of each scarred multiplet depends on the point group $T_d, O_h, I_h$: For Platonic solids, the degeneracies are always 2 for $T_d$, 3 for $O_h$, and 5 for $I_h$. I am still not sure where these numbers come from, but my guess would be that they are related to the `'rotational'' symmetry subgroup of each point group. For Catalan and Archimedean solids, the description seems to be more complicated, because we have 2 types of vertices and faces, respectively, but it should follow a similar, more convoluted reasoning.
+\item In some cases, the scarred multiplets come in symmetric pairs at $\pm n, n\in\mathbb{N}$. I would like to think this is related to frustration - this seems to happen when the faces of each solid have an even number of vertices, and for this cases the scars are usually annihilated by $\Hising$ and not by $\Htf$. There are however exception to this observation: in primis the octahedron, which shouldn't have symmetric scars since it has triangular faces, but it does; the cube, which despite having square faces, it does have a pair of symmetric scars, but these are annihilated by $\Htf$ and not  $\Hising$. This aspect is also confusing for Archimedean solids, since they have both even and odd-number of vertices faces.
+\end{itemize}
+
 
 \end{document}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.8)  18 SEP 2025 17:12
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.8)  22 SEP 2025 16:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -363,31 +363,31 @@ File: l3backend-xetex.def 2023-04-19 L3 backend support: XeTeX
 (./scars_polyhedra.aux)
 \openout1 = `scars_polyhedra.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
-6.
+7.
  (c:/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -423,18 +423,18 @@ LaTeX Font Info:    ... okay on input line 36.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 36.
+Package hyperref Info: Link coloring OFF on input line 37.
 (./scars_polyhedra.out) (./scars_polyhedra.out)
 \@outlinefile=\write3
 \openout3 = `scars_polyhedra.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
 
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
 
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -462,179 +462,239 @@ Overfull \hbox (2.17328pt too wide) in paragraph at lines 86--86
 File: octahedron.pdf Graphic file (type pdf)
 <use octahedron.pdf>
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
 
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 133--133
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 132--132
  []|\TU/lmr/bx/n/10.95 Degeneracy| 
  []
 
 
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 133--133
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 132--132
  []|\TU/lmr/bx/n/10.95 Annihilated 
  []
 
-[3]
 File: cube.pdf Graphic file (type pdf)
 <use cube.pdf>
-
-Underfull \hbox (badness 10000) in paragraph at lines 179--180
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
 
  []
 
 
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 184--184
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 182--182
  []|\TU/lmr/bx/n/10.95 Degeneracy| 
  []
 
 
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 184--184
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 182--182
  []|\TU/lmr/bx/n/10.95 Annihilated 
+ []
+
+
+Overfull \hbox (30.95567pt too wide) in paragraph at lines 195--196
+[]\TU/lmr/bx/n/10.95 Compactness criterion: \TU/lmr/m/n/10.95 nearest-neighbor 
++ most compact, for example $\OT1/cmr/m/n/10.95 [0\OML/cmm/m/it/10.95 ; \OT1/cm
+r/m/n/10.95 1](\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 = 2)\OML/cmm/m/it/10.95
+ ; \OT1/cmr/m/n/10.95 [0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1\OML/cmm/m/it
+/10.95 ; \OT1/cmr/m/n/10.95 2](\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 =
  []
 
 [4]
 File: icosahedron.pdf Graphic file (type pdf)
 <use icosahedron.pdf>
- [5]
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
  []
 
 
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 233--233
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 230--230
  []|\TU/lmr/bx/n/10.95 Degeneracy| 
  []
 
 
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 233--233
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 230--230
  []|\TU/lmr/bx/n/10.95 Annihilated 
  []
 
+
+Overfull \hbox (34.6056pt too wide) in paragraph at lines 241--242
+[]\TU/lmr/bx/n/10.95 Compactness criterion: \TU/lmr/m/n/10.95 nearest-neighbor 
++ most compact, for example $\OT1/cmr/m/n/10.95 [0\OML/cmm/m/it/10.95 ; \OT1/cm
+r/m/n/10.95 2] (\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 = 2)\OML/cmm/m/it/10.9
+5 ; \OT1/cmr/m/n/10.95 [0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 2\OML/cmm/m/i
+t/10.95 ; \OT1/cmr/m/n/10.95 9] (\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 =
+ []
+
+[5]
 File: dodecahedron.pdf Graphic file (type pdf)
 <use dodecahedron.pdf>
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 275--276
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
 
  []
 
 
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 280--280
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 276--276
  []|\TU/lmr/bx/n/10.95 Degeneracy| 
  []
 
 
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 280--280
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 276--276
  []|\TU/lmr/bx/n/10.95 Annihilated 
  []
 
+[6]
 File: triakistetrahedron.pdf Graphic file (type pdf)
 <use triakistetrahedron.pdf>
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 327--328
+ [7]
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
 
  []
 
 
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 332--332
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 329--329
  []|\TU/lmr/bx/n/10.95 Degeneracy| 
  []
 
 
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 332--332
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 329--329
  []|\TU/lmr/bx/n/10.95 Annihilated 
  []
 
-[8]
+
+Overfull \hbox (30.95567pt too wide) in paragraph at lines 340--341
+[]\TU/lmr/bx/n/10.95 Compactness criterion: \TU/lmr/m/n/10.95 nearest-neighbor 
++ most compact, for example $\OT1/cmr/m/n/10.95 [1\OML/cmm/m/it/10.95 ; \OT1/cm
+r/m/n/10.95 2](\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 = 2)\OML/cmm/m/it/10.95
+ ; \OT1/cmr/m/n/10.95 [1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 2\OML/cmm/m/it
+/10.95 ; \OT1/cmr/m/n/10.95 5](\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 =
+ []
+
 File: rhombicdodecahedron.pdf Graphic file (type pdf)
 <use rhombicdodecahedron.pdf>
-
-Underfull \hbox (badness 10000) in paragraph at lines 376--377
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 370--371
 
  []
 
 
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 381--381
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 375--375
  []|\TU/lmr/bx/n/10.95 Degeneracy| 
  []
 
 
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 381--381
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 375--375
  []|\TU/lmr/bx/n/10.95 Annihilated 
  []
 
 [9]
+Overfull \hbox (34.6056pt too wide) in paragraph at lines 392--393
+[]\TU/lmr/bx/n/10.95 Compactness criterion: \TU/lmr/m/n/10.95 nearest-neighbor 
++ most compact, for example $\OT1/cmr/m/n/10.95 [0\OML/cmm/m/it/10.95 ; \OT1/cm
+r/m/n/10.95 1] (\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 = 2)\OML/cmm/m/it/10.9
+5 ; \OT1/cmr/m/n/10.95 [0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1\OML/cmm/m/i
+t/10.95 ; \OT1/cmr/m/n/10.95 4] (\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 =
+ []
+
 File: triakisoctahedron.pdf Graphic file (type pdf)
 <use triakisoctahedron.pdf>
- [10]
-Underfull \hbox (badness 10000) in paragraph at lines 425--426
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 422--423
 
  []
 
 
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 430--430
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 427--427
  []|\TU/lmr/bx/n/10.95 Degeneracy| 
  []
 
 
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 430--430
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 427--427
  []|\TU/lmr/bx/n/10.95 Annihilated 
+ []
+
+
+Overfull \hbox (34.6056pt too wide) in paragraph at lines 442--443
+[]\TU/lmr/bx/n/10.95 Compactness criterion: \TU/lmr/m/n/10.95 nearest-neighbor 
++ most compact, for example $\OT1/cmr/m/n/10.95 [5\OML/cmm/m/it/10.95 ; \OT1/cm
+r/m/n/10.95 6] (\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 = 2)\OML/cmm/m/it/10.9
+5 ; \OT1/cmr/m/n/10.95 [5\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 6\OML/cmm/m/i
+t/10.95 ; \OT1/cmr/m/n/10.95 9] (\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 =
  []
 
 File: tetrakishexahedron.pdf Graphic file (type pdf)
 <use tetrakishexahedron.pdf>
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 474--475
+Underfull \hbox (badness 10000) in paragraph at lines 472--473
 
  []
 
 
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 479--479
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 477--477
  []|\TU/lmr/bx/n/10.95 Degeneracy| 
  []
 
 
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 479--479
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 477--477
  []|\TU/lmr/bx/n/10.95 Annihilated 
+ []
+
+[12]
+Overfull \hbox (34.6056pt too wide) in paragraph at lines 492--493
+[]\TU/lmr/bx/n/10.95 Compactness criterion: \TU/lmr/m/n/10.95 nearest-neighbor 
++ most compact, for example $\OT1/cmr/m/n/10.95 [1\OML/cmm/m/it/10.95 ; \OT1/cm
+r/m/n/10.95 5] (\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 = 2)\OML/cmm/m/it/10.9
+5 ; \OT1/cmr/m/n/10.95 [1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 5\OML/cmm/m/i
+t/10.95 ; \OT1/cmr/m/n/10.95 7] (\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 =
  []
 
 File: truncatedtetrahedron.pdf Graphic file (type pdf)
 <use truncatedtetrahedron.pdf>
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 529--530
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 530--531
 
  []
 
 
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 534--534
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 535--535
  []|\TU/lmr/bx/n/10.95 Degeneracy| 
  []
 
 
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 534--534
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 535--535
  []|\TU/lmr/bx/n/10.95 Annihilated 
  []
 
-[13]
+
+Overfull \hbox (34.6056pt too wide) in paragraph at lines 548--549
+[]\TU/lmr/bx/n/10.95 Compactness criterion: \TU/lmr/m/n/10.95 nearest-neighbor 
++ most compact, for example $\OT1/cmr/m/n/10.95 [0\OML/cmm/m/it/10.95 ; \OT1/cm
+r/m/n/10.95 2] (\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 = 2)\OML/cmm/m/it/10.9
+5 ; \OT1/cmr/m/n/10.95 [0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 2\OML/cmm/m/i
+t/10.95 ; \OT1/cmr/m/n/10.95 8] (\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 =
+ []
+
 File: cuboctahedron.pdf Graphic file (type pdf)
 <use cuboctahedron.pdf>
-
-Underfull \hbox (badness 10000) in paragraph at lines 578--579
-
+[14]
+Overfull \hbox (34.6056pt too wide) in paragraph at lines 583--584
+[]\TU/lmr/bx/n/10.95 Compactness criterion: \TU/lmr/m/n/10.95 nearest-neighbor 
++ most compact, for example $\OT1/cmr/m/n/10.95 [0\OML/cmm/m/it/10.95 ; \OT1/cm
+r/m/n/10.95 2] (\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 = 2)\OML/cmm/m/it/10.9
+5 ; \OT1/cmr/m/n/10.95 [0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 2\OML/cmm/m/i
+t/10.95 ; \OT1/cmr/m/n/10.95 4] (\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 =
  []
 
 
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 583--583
- []|\TU/lmr/bx/n/10.95 Degeneracy| 
+Underfull \hbox (badness 10000) in paragraph at lines 592--593
+
  []
 
-
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 583--583
- []|\TU/lmr/bx/n/10.95 Annihilated 
- []
-
-[14] [15] (./scars_polyhedra.aux)
+[15] (./scars_polyhedra.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -643,12 +703,12 @@ Package rerunfilecheck Info: File `scars_polyhedra.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 10804 strings out of 475591
- 165507 string characters out of 5777375
- 1920432 words of memory out of 5000000
- 31997 multiletter control sequences out of 15000+600000
- 565371 words of font info for 77 fonts, out of 8000000 for 9000
+ 10806 strings out of 475591
+ 165521 string characters out of 5777375
+ 1924432 words of memory out of 5000000
+ 31998 multiletter control sequences out of 15000+600000
+ 566900 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 72i,13n,79p,552b,448s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,13n,79p,770b,448s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on scars_polyhedra.pdf (15 pages).
