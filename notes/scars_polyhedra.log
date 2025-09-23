@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.8)  22 SEP 2025 16:47
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.8)  23 SEP 2025 14:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -655,22 +655,22 @@ t/10.95 ; \OT1/cmr/m/n/10.95 7] (\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 =
 File: truncatedtetrahedron.pdf Graphic file (type pdf)
 <use truncatedtetrahedron.pdf>
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 530--531
+Underfull \hbox (badness 10000) in paragraph at lines 533--534
 
  []
 
 
-Overfull \hbox (1.22063pt too wide) in paragraph at lines 535--535
+Overfull \hbox (1.22063pt too wide) in paragraph at lines 538--538
  []|\TU/lmr/bx/n/10.95 Degeneracy| 
  []
 
 
-Overfull \hbox (2.17328pt too wide) in paragraph at lines 535--535
+Overfull \hbox (2.17328pt too wide) in paragraph at lines 538--538
  []|\TU/lmr/bx/n/10.95 Annihilated 
  []
 
 
-Overfull \hbox (34.6056pt too wide) in paragraph at lines 548--549
+Overfull \hbox (34.6056pt too wide) in paragraph at lines 551--552
 []\TU/lmr/bx/n/10.95 Compactness criterion: \TU/lmr/m/n/10.95 nearest-neighbor 
 + most compact, for example $\OT1/cmr/m/n/10.95 [0\OML/cmm/m/it/10.95 ; \OT1/cm
 r/m/n/10.95 2] (\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 = 2)\OML/cmm/m/it/10.9
@@ -678,10 +678,11 @@ r/m/n/10.95 2] (\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 = 2)\OML/cmm/m/it/10.9
 t/10.95 ; \OT1/cmr/m/n/10.95 8] (\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 =
  []
 
+[14]
 File: cuboctahedron.pdf Graphic file (type pdf)
 <use cuboctahedron.pdf>
-[14]
-Overfull \hbox (34.6056pt too wide) in paragraph at lines 583--584
+
+Overfull \hbox (34.6056pt too wide) in paragraph at lines 586--587
 []\TU/lmr/bx/n/10.95 Compactness criterion: \TU/lmr/m/n/10.95 nearest-neighbor 
 + most compact, for example $\OT1/cmr/m/n/10.95 [0\OML/cmm/m/it/10.95 ; \OT1/cm
 r/m/n/10.95 2] (\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 = 2)\OML/cmm/m/it/10.9
@@ -689,12 +690,12 @@ r/m/n/10.95 2] (\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 = 2)\OML/cmm/m/it/10.9
 t/10.95 ; \OT1/cmr/m/n/10.95 4] (\OML/cmm/m/it/10.95 n \OT1/cmr/m/n/10.95 =
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 592--593
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 595--596
 
  []
 
-[15] (./scars_polyhedra.aux)
+[16] (./scars_polyhedra.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -705,10 +706,10 @@ Package rerunfilecheck Info: File `scars_polyhedra.out' has not changed.
 Here is how much of TeX's memory you used:
  10806 strings out of 475591
  165521 string characters out of 5777375
- 1924432 words of memory out of 5000000
+ 1921432 words of memory out of 5000000
  31998 multiletter control sequences out of 15000+600000
  566900 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  72i,13n,79p,770b,448s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on scars_polyhedra.pdf (15 pages).
+Output written on scars_polyhedra.pdf (16 pages).
