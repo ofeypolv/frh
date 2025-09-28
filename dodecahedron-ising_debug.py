@@ -185,5 +185,9 @@ if __name__ == "__main__":
     # Hi = ising_dodecahedron(N, J)  # Unused
     # Htf = transverse_field_dodecahedral(N, h)  # Unused
 
-    eivt, eigt = eigsh(H, k=10, sigma= -18.1, which='LM', verbose=True)
-    print(f"total energy eigenvalues: {eivt}")
+    E0 = -18.0
+    H_shifted = H - E0 * identity(H.shape[0], format="csr")
+    #H_sq = H_shifted @ H_shifted # with this which = 'SA' finds the smallest eigenvalue of H^2, which is (E0 - E)^2
+    eivt, eigt = eigsh(H_shifted, k=5, which='SM', maxiter=500, ncv=128, tol=1e-8)
+    #If H_sq: The closest eigenvalue of H is: E0 ± sqrt(eivt[0])
+    print(eivt + E0)
