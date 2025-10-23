@@ -202,9 +202,14 @@ $S_2$ & 2 & 3 & $\Htf$ & 48 \\
 \subsection*{Icosahedron}
 
 \subsubsection*{Overview and data}
+
 \begin{center}
-  % Put your graphic at the very beginning of the subparagraph
-  \includegraphics[width=.6\linewidth]{icosahedron}
+  \begin{minipage}[c]{0.45\linewidth}
+    \includegraphics[width=\linewidth]{icosahedron}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.45\linewidth}
+    \includegraphics[width=\linewidth]{icosahedronp}
+  \end{minipage}
 \end{center}
 
 \begin{itemize}[leftmargin=1.5em]
@@ -233,14 +238,44 @@ $S_1$ & -6 & 5 & $\Htf$ & 280 \\
 \bottomrule
 \end{tabular}
 \end{center}
+  
+\noindent *We have also observed two additional, non-degenerate ``scarred'' states (let's call them ``pseudoscars'') at integer energies $E=0,-4$, which are less sparse than the five-fold scarred multiplet, but are still sparser than the other eigenstates. These two pseudoscars have the peculiarity that they are not annihilated by either $\Hising , \Htf$, and they are not even eigenstates of them (like it happens for the other scars), but instead their expectation value of  $\Htf$ is zero (for the pseudoscar at $E=0$, the expectation value of $\Hising$ is also zero). If $|s\rangle$ is the scarred eigenstate of $H$ corresponding to either $E=0,-4$, we have that:
+
+\begin{equation}
+\langle s|  H_{\text{TF}} |s \rangle = 0
+\end{equation}
+
+In other words,  $H_{\text{TF}}$ projects $|s\rangle$ onto its orthogonal complement, causing the expectation value to be zero.\\
+
+\begin{center}
+\begin{tabular}{L{3.5cm} C{2.2cm} C{2.2cm} C{2.2cm} C{3.0cm} C{3.2cm}}
+\toprule
+\textbf{Multiplet label} & \textbf{Energy $E$} & \textbf{Degeneracy} & \textbf{Annihilated by} & \textbf{Non-zero components (vs.\ $2^{12} = 4096$)} \\
+\midrule
+$S'_1$ & -4 & 1 & neither & 720 \\
+$S'_2$ & 0 & 1 & neither & 600 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+There are additional sparser eigenvectors which are not integer:
+
+\begin{itemize}
+\item 480 non-zero components: E= -8.64, -5.85, 3.85, 6.64 
+\item 840 non-zero components: E= -16.87, -12.87, -8.27, -4.27, 0.27, 4.27, 8.87, 12.87 
+\end{itemize}
 
 \subsubsection*{Local properties (RDMs)}
 
 \begin{itemize}[leftmargin=1.5em]
   \item \textbf{Local RDM definition:} $\rho_A=\mathrm{Tr}_{\bar A}(|\psi\rangle\langle\psi|)$ on compact subsets of $n=2,3,4,5$ sites, with $n < V/2, (V=12)$.
-  \item \textbf{Compactness criterion:} nearest-neighbor + most compact, for example $[0,2] \, (n = 2), [0,2,9] \, (n = 3), [0,2,7,9] \,  (n = 4), [0,2,7,9,11] \, (n = 5)$ (see highlighted edges in figure)
-  \item \textbf{Diagnostics:} \begin{itemize} \item 2/3-sites RDMs for all 5 scars have full rank \item 4-sites RDMs for all 5 scars have reduced rank of 11 = 16 - 5 \item 5-sites RDMs for all 5 scars have reduced rank of 18 = 32 - 14 \end{itemize}
+  \item \textbf{Compactness criterion:} nearest-neighbor + most compact, for example $[0,2] \, (n = 2),$ \\ $[0,2,9] \, (n = 3), [0,2,7,9] \,  (n = 4), [0,2,7,9,11] \, (n = 5)$; for the pseudoscars, for n=5 we looked at the pentagon [0,2,5,7,11] (see highlighted edges in figure; first n=5 [0,2,7,9,11] is highlighted in the figure on the left, while n=5 [0,2,5,7,11] is highlighted in the figure on the right).
+  \item \textbf{Diagnostics:} \begin{itemize} \item 2/3-sites RDMs for all 5 scars + 2 pseudoscars have full rank \item 4-sites RDMs for all 5 scars have reduced rank of 11 = 16 - 5; 2 pseudoscars have full rank \item 5-sites ([0,2,7,9,11]) RDMs for all 5 scars have reduced rank of 18 = 32 - 14, while the 2 pseudoscars have full rank; for the pentagon 5-sites [0,2,5,7,11], the 2 pseudoscars (together with the other non-integer sparser eigenvectors found above) have both reduced rank of 32 - 8 = 24 (the 5 scars have also reduced rank of 32 - 6 = 26)\end{itemize}
 \end{itemize}
+
+\subsubsection*{Observation on pseudoscars}
+
+The two pseudoscars at integer energies $E=0,-4$ do not have sub-volume entanglement entropy (like for the scars studied in literature so far), but still show reduced rank for appropriately chosen local RDMs, such as the 5-sites pentagon one. This suggests that the two pseudoscars - if they are of any interest - are better characterized in terms of the FRH (Full Rank Hypothesis) rather than the ETH (Eigenstate Thermalization Hypothesis).
 
 % -------------------- Polyhedron Block: END --------------------
 
