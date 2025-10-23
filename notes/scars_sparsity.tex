@@ -1,0 +1,211 @@
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{xfp}
+\usepackage{caption}
+\usepackage{setspace}
+\geometry{margin=1in}
+
+\title{Sparsity Tables for Polyhedra Scars and Exact Scars}
+\author{Camilla Polvara}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\paragraph{Polyhedra scars (fixed $L$).}
+For each polyhedron we list the scar multiplets (including pseudoscars where observed) and their sparsity, defined as
+$\text{sparsity}=\frac{\text{number of non-zero components}}{\dim\mathcal{H}}$.
+Data are taken from the polyhedra study (icosahedron, dodecahedron, Catalan solids, and the Archimedean solid with a scar).
+
+\begin{table}[h!]
+\centering
+\caption{Icosahedron ($V{=}12$, $\dim\mathcal{H}{=}2^{12}{=}4096$). Includes pseudoscars.}
+\begin{tabular}{lcccc}
+\toprule
+Label & Energy $E$ & Degeneracy & Non-zero comps. & Sparsity (\%) \\
+\midrule
+Scar $S_1$ & $-6$ & $5$ & $280$ & \fpeval{round(100*280/4096,3)} \\
+Pseudoscar $S'_1$ & $-4$ & $1$ & $720$ & \fpeval{round(100*720/4096,3)} \\
+Pseudoscar $S'_2$ & $0$  & $1$ & $600$ & \fpeval{round(100*600/4096,3)} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Dodecahedron ($V{=}20$, $\dim\mathcal{H}{=}2^{20}{=}1{,}048{,}576$).}
+\begin{tabular}{lcccc}
+\toprule
+Label & Energy $E$ & Degeneracy & Non-zero comps. & Sparsity (\%) \\
+\midrule
+Scar $S_1$ &  &  &  &  \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Catalan solids (fixed $L$ of each graph).}
+\hspace*{-1cm} % shift left by 1 cm (adjust value)
+\begin{tabular}{lccccc}
+\toprule
+Solid & Label & Energy $E$ & Degeneracy & Non-zero comps. & Sparsity (\%) \\
+\midrule
+%Triakis tetrahedron ($\dim\mathcal{H}{=}256$) & $S_1$ & $-2$ & 3 & 36  & \fpeval{round(100*36/256,3)} \\
+Rhombic dodecahedron ($\dim\mathcal{H}{=}16384$) & $S_1$ & $-12$& 3  & 432 & \fpeval{round(100*432/16384,3)} \\
+Rhombic dodecahedron & $S_2$ & $-6$ & 18 & 432 & \fpeval{round(100*432/16384,3)} \\
+Rhombic dodecahedron & $S_3$ & $6$  & 18 & 432 & \fpeval{round(100*432/16384,3)} \\
+Rhombic dodecahedron & $S_4$ & $12$ & 3  & 432 & \fpeval{round(100*432/16384,3)} \\
+Triakis octahedron ($\dim\mathcal{H}{=}16384$) & $S_1$ & $-4$ & 1 & 192 & \fpeval{round(100*192/16384,3)} \\
+Triakis octahedron & $S_2$ & $0$  & 4 & 368 & \fpeval{round(100*368/16384,3)} \\
+Tetrakis hexahedron ($\dim\mathcal{H}{=}16384$) & $S_1$ & $-4$ & 12 & 1172 & \fpeval{round(100*1172/16384,3)} \\
+Tetrakis hexahedron & $S_2$ & $0$  & 1  & 192  & \fpeval{round(100*192/16384,3)} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Archimedean solid with a scar: Truncated tetrahedron ($\dim\mathcal{H}{=}4096$).}
+\begin{tabular}{lcccc}
+\toprule
+Label & Energy $E$ & Degeneracy & Non-zero comps. & Sparsity (\%) \\
+\midrule
+$S_1$ & 0 & 1 & 48 & \fpeval{round(100*48/4096,3)} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\vspace{1em}
+
+\paragraph{Exact scars (top-of-tower vs.\ $L$).}
+Below we list the sparsity of the \emph{top scar in the tower} as a function of chain length $L$ for each exactly solvable model.
+
+\begin{table}[h!]
+\centering
+\caption{Dimer scar (spin-$\frac12$).}
+\begin{tabular}{lccc}
+\toprule
+$L$ & Non-zero comps. & $\dim\mathcal{H}$ & Sparsity (\%) \\
+\midrule
+14 & 252 & $2^{14}=16384$ & \fpeval{round(100*252/16384,3)} \\
+16 & 510 & $2^{16}=65536$ & \fpeval{round(100*510/65536,3)} \\
+18 & 1020 & $2^{18}=262144$ & \fpeval{round(100*1020/262144,3)} \\
+20 & 2046 & $2^{20}=1048576$ & \fpeval{round(100*2046/1048576,3)} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[h!]
+\centering
+\caption{Domain-wall conserving spin-$\frac{1}{2}$ model --- tower $|S_n\rangle$.}
+\begin{tabular}{lccc}
+\toprule
+$L$ & Non-zero comps. & $\dim\mathcal{H}$ & Sparsity (\%) \\
+\midrule
+12 & 54 & 4096 & \fpeval{round(100*54/4096,3)} \\
+14 & 210 & 16384 & \fpeval{round(100*210/16384,3)} \\
+16 & 352 & 65536 & \fpeval{round(100*352/65536,3)} \\
+18 & 1287 & 262144 & \fpeval{round(100*1287/262144,3)} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Domain-wall conserving spin-$\frac{1}{2}$ model --- tower $|S'_n\rangle$.}
+\begin{tabular}{lccc}
+\toprule
+$L$ & Non-zero comps. & $\dim\mathcal{H}$ & Sparsity (\%) \\
+\midrule
+12 & 54 & 4096 & \fpeval{round(100*54/4096,3)} \\
+14 & 210 & 16384 & \fpeval{round(100*210/16384,3)} \\
+16 & 352 & 65536 & \fpeval{round(100*352/65536,3)} \\
+18 & 1287 & 262144 & \fpeval{round(100*1287/262144,3)} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[h!]
+\centering
+\caption{Hubbard/Hirsch model --- $\eta$ tower.}
+\begin{tabular}{lccc}
+\toprule
+$L$ & Non-zero comps. & $\dim\mathcal{H}$ & Sparsity (\%) \\
+\midrule
+8 & 70 & 65536 & \fpeval{round(100*70/65536,3)} \\
+10 & 252 & 1048576 & \fpeval{round(100*252/1048576,3)} \\
+12 & 924 & 16777216 & \fpeval{round(100*924/16777216,3)} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Hubbard/Hirsch model --- $\tau$ tower.}
+\begin{tabular}{lccc}
+\toprule
+$L$ & Non-zero comps. & $\dim\mathcal{H}$ & Sparsity (\%) \\
+\midrule
+8 & 120 & 65536 & \fpeval{round(100*120/65536,3)} \\
+10 & 700 & 1048576 & \fpeval{round(100*700/1048576,3)} \\
+12 & 3780 & 16777216 & \fpeval{round(100*3780/16777216,3)} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Hubbard/Hirsch model --- $\varsigma$ tower.}
+\begin{tabular}{lccc}
+\toprule
+$L$ & Non-zero comps. & $\dim\mathcal{H}$ & Sparsity (\%) \\
+\midrule
+8 & 320 & 65536 & \fpeval{round(100*320/65536,3)} \\
+10 & 1400 & 1048576 & \fpeval{round(100*1400/1048576,3)} \\
+12 & 6048 & 16777216 & \fpeval{round(100*6048/16777216,3)} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Spin-1 XY model --- Tower A.}
+\begin{tabular}{lccc}
+\toprule
+$L$ & Non-zero comps. & $\dim\mathcal{H}$ & Sparsity (\%) \\
+\midrule
+8 & 70 & 6561 & \fpeval{round(100*70/6561,3)} \\
+10 & 252 & 59049 & \fpeval{round(100*252/59049,3)} \\
+12 & 924 & 531441 & \fpeval{round(100*924/531441,3)} \\
+14 & 3432 & 4782969 & \fpeval{round(100*3432/4782969,3)} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Spin-1 XY model --- Tower B.}
+\begin{tabular}{lccc}
+\toprule
+$L$ & Non-zero comps. & $\dim\mathcal{H}$ & Sparsity (\%) \\
+\midrule
+8 & 69 & 6561 & \fpeval{round(100*69/6561,3)} \\
+10 & 250 & 59049 & \fpeval{round(100*250/59049,3)} \\
+12 & 923 & 531441 & \fpeval{round(100*923/531441,3)} \\
+14 & 3430 & 4782969 & \fpeval{round(100*3430/4782969,3)} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}
