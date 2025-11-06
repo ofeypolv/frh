@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     29036,        736]
-NotebookOptionsPosition[     27244,        698]
-NotebookOutlinePosition[     27668,        715]
-CellTagsIndexPosition[     27625,        712]
+NotebookDataLength[     30854,        779]
+NotebookOptionsPosition[     28839,        737]
+NotebookOutlinePosition[     29263,        754]
+CellTagsIndexPosition[     29220,        751]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -656,6 +656,8 @@ Cell[BoxData[
  CellChangeTimes->{{3.9714425129036217`*^9, 3.971442522582428*^9}},
  CellLabel->"In[84]:=",ExpressionUUID->"2e99b21d-acee-8a4c-b66f-b7f79fac1656"],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", " ", 
@@ -669,18 +671,42 @@ Cell[BoxData[
     "Flat", " ", "list", " ", "of", " ", "all", " ", "120", " ", 
      "permutations", " ", "in", " ", "0"}], "-", 
     RowBox[{"based", " ", "form"}]}], "*)"}], 
+  RowBox[{"(*", 
+   RowBox[{
+   "Flat", " ", "list", " ", "of", " ", "all", " ", "120", " ", 
+    "permutations", " ", 
+    RowBox[{"(", 
+     RowBox[{"0", "-", "based"}], ")"}]}], "*)"}], "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
     RowBox[{"allPerms0Based", "=", 
      RowBox[{"Flatten", "[", 
-      RowBox[{"conjugacyClasses0Based", ",", "1"}], "]"}]}], ";"}], "\n", "\[IndentingNewLine]", 
+      RowBox[{"conjugacyClasses0Based", ",", "1"}], "]"}]}], ";"}], "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+     "Format", " ", "each", " ", "permutation", " ", "as", " ", "a", " ", 
+      "Python"}], "-", 
+     RowBox[{"style", " ", "list", " ", "string"}]}], "*)"}], "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"Export", "[", 
-     RowBox[{"\"\<ih_permutations_0based.txt\>\"", ",", 
-      RowBox[{"Row", "/@", 
-       RowBox[{"(", 
-        RowBox[{"ToString", "/@", "allPerms0Based"}], ")"}]}], 
-      ",", "\"\<Lines\>\""}], "]"}], ";"}], "\[IndentingNewLine]", "\n", 
+    RowBox[{"stringPerms", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\"\<[\>\"", "<>", 
+        RowBox[{"StringRiffle", "[", 
+         RowBox[{
+          RowBox[{"ToString", "/@", "#"}], ",", "\"\<, \>\""}], "]"}], 
+        "<>", "\"\<]\>\""}], "&"}], "/@", "allPerms0Based"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"Directory", "[", "]"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Export", " ", "each", " ", "permutation", " ", "on", " ", "its", " ", 
+     "own", " ", "line"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"Export", "[", 
+    RowBox[{"\"\<C:\\\\Users\\\\camipolv\\\\Desktop\\\\ih_permutations_0based.\
+txt\>\"", ",", "stringPerms", ",", "\"\<Lines\>\""}], "]"}], 
+   "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{
      RowBox[{"Grouped", " ", "by", " ", "classes", " ", 
@@ -690,11 +716,24 @@ Cell[BoxData[
       RowBox[{"still", " ", "0"}], "-", "based"}]}], "*)"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"Export", "[", 
-     RowBox[{"\"\<ih_conjugacy_classes_0based.m\>\"", ",", 
-      "conjugacyClasses0Based", ",", "\"\<Table\>\""}], "]"}], 
+     RowBox[{"\"\<C:\\\\Users\\\\camipolv\\\\Desktop\\\\ih_conjugacy_classes_\
+0based.m\>\"", ",", "conjugacyClasses0Based", ",", "\"\<Table\>\""}], "]"}], 
     ";"}]}]}]], "Input",
- CellChangeTimes->{{3.9714426279558315`*^9, 3.9714426279558315`*^9}},
- CellLabel->"In[86]:=",ExpressionUUID->"6800149e-4eb9-504f-bf5f-3320f48fcdf5"]
+ CellChangeTimes->{{3.9714426279558315`*^9, 3.9714426279558315`*^9}, {
+  3.971444053418215*^9, 3.9714440818867226`*^9}, {3.9714441608518734`*^9, 
+  3.9714441883589287`*^9}, {3.971444288118643*^9, 3.9714443151265545`*^9}, {
+  3.97144434569578*^9, 3.971444398493372*^9}},
+ CellLabel->"In[94]:=",ExpressionUUID->"6800149e-4eb9-504f-bf5f-3320f48fcdf5"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\camipolv\"\>"], "Output",
+ CellChangeTimes->{3.9714444001087036`*^9},
+ CellLabel->"Out[96]=",ExpressionUUID->"5ee3c9ed-9360-f148-ab81-4dd444dcd172"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\camipolv\\\\Desktop\\\\ih_permutations_\
+0based.txt\"\>"], "Output",
+ CellChangeTimes->{3.9714444001087036`*^9},
+ CellLabel->"Out[97]=",ExpressionUUID->"d9fa983d-ed62-f54c-8a46-81e438e2a185"]
+}, Open  ]]
 },
 WindowSize->{1072.125, 647.625},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
@@ -737,7 +776,11 @@ Cell[16693, 442, 2056, 50, 161, "Input",ExpressionUUID->"1cc6be8e-3ba0-6b49-9bda
 Cell[18752, 494, 5235, 114, 203, "Output",ExpressionUUID->"788ef2c7-7350-854e-ba76-6cc80e034a3a"]
 }, Open  ]],
 Cell[24002, 611, 1724, 45, 142, "Input",ExpressionUUID->"2e99b21d-acee-8a4c-b66f-b7f79fac1656"],
-Cell[25729, 658, 1511, 38, 142, "Input",ExpressionUUID->"6800149e-4eb9-504f-bf5f-3320f48fcdf5"]
+Cell[CellGroupData[{
+Cell[25751, 660, 2661, 65, 218, "Input",ExpressionUUID->"6800149e-4eb9-504f-bf5f-3320f48fcdf5"],
+Cell[28415, 727, 181, 2, 32, "Output",ExpressionUUID->"5ee3c9ed-9360-f148-ab81-4dd444dcd172"],
+Cell[28599, 731, 224, 3, 32, "Output",ExpressionUUID->"d9fa983d-ed62-f54c-8a46-81e438e2a185"]
+}, Open  ]]
 }
 ]
 *)
