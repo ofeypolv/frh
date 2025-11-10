@@ -1,5 +1,5 @@
 """
-TFIM on the dodecahedron in PETSc/SLEPc form.
+TFIM on the aicosahedron in PETSc/SLEPc form.
 
 This file builds sparse PETSc matrices for:
     1. Full transverse-field Ising:
@@ -38,28 +38,20 @@ def pauli_z():
 
 # ---------- Lattice / molecular graph ----------
 
-def dodecahedral_bonds():
+def icosahedral_bonds():
     """
-    Connectivity (edges) of a 20-site dodecahedral structure.
+    Connectivity (edges) of a 12-site icosahedral structure.
 
     Returns:
         list[tuple[int,int]]: each (i,j) is a bond between spins i and j.
     """
     bonds = [
-        (0, 13), (0, 14), (0, 15),
-        (1, 4),  (1, 5),  (1, 12),
-        (2, 6),  (2, 13), (2, 18),
-        (3, 7),  (3, 14), (3, 19),
-        (4, 10), (4, 18),
-        (5, 11), (5, 19),
-        (6, 10), (6, 15),
-        (7, 11), (7, 15),
-        (8, 9),  (8, 13), (8, 16),
-        (9, 14), (9, 17),
-        (10,11),
-        (12,16), (12,17),
-        (16,18),
-        (17,19),
+        (0, 2), (0, 4), (0, 5), (0, 8), (0, 9),
+        (1, 3), (1, 6), (1, 7), (1, 10), (1, 11),
+        (2, 6), (2, 7), (2, 8), (2, 9), (3, 4),
+        (3, 5), (3, 10), (3, 11), (4, 5), (4, 8),
+        (4, 10), (5, 9), (5, 11), (6, 7), (6, 8),
+        (6, 10), (7, 9), (7, 11), (8, 10), (9, 11)
     ]
     return bonds
 
@@ -111,23 +103,23 @@ def add_sigma_x_sigma_x(mat, N, i, j, coeff):
 
 # ---------- PETSc Hamiltonian builders ----------
 
-def build_matrix_tfim_dodecahedral(N, J, h):
+def build_matrix_tfim_icosahedral(N, J, h):
     """
-    Full transverse-field Ising on the dodecahedron:
+    Full transverse-field Ising on the icosahedron:
         H = J * Σ_{(i,j) in bonds} σ^x_i σ^x_j  - h * Σ_i σ^z_i
 
     Args:
-        N (int): number of spins (should be 20 here).
+        N (int): number of spins (should be 12 here).
         J (float): interaction strength.
         h (float): transverse field strength.
 
     Returns:
         PETSc.Mat: sparse Hamiltonian (AIJ) of dimension 2^N × 2^N
     """
-    if N != 20:
-        raise ValueError("Dodecahedral molecule expects N = 20 sites.")
+    if N != 12:
+        raise ValueError("Icosahedral molecule expects N = 12 sites.")
 
-    bonds = dodecahedral_bonds()
+    bonds = icosahedral_bonds()
     dim = 1 << N  # 2**N
 
     H = PETSc.Mat().create()
@@ -342,7 +334,6 @@ def jackson_weights(m):
     g = ((M - k) * np.cos(np.pi * k / M) + np.sin(np.pi * k / M) / np.tan(np.pi / M)) / M
     return g
 
-
 def chebyshev_filter(H, Emin, Emax, target_E0, m, pad=0.05, use_jackson=True, rng=None):
     """
     Apply a Chebyshev cosine kernel centered at target_E0.
@@ -417,27 +408,156 @@ def chebyshev_filter(H, Emin, Emax, target_E0, m, pad=0.05, use_jackson=True, rn
     Hv.destroy(); tk.destroy(); tkm1.destroy(); t1.destroy(); t0.destroy(); v0.destroy()
     return filt, approx_E
 
+def chebyshev_apply_to_vec(H, v_in, Emin, Emax, target_E0, m, pad=0.05,
+                           use_jackson=True):
+    width = Emax - Emin
+    Emin_p = Emin - pad*width
+    Emax_p = Emax + pad*width
 
-# ---------- Run tests / builds / filter ----------
+    c = 0.5 * (Emax_p + Emin_p)
+    d = 0.5 * (Emax_p - Emin_p)
+
+    x0 = (target_E0 - c) / d
+    x0 = float(np.clip(x0, -0.999999, 0.999999))
+    theta0 = np.arccos(x0)
+
+    alpha = np.cos(np.arange(m+1) * theta0)
+    if use_jackson:
+        g = jackson_weights(m)
+        alpha *= g
+
+    # t0, t1
+    t0 = v_in.copy()
+    t0.normalize()
+    t1 = v_in.duplicate()
+    apply_Htilde(H, t0, t1, c, d)  # (H - cI)/d
+
+    filt = v_in.duplicate()
+    filt.zeroEntries()
+    filt.axpy(alpha[0], t0)
+    filt.axpy(alpha[1], t1)
+
+    tkm1 = t0
+    tk   = t1
+
+    for k in range(2, m+1):
+        tkp1 = v_in.duplicate()
+        apply_Htilde(H, tk, tkp1, c, d)
+        tkp1.scale(2.0)
+        tkp1.axpy(-1.0, tkm1)
+        filt.axpy(alpha[k], tkp1)
+
+        tkm1.destroy()
+        tkm1 = tk
+        tk = tkp1
+
+    # cleanup
+    tk.destroy(); tkm1.destroy()
+    return filt
+
+def orthonormalize_block(V, tol=0.0):
+    Q = []
+    for v in V:
+        w = v.copy()
+        for q in Q:
+            coeff = q.dot(w)
+            w.axpy(-coeff, q)
+        nrm = w.norm()
+        if nrm > tol:
+            w.scale(1.0 / nrm)
+            Q.append(w)
+    return Q
+
+def chebyshev_block(H, Emin, Emax, target_E0, m,
+                    block_size=8, pad=0.05, use_jackson=False, rng=None):
+    """
+    Block Chebyshev filter around target_E0.
+
+    Returns:
+        theta: 1D numpy array of Ritz values (length p)
+        ritz_vecs: list of PETSc.Vec (length p)
+    """
+
+    if rng is None:
+        import numpy.random as npr
+        rng = npr.default_rng()
+
+    # 1. random initial block
+    V = []
+    for _ in range(block_size):
+        v = H.createVecRight()
+        v.setRandom()
+        v.normalize()
+        V.append(v)
+
+    # 2. apply Chebyshev filter to each vector
+    W = []
+    for v in V:
+        w = chebyshev_apply_to_vec(H, v, Emin, Emax, target_E0, m,
+                                   pad=pad, use_jackson=use_jackson)
+        W.append(w)
+    print("len(W) before ortho:", len(W))
+
+    # 3. orthonormalize -> Q
+    Q = orthonormalize_block(W)
+    p = len(Q)
+    print("len(Q) after ortho:", p)
+    if p == 0:
+        raise RuntimeError("Block orthonormalization produced no vectors (all near-zero).")
+
+    # 4. Build small matrix T_ij = <q_i, H q_j>
+    T = np.zeros((p, p), dtype=np.float64)
+    tmp = H.createVecRight()
+
+    # sanity check: sizes
+    N = H.getSize()[0]
+    for q in Q:
+        assert q.getSize() == N, "Vec size mismatch with H"
+
+    for j in range(p):
+        H.mult(Q[j], tmp)        # tmp = H q_j
+        for i in range(p):
+            T[i, j] = Q[i].dot(tmp)
+
+    # 5. diagonalize T
+    theta, Y = np.linalg.eigh(T)
+
+    # 6. form Ritz vectors u_i = sum_j Q_j * Y[j,i]
+    ritz_vecs = []
+    for i in range(p):
+        u = H.createVecRight()
+        u.set(0.0)
+        for j in range(p):
+            if abs(Y[j, i]) != 0.0:
+                u.axpy(Y[j, i], Q[j])
+        # (optional) normalize to be safe
+        nrm = u.norm()
+        if nrm > 0:
+            u.scale(1.0 / nrm)
+        ritz_vecs.append(u)
+
+    return theta, ritz_vecs
+
 
 if __name__ == "__main__":
     
     ########################################################################
-    # Full 20-site dodecahedron build                              
+    # Full 12-site icosahedron build
     ########################################################################
-    N_full = 20
+    N_full = 12
     J_full = 1.0
     h_full = 3.0
 
-    Emin_full = -62.51489576
-    Emax_full =  62.60812227
+    Emin_full = -37.9456425
+    Emax_full =  41.28675302
+
     target_E0_full = -6.0
 
-    print("\n=== Full dodecahedron (N=20) ===")
+    print("\n=== Full icosahedron (N=12) ===")
     dim_full = 1 << N_full
-    print("Hilbert space dimension 2^N =", dim_full)  # 1_048_576
+    print("Hilbert space dimension 2^N =", dim_full)  # 4096
 
-    H_full = build_matrix_tfim_dodecahedral(N_full, J_full, h_full)
+    H_full = build_matrix_tfim_icosahedral(N_full, J_full, h_full)
     print("H_full size:", H_full.getSize())
     print("H_full nnz: ", H_full.getInfo()['nz_used'])
 
@@ -445,7 +565,7 @@ if __name__ == "__main__":
     Emin_fullb, Emax_fullb = get_bounds_with_slepc(H_full, tol=1e-7, maxit=500)
     print(f"SLEPc bounds: Emin = {Emin_fullb}, Emax = {Emax_fullb}")
 
-    # Chebyshev filter of degree m around -18.0
+    # Chebyshev filter of degree m around -6.0
     # m=80/100 is typical for fairly sharp focus; tweak as needed.
     m_poly = 3000
 
@@ -461,10 +581,19 @@ if __name__ == "__main__":
 
     print(f"Filtered Rayleigh quotient near {target_E0_full}: {approx_E_full}")
 
-    # You would now:
-    # 1. build a small subspace from repeated filtering / random starts,
-    # 2. Rayleigh-Ritz that subspace to extract several eigenpairs near -18,
-    # or 3. feed filt_vec_full as an initial guess to a shift-invert / LOBPCG.
+    # Cleanup
+    #filt_vec_full.destroy()
+    #H_full.destroy()
 
-    filt_vec_full.destroy()
-    H_full.destroy()
+    theta, ritz_vecs = chebyshev_block(H_full, Emin_full, Emax_full, target_E0=target_E0_full,
+                                   m=3000, block_size=10, pad=0.01, use_jackson=True)
+
+    print("Ritz values from block Chebyshev:")
+    print(len(theta))
+    print(theta)
+
+    # pick the Ritz values closest to -6
+    idx = np.argsort(np.abs(theta + 6.0))
+    eigs_around_minus6 = theta[idx[:5]]
+    vecs_around_minus6 = [ritz_vecs[i] for i in idx[:5]]
+    print("Ritz values near -6.0:", eigs_around_minus6)
